@@ -3,9 +3,9 @@
   <img src="assets/squad105-banner-unico.png" alt="Squad 105 — Bootcamp Educadados" width="100%">
 </div>
 
-## Sobre o Bootcamp
+## Bootcamp Educadados
 
-O **Bootcamp Educadados** é uma jornada de aprendizagem prática e colaborativa em análise de dados e Business Intelligence, que integra formação técnica, resolução de desafios e desenvolvimento de projetos em equipe.
+É uma jornada de aprendizagem prática e colaborativa em análise de dados e Business Intelligence, que integra formação técnica, resolução de desafios e desenvolvimento de projetos em equipe.
 
 Ao longo de **seis fases**, os participantes aplicam seus conhecimentos em situações que simulam problemas reais de negócio, passando pela compreensão dos dados, modelagem, construção de indicadores e desenvolvimento de soluções analíticas.
 
