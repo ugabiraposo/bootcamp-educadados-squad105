@@ -1,0 +1,165 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1220.0035861933734,
+            "y": 613.60598577694009
+          },
+          "nodeIndex": "calendario",
+          "nodeLineageTag": "fea6cb85-efc6-4b79-891a-8572d064a459",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 506.6847880169305,
+            "y": 69.5847882543303
+          },
+          "nodeIndex": "cidades",
+          "nodeLineageTag": "4e75c66b-473e-4fc9-a419-d5a9b7b29d4a",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 925.51729080681184,
+            "y": 443.94986289106009
+          },
+          "nodeIndex": "filiais",
+          "nodeLineageTag": "31436c85-8749-4069-ba6a-40242687c471",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 741.62849606365955
+          },
+          "nodeIndex": "grupos_servico",
+          "nodeLineageTag": "e57eb1cf-34de-4859-a8ab-5057b2bb9fcd",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1154.4062013268904,
+            "y": 1297.2959761969646
+          },
+          "nodeIndex": "itens_venda",
+          "nodeLineageTag": "072c6883-a670-42d2-9ad3-4152bc04ea59",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 631.55229783153845,
+            "y": 700.96501630061812
+          },
+          "nodeIndex": "metas_quantidade",
+          "nodeLineageTag": "98f4970a-daa2-4bc0-ae46-7c30776d0caf",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 344.7302350676373,
+            "y": 397.7102416030566
+          },
+          "nodeIndex": "metas_valor",
+          "nodeLineageTag": "34526a14-a043-421f-aeb8-df9285f4ccae",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 798.04348742870775,
+            "y": -50
+          },
+          "nodeIndex": "profissionais",
+          "nodeLineageTag": "04502e6d-b79b-4187-9f01-65fad1a24542",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 336.61578281279435,
+            "y": 906.38758667865
+          },
+          "nodeIndex": "servicos",
+          "nodeLineageTag": "fc0f97b0-2f64-4f1f-953e-bb935e14b6c8",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1450.1477574871942,
+            "y": 975.859867928833
+          },
+          "nodeIndex": "vendas",
+          "nodeLineageTag": "b0b38e8f-85a5-41be-8ce9-5904c693d0c9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 939.440675471174,
+            "y": 207.3363736497472
+          },
+          "nodeIndex": "vendedores",
+          "nodeLineageTag": "0c235ee2-8548-42cc-af81-5020886b3a31",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

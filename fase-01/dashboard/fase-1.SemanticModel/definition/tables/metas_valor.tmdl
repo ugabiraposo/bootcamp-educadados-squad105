@@ -1,0 +1,97 @@
+table metas_valor
+	lineageTag: 34526a14-a043-421f-aeb8-df9285f4ccae
+
+	column codigo_meta_valor
+		dataType: int64
+		formatString: 0
+		lineageTag: 9acf2315-0b5b-4ccf-bd57-450806e0a7fa
+		summarizeBy: sum
+		sourceColumn: codigo_meta_valor
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_filial
+		dataType: int64
+		formatString: 0
+		lineageTag: 0cebce61-25e9-4ab2-91ac-a8daca12cc62
+		summarizeBy: none
+		sourceColumn: codigo_filial
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: c9a8e6da-48fe-49dc-a6aa-5c4afe766dec
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column nivel
+		dataType: string
+		lineageTag: e538d235-32e5-49ef-b666-05c45e844333
+		summarizeBy: none
+		sourceColumn: nivel
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_grupo_servico
+		dataType: int64
+		formatString: 0
+		lineageTag: 76d5a70b-9acd-4ae3-81ab-2fa79c17bf95
+		summarizeBy: none
+		sourceColumn: codigo_grupo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_servico
+		dataType: int64
+		formatString: 0
+		lineageTag: c6711b7d-cbe5-4528-8919-9866aa076de2
+		summarizeBy: sum
+		sourceColumn: codigo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_vendedor
+		dataType: string
+		lineageTag: 55aa97f3-7f9c-4f4d-82db-2af6970a2b74
+		summarizeBy: none
+		sourceColumn: codigo_vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_profissional
+		dataType: string
+		lineageTag: 5c7e1626-aff2-4f36-9eb7-5d82a6ded93b
+		summarizeBy: none
+		sourceColumn: codigo_profissional
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta_valor
+		dataType: double
+		lineageTag: c168c7c5-2a71-41d9-911f-8b755e4f6824
+		summarizeBy: sum
+		sourceColumn: meta_valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition metas_valor = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\metas_valor.xlsx"), null, true),
+				    metas_valor_Sheet = Fonte{[Item="metas_valor",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(metas_valor_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_meta_valor", Int64.Type}, {"codigo_filial", Int64.Type}, {"mes", Int64.Type}, {"nivel", type text}, {"codigo_grupo_servico", Int64.Type}, {"codigo_servico", Int64.Type}, {"codigo_vendedor", type any}, {"codigo_profissional", type any}, {"meta_valor", type number}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

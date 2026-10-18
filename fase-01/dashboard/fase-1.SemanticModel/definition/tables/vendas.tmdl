@@ -1,0 +1,135 @@
+table vendas
+	lineageTag: b0b38e8f-85a5-41be-8ce9-5904c693d0c9
+
+	column codigo_venda
+		dataType: int64
+		formatString: 0
+		lineageTag: f2fede01-974e-40b5-8aa9-7210434a76f6
+		summarizeBy: none
+		sourceColumn: codigo_venda
+
+		annotation SummarizationSetBy = Automatic
+
+	column data
+		dataType: int64
+		formatString: 0
+		lineageTag: 13bc8d47-37fa-4d9c-b96b-da75e10535f4
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_filial
+		dataType: int64
+		formatString: 0
+		lineageTag: 120b83da-0868-46d5-8d09-06139d8ff9f1
+		summarizeBy: none
+		sourceColumn: codigo_filial
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 7288c691-57a8-44b5-b861-e02f1e86c353
+		summarizeBy: sum
+		sourceColumn: codigo_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_profissional
+		dataType: int64
+		formatString: 0
+		lineageTag: c61e21f9-d38a-4603-8758-b3280a27b016
+		summarizeBy: sum
+		sourceColumn: codigo_profissional
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_vendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a35d335-ff4a-4ff6-b24b-e54260de34eb
+		summarizeBy: sum
+		sourceColumn: codigo_vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_usuario
+		dataType: int64
+		formatString: 0
+		lineageTag: f32c717a-c8cb-45ec-a026-3b1252be9484
+		summarizeBy: sum
+		sourceColumn: codigo_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_midia
+		dataType: int64
+		formatString: 0
+		lineageTag: e61036c3-7723-42dd-b441-1684f62c2529
+		summarizeBy: sum
+		sourceColumn: codigo_midia
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_bruto
+		dataType: int64
+		formatString: 0
+		lineageTag: 8fbb112f-75c6-45b0-8308-277a7bcf9068
+		summarizeBy: sum
+		sourceColumn: valor_bruto
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_desconto
+		dataType: double
+		lineageTag: 94a8acbe-0042-49f1-94c8-9680288f83e6
+		summarizeBy: sum
+		sourceColumn: valor_desconto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column valor_liquido
+		dataType: double
+		lineageTag: 74c75080-a875-4f05-b2f0-6740b7214556
+		summarizeBy: sum
+		sourceColumn: valor_liquido
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column forma_pagamento
+		dataType: string
+		lineageTag: dce18220-1e6b-4997-9e6d-1f6da5121a45
+		summarizeBy: none
+		sourceColumn: forma_pagamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente_novo
+		dataType: string
+		lineageTag: 2865f3aa-a0ce-4c7a-b3f0-ca544e672884
+		summarizeBy: none
+		sourceColumn: cliente_novo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vendas = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\vendas.xlsx"), null, true),
+				    vendas_Sheet = Fonte{[Item="vendas",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(vendas_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_venda", Int64.Type}, {"data", Int64.Type}, {"codigo_filial", Int64.Type}, {"codigo_cliente", Int64.Type}, {"codigo_profissional", Int64.Type}, {"codigo_vendedor", Int64.Type}, {"codigo_usuario", Int64.Type}, {"codigo_midia", Int64.Type}, {"valor_bruto", Int64.Type}, {"valor_desconto", type number}, {"valor_liquido", type number}, {"forma_pagamento", type text}, {"cliente_novo", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

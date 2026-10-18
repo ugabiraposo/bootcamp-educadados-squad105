@@ -1,0 +1,32 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["calendario","cidades","filiais","grupos_servico","itens_venda","metas_quantidade","metas_valor","profissionais","servicos","vendas","vendedores"]
+
+ref table calendario
+ref table DateTableTemplate_34e28ad4-7e82-4cc3-84d5-46d00dcf28f7
+ref table LocalDateTable_90d5cd5a-efac-4552-b2b4-05499a8b75c0
+ref table LocalDateTable_8979d286-7995-47d0-9b84-0c9711a1e0c7
+ref table cidades
+ref table filiais
+ref table grupos_servico
+ref table itens_venda
+ref table metas_quantidade
+ref table metas_valor
+ref table profissionais
+ref table servicos
+ref table vendas
+ref table vendedores
+
+ref cultureInfo pt-BR
+
