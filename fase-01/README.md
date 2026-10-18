@@ -18,9 +18,14 @@ O desafio consiste em analisar o desempenho das vendas, identificar resultados r
 
 Para isso, utilizamos o estudo de caso da **Rede Aurora Odontologia**, uma empresa fictícia criada para o contexto do bootcamp.
 
+
 <div align="center">
-  <img src="../assets/aurora_branco_horizontal.png" alt="Rede Aurora Odontologia" width="190">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../assets/aurora_branco_horizontal.png">
+    <img src="../assets/aurora_preto_horizontal.png" alt="Rede Aurora Odontologia" width="190">
+  </picture>
 </div>
+
 
 ## Nosso objetivo
 
