@@ -1,0 +1,102 @@
+table filiais
+	lineageTag: 31436c85-8749-4069-ba6a-40242687c471
+
+	column codigo_filial
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f00f67f-1fcc-42a3-9682-6cfa0e269633
+		summarizeBy: none
+		sourceColumn: codigo_filial
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome
+		dataType: string
+		lineageTag: 46067250-2f83-4593-b71d-2d9fa1cb4732
+		summarizeBy: none
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_abreviado
+		dataType: string
+		lineageTag: 450cd09f-22b2-438c-8b0b-0de4e2908a91
+		summarizeBy: none
+		sourceColumn: nome_abreviado
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_cidade
+		dataType: int64
+		formatString: 0
+		lineageTag: acafcd70-3226-49b0-9797-c328a05264b8
+		summarizeBy: none
+		sourceColumn: codigo_cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column regional
+		dataType: string
+		lineageTag: 8a29d2c7-17ac-4baa-ad9b-aa8d9f67b34d
+		summarizeBy: none
+		sourceColumn: regional
+
+		annotation SummarizationSetBy = Automatic
+
+	column cluster
+		dataType: string
+		lineageTag: 1471f6be-39e0-43ac-8bf7-de75172a9f67
+		summarizeBy: none
+		sourceColumn: cluster
+
+		annotation SummarizationSetBy = Automatic
+
+	column sabado_dia_util
+		dataType: string
+		lineageTag: 37000f7c-0ea3-45ec-8531-662e1ed9a6fb
+		summarizeBy: none
+		sourceColumn: sabado_dia_util
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidade_ativa
+		dataType: string
+		lineageTag: e959e759-bf38-4959-b3d5-7e02dd886a33
+		summarizeBy: none
+		sourceColumn: unidade_ativa
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_inauguracao
+		dataType: int64
+		formatString: 0
+		lineageTag: 77736d74-26b6-4b25-839e-8d8b3d01e2e7
+		summarizeBy: sum
+		sourceColumn: data_inauguracao
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_encerramento
+		dataType: int64
+		formatString: 0
+		lineageTag: 4f9c2ac4-a72d-49c1-b35c-936f4643816a
+		summarizeBy: sum
+		sourceColumn: data_encerramento
+
+		annotation SummarizationSetBy = Automatic
+
+	partition filiais = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\filiais.xlsx"), null, true),
+				    filiais_Sheet = Fonte{[Item="filiais",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(filiais_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_filial", Int64.Type}, {"nome", type text}, {"nome_abreviado", type text}, {"codigo_cidade", Int64.Type}, {"regional", type text}, {"cluster", type text}, {"sabado_dia_util", type text}, {"unidade_ativa", type text}, {"data_inauguracao", Int64.Type}, {"data_encerramento", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

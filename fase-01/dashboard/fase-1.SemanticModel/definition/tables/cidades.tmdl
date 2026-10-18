@@ -1,0 +1,88 @@
+table cidades
+	lineageTag: 4e75c66b-473e-4fc9-a419-d5a9b7b29d4a
+
+	column codigo_cidade
+		dataType: int64
+		formatString: 0
+		lineageTag: 58221908-fe1d-4034-8433-6c9bae4fee93
+		summarizeBy: none
+		sourceColumn: codigo_cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: 007015e5-1c08-4993-9971-4931386df30f
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column uf
+		dataType: string
+		lineageTag: d3347fdb-1c6f-4ae2-89f1-3ef827cbc766
+		summarizeBy: none
+		sourceColumn: uf
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: string
+		lineageTag: b9d0b640-5d78-4bf3-8b54-cc4f61066558
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column regiao
+		dataType: string
+		lineageTag: e81e0e1f-2f1b-443e-8232-b7daaa6927b9
+		summarizeBy: none
+		sourceColumn: regiao
+
+		annotation SummarizationSetBy = Automatic
+
+	column latitude
+		dataType: double
+		lineageTag: eb587a39-ee28-4c79-a460-b66928069bb9
+		summarizeBy: none
+		sourceColumn: latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column longitude
+		dataType: double
+		lineageTag: 2a1d1572-ed49-471c-87b3-3d4a0398067b
+		summarizeBy: none
+		sourceColumn: longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column populacao_aprox
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c06188e-acae-4be8-a4dc-83fa86bb5c00
+		summarizeBy: none
+		sourceColumn: populacao_aprox
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cidades = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\cidades.xlsx"), null, true),
+				    cidades_Sheet = Fonte{[Item="cidades",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(cidades_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_cidade", Int64.Type}, {"cidade", type text}, {"uf", type text}, {"estado", type text}, {"regiao", type text}, {"latitude", type number}, {"longitude", type number}, {"populacao_aprox", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

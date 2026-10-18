@@ -1,0 +1,53 @@
+table servicos
+	lineageTag: fc0f97b0-2f64-4f1f-953e-bb935e14b6c8
+
+	column codigo_servico
+		dataType: int64
+		formatString: 0
+		lineageTag: 344d1666-f524-49e8-8462-9a6bd1b8f4cd
+		summarizeBy: none
+		sourceColumn: codigo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column servico
+		dataType: string
+		lineageTag: 3aa07edc-be18-486a-adc5-8867d1e12f3e
+		summarizeBy: none
+		sourceColumn: servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_grupo_servico
+		dataType: int64
+		formatString: 0
+		lineageTag: 5544c1b5-2419-422c-938c-8b090c75ad10
+		summarizeBy: none
+		sourceColumn: codigo_grupo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_tabela
+		dataType: int64
+		formatString: 0
+		lineageTag: 35d54986-78d2-494d-9f4c-f88c2dc0d119
+		summarizeBy: sum
+		sourceColumn: valor_tabela
+
+		annotation SummarizationSetBy = Automatic
+
+	partition servicos = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\servicos.xlsx"), null, true),
+				    servicos_Sheet = Fonte{[Item="servicos",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(servicos_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_servico", Int64.Type}, {"servico", type text}, {"codigo_grupo_servico", Int64.Type}, {"valor_tabela", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

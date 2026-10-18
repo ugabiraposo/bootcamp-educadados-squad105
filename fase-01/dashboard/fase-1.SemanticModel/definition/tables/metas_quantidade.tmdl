@@ -1,0 +1,96 @@
+table metas_quantidade
+	lineageTag: 98f4970a-daa2-4bc0-ae46-7c30776d0caf
+
+	column codigo_meta_quantidade
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ea2052a-a2a5-4113-b0f1-ca9fbb3f764a
+		summarizeBy: sum
+		sourceColumn: codigo_meta_quantidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_filial
+		dataType: int64
+		formatString: 0
+		lineageTag: 959387fc-d3eb-4dcf-8f89-1713680fdbcc
+		summarizeBy: none
+		sourceColumn: codigo_filial
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: c4283734-8c82-4944-8535-8750421d3d01
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column nivel
+		dataType: string
+		lineageTag: fb762ae8-7d72-45eb-8c00-56bbd657a1de
+		summarizeBy: none
+		sourceColumn: nivel
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_grupo_servico
+		dataType: int64
+		formatString: 0
+		lineageTag: bfef41a1-211f-4474-b689-d7bad7c2e9f6
+		summarizeBy: none
+		sourceColumn: codigo_grupo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_servico
+		dataType: int64
+		formatString: 0
+		lineageTag: a6d3d889-6b37-4238-b7e8-793f0705c83a
+		summarizeBy: sum
+		sourceColumn: codigo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_vendedor
+		dataType: string
+		lineageTag: 01242fea-339d-42fd-a252-8d339dd7aefc
+		summarizeBy: none
+		sourceColumn: codigo_vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_profissional
+		dataType: string
+		lineageTag: b0c5fa27-0eaf-4088-9154-91ef15bb8b76
+		summarizeBy: none
+		sourceColumn: codigo_profissional
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta_quantidade
+		dataType: int64
+		formatString: 0
+		lineageTag: d00e5724-023b-49c7-a6dc-870fc4aa0057
+		summarizeBy: sum
+		sourceColumn: meta_quantidade
+
+		annotation SummarizationSetBy = Automatic
+
+	partition metas_quantidade = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\metas_quantidade.xlsx"), null, true),
+				    metas_quantidade_Sheet = Fonte{[Item="metas_quantidade",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(metas_quantidade_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_meta_quantidade", Int64.Type}, {"codigo_filial", Int64.Type}, {"mes", Int64.Type}, {"nivel", type text}, {"codigo_grupo_servico", Int64.Type}, {"codigo_servico", Int64.Type}, {"codigo_vendedor", type any}, {"codigo_profissional", type any}, {"meta_quantidade", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

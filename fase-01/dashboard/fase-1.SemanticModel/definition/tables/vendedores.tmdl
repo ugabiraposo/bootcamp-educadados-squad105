@@ -1,0 +1,53 @@
+table vendedores
+	lineageTag: 0c235ee2-8548-42cc-af81-5020886b3a31
+
+	column codigo_vendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: 77ed7d3a-78d3-4f42-8ded-145f64d4cc33
+		summarizeBy: sum
+		sourceColumn: codigo_vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome
+		dataType: string
+		lineageTag: b4cfeb5f-c45c-4049-84e8-72a12bb84a1a
+		summarizeBy: none
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_filial
+		dataType: int64
+		formatString: 0
+		lineageTag: a32dc1d7-1a6a-4e0e-a6b1-3b4177bbf656
+		summarizeBy: none
+		sourceColumn: codigo_filial
+
+		annotation SummarizationSetBy = Automatic
+
+	column ativo
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 10438dca-fc4a-4ba1-89a0-ea0cc6893173
+		summarizeBy: none
+		sourceColumn: ativo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vendedores = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\vendedores.xlsx"), null, true),
+				    vendedores_Sheet = Fonte{[Item="vendedores",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(vendedores_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_vendedor", Int64.Type}, {"nome", type text}, {"codigo_filial", Int64.Type}, {"ativo", type logical}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

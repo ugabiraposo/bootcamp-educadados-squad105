@@ -1,0 +1,72 @@
+table itens_venda
+	lineageTag: 072c6883-a670-42d2-9ad3-4152bc04ea59
+
+	column codigo_item_venda
+		dataType: int64
+		formatString: 0
+		lineageTag: 33838904-8ec6-4f31-9dbe-4c59b93612bd
+		summarizeBy: sum
+		sourceColumn: codigo_item_venda
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_venda
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e561d24-39b8-44d4-a4ef-83f29705db7f
+		summarizeBy: none
+		sourceColumn: codigo_venda
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_servico
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ccd81f3-51f1-4764-8ec5-0fbca19cafcd
+		summarizeBy: none
+		sourceColumn: codigo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantidade
+		dataType: int64
+		formatString: 0
+		lineageTag: 11142d86-a352-46e2-88c9-18c9e8d04712
+		summarizeBy: sum
+		sourceColumn: quantidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_unitario
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e3d9675-7bc5-4b90-95d0-19a1bf23a723
+		summarizeBy: sum
+		sourceColumn: valor_unitario
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_total
+		dataType: int64
+		formatString: 0
+		lineageTag: ac62cf1c-8aae-4f51-9b5f-c65d9c34e028
+		summarizeBy: sum
+		sourceColumn: valor_total
+
+		annotation SummarizationSetBy = Automatic
+
+	partition itens_venda = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\itens_venda.xlsx"), null, true),
+				    itens_venda_Sheet = Fonte{[Item="itens_venda",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(itens_venda_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_item_venda", Int64.Type}, {"codigo_venda", Int64.Type}, {"codigo_servico", Int64.Type}, {"quantidade", Int64.Type}, {"valor_unitario", Int64.Type}, {"valor_total", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

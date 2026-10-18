@@ -1,0 +1,61 @@
+table profissionais
+	lineageTag: 04502e6d-b79b-4187-9f01-65fad1a24542
+
+	column codigo_profissional
+		dataType: int64
+		formatString: 0
+		lineageTag: ed61c29c-fd03-4141-9657-ad28869d4e3e
+		summarizeBy: sum
+		sourceColumn: codigo_profissional
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome
+		dataType: string
+		lineageTag: b84efd75-6613-446c-a575-fa8e03f3c207
+		summarizeBy: none
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column especialidade
+		dataType: string
+		lineageTag: ce63ed09-adbf-471a-ac2a-1b59454eec4f
+		summarizeBy: none
+		sourceColumn: especialidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_filial
+		dataType: int64
+		formatString: 0
+		lineageTag: b8fa4503-0fc0-494d-b798-6d85e1315d6f
+		summarizeBy: none
+		sourceColumn: codigo_filial
+
+		annotation SummarizationSetBy = Automatic
+
+	column ativo
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 746296b9-66c5-421a-acbe-f46b021c1a09
+		summarizeBy: none
+		sourceColumn: ativo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition profissionais = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\profissionais.xlsx"), null, true),
+				    profissionais_Sheet = Fonte{[Item="profissionais",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(profissionais_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_profissional", Int64.Type}, {"nome", type text}, {"especialidade", type text}, {"codigo_filial", Int64.Type}, {"ativo", type logical}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

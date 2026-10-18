@@ -1,0 +1,35 @@
+table grupos_servico
+	lineageTag: e57eb1cf-34de-4859-a8ab-5057b2bb9fcd
+
+	column codigo_grupo_servico
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b2e74e9-445c-4386-b222-4600fc948684
+		summarizeBy: none
+		sourceColumn: codigo_grupo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo_servico
+		dataType: string
+		lineageTag: 16cef727-8adc-4962-9a6f-d3585bce8053
+		summarizeBy: none
+		sourceColumn: grupo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	partition grupos_servico = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\grupos_servico.xlsx"), null, true),
+				    grupos_servico_Sheet = Fonte{[Item="grupos_servico",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(grupos_servico_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_grupo_servico", Int64.Type}, {"grupo_servico", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

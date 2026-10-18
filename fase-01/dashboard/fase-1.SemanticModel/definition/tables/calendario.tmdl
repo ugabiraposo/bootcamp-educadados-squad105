@@ -1,0 +1,172 @@
+table calendario
+	lineageTag: fea6cb85-efc6-4b79-891a-8572d064a459
+
+	column data
+		dataType: int64
+		formatString: 0
+		lineageTag: 7492829e-6589-4079-9a10-f7119f0af935
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano
+		dataType: int64
+		formatString: 0
+		lineageTag: af4bc221-d3ba-4b86-a19e-776ce9dc36a1
+		summarizeBy: sum
+		sourceColumn: ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_numero
+		dataType: int64
+		formatString: 0
+		lineageTag: b5efc523-32ba-4ae9-8fb3-3ce0b0714578
+		summarizeBy: sum
+		sourceColumn: mes_numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_nome
+		dataType: string
+		lineageTag: bf4e879c-3a89-4438-b0b9-95d3cc2d71bc
+		summarizeBy: none
+		sourceColumn: mes_nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_abreviado
+		dataType: string
+		lineageTag: 86ec38ba-8e35-452a-9b88-f4b3cc812e4e
+		summarizeBy: none
+		sourceColumn: mes_abreviado
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_ano
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2a8fb8e6-5c87-4eb7-9dac-0b5aa8def51b
+		summarizeBy: none
+		sourceColumn: mes_ano
+
+		variation Variação
+			isDefault
+			relationship: 569ebef4-5ad1-454f-a376-78143b829296
+			defaultHierarchy: LocalDateTable_90d5cd5a-efac-4552-b2b4-05499a8b75c0.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ano_mes
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 73cdf8e6-e3a5-40c1-98eb-e10d88fd676b
+		summarizeBy: none
+		sourceColumn: ano_mes
+
+		variation Variação
+			isDefault
+			relationship: b8cdd408-b6a9-442b-b369-1899c62845c9
+			defaultHierarchy: LocalDateTable_8979d286-7995-47d0-9b84-0c9711a1e0c7.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: 916e10e1-56dc-4d3d-a51f-0eee6187e138
+		summarizeBy: sum
+		sourceColumn: trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column semana_do_ano
+		dataType: int64
+		formatString: 0
+		lineageTag: bcce9a3e-0ab4-4067-bb65-7ef7e377f434
+		summarizeBy: sum
+		sourceColumn: semana_do_ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia
+		dataType: int64
+		formatString: 0
+		lineageTag: c4104f98-bb05-49f8-9f5f-f8baa5552eb7
+		summarizeBy: sum
+		sourceColumn: dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana_numero
+		dataType: int64
+		formatString: 0
+		lineageTag: 1eb912dd-ffd4-4fd7-a2ab-a22984d68ed4
+		summarizeBy: sum
+		sourceColumn: dia_semana_numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana_nome
+		dataType: string
+		lineageTag: 4db720fb-76bc-4ea6-9535-61fb6bd876f0
+		summarizeBy: none
+		sourceColumn: dia_semana_nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column fim_de_semana
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5638d94e-74f2-405d-bb00-e0220630e330
+		summarizeBy: none
+		sourceColumn: fim_de_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column feriado_nacional
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6fcc64c0-33a5-452a-8ac7-8d7391627fd5
+		summarizeBy: none
+		sourceColumn: feriado_nacional
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_feriado_nacional
+		dataType: string
+		lineageTag: 6f29366e-4580-4012-9299-24a8567cd188
+		summarizeBy: none
+		sourceColumn: nome_feriado_nacional
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_util
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8cb7c340-91c4-4c2b-bd6b-0187d2592774
+		summarizeBy: none
+		sourceColumn: dia_util
+
+		annotation SummarizationSetBy = Automatic
+
+	partition calendario = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\calendario.xlsx"), null, true),
+				    calendario_Sheet = Fonte{[Item="calendario",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(calendario_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"data", Int64.Type}, {"ano", Int64.Type}, {"mes_numero", Int64.Type}, {"mes_nome", type text}, {"mes_abreviado", type text}, {"mes_ano", type date}, {"ano_mes", type date}, {"trimestre", Int64.Type}, {"semana_do_ano", Int64.Type}, {"dia", Int64.Type}, {"dia_semana_numero", Int64.Type}, {"dia_semana_nome", type text}, {"fim_de_semana", type logical}, {"feriado_nacional", type logical}, {"nome_feriado_nacional", type text}, {"dia_util", type logical}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
