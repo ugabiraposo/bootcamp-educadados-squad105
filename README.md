@@ -45,17 +45,27 @@ Cada fase possui sua própria documentação, permitindo acompanhar a evolução
 
 As próximas fases serão documentadas conforme seus desafios forem oficialmente disponibilizados.
 
+
 ## Tecnologias e ferramentas
 
 **Dados e Business Intelligence**
 
-Power BI · Power Query · DAX · Excel · SQL · Python
+![Power BI](https://img.shields.io/badge/Power_BI-192D35?style=flat-square)
+![Power Query](https://img.shields.io/badge/Power_Query-192D35?style=flat-square)
+![DAX](https://img.shields.io/badge/DAX-192D35?style=flat-square)
+![Excel](https://img.shields.io/badge/Excel-192D35?style=flat-square)
+![SQL](https://img.shields.io/badge/SQL-192D35?style=flat-square)
+![Python](https://img.shields.io/badge/Python-192D35?style=flat-square&logo=python&logoColor=white)
 
 **Desenvolvimento e colaboração**
 
-Git · GitHub · VS Code · ClickUp
+![Git](https://img.shields.io/badge/Git-192D35?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-192D35?style=flat-square&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-192D35?style=flat-square)
+![ClickUp](https://img.shields.io/badge/ClickUp-192D35?style=flat-square&logo=clickup&logoColor=white)
 
 As ferramentas fazem parte do percurso de aprendizagem e desenvolvimento do Squad. Cada fase documentará as tecnologias efetivamente utilizadas em sua execução.
+
 
 ## Materiais do case
 
