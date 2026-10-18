@@ -1,4 +1,3 @@
-
 <div align="center">
   <img src="assets/squad105-banner-unico.png" alt="Squad 105 — Bootcamp Educadados" width="100%">
 </div>
@@ -19,14 +18,19 @@ Este repositório reúne a documentação das seis fases do projeto, registrando
 
 Cada fase possui sua própria documentação, permitindo acompanhar a evolução do projeto de forma clara e organizada.
 
+
+
+
 ## Integrantes
 
-| Integrante | GitHub |
-|:--|:--|
-| **Gabriela Raposo** | [@ugabiraposo](https://github.com/ugabiraposo) |
-| **Pablo Leon Pereira** | [@pablopereira70](https://github.com/pablopereira70) |
-| **Pedro Azevedo** | A adicionar |
-| **Isabela Colling** | A adicionar |
+| Integrante | GitHub | LinkedIn |
+|:--|:--|:--|
+| **Gabriela Raposo** | [![GitHub](https://img.shields.io/badge/@ugabiraposo-24292F?style=flat-square&logo=github&logoColor=white)](https://github.com/ugabiraposo) | [![LinkedIn](https://img.shields.io/badge/in-@gabiiraposo-0A66C2?style=flat-square&labelColor=075A9B)](https://www.linkedin.com/in/gabiiraposo/) |
+| **Pablo Leon Pereira** | [![GitHub](https://img.shields.io/badge/@pablopereira70-24292F?style=flat-square&logo=github&logoColor=white)](https://github.com/pablopereira70) | [![LinkedIn](https://img.shields.io/badge/in-@pablopereira70-0A66C2?style=flat-square&labelColor=075A9B)](https://www.linkedin.com/in/pablopereira70/) |
+| **Pedro Azevedo** | A adicionar | A adicionar |
+| **Isabela Colling** | A adicionar | A adicionar |
+
+
 
 ## Fases do Bootcamp
 
