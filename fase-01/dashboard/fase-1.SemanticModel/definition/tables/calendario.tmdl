@@ -2,13 +2,20 @@ table calendario
 	lineageTag: fea6cb85-efc6-4b79-891a-8572d064a459
 
 	column data
-		dataType: int64
-		formatString: 0
+		dataType: dateTime
+		formatString: Long Date
 		lineageTag: 7492829e-6589-4079-9a10-f7119f0af935
 		summarizeBy: none
 		sourceColumn: data
 
+		variation Variação
+			isDefault
+			relationship: 77baa947-6eb8-4f5d-9cc4-12da9fbc043d
+			defaultHierarchy: LocalDateTable_dd9b61e8-cfcb-4e05-a908-e7d216380c35.'Hierarquia de datas'
+
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column ano
 		dataType: int64
@@ -45,36 +52,20 @@ table calendario
 		annotation SummarizationSetBy = Automatic
 
 	column mes_ano
-		dataType: dateTime
-		formatString: Long Date
+		dataType: string
 		lineageTag: 2a8fb8e6-5c87-4eb7-9dac-0b5aa8def51b
 		summarizeBy: none
 		sourceColumn: mes_ano
 
-		variation Variação
-			isDefault
-			relationship: 569ebef4-5ad1-454f-a376-78143b829296
-			defaultHierarchy: LocalDateTable_90d5cd5a-efac-4552-b2b4-05499a8b75c0.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
 
-		annotation UnderlyingDateTimeDataType = Date
-
 	column ano_mes
-		dataType: dateTime
-		formatString: Long Date
+		dataType: string
 		lineageTag: 73cdf8e6-e3a5-40c1-98eb-e10d88fd676b
 		summarizeBy: none
 		sourceColumn: ano_mes
 
-		variation Variação
-			isDefault
-			relationship: b8cdd408-b6a9-442b-b369-1899c62845c9
-			defaultHierarchy: LocalDateTable_8979d286-7995-47d0-9b84-0c9711a1e0c7.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
 
 	column trimestre
 		dataType: int64
@@ -162,7 +153,7 @@ table calendario
 				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\calendario.xlsx"), null, true),
 				    calendario_Sheet = Fonte{[Item="calendario",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(calendario_Sheet, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"data", Int64.Type}, {"ano", Int64.Type}, {"mes_numero", Int64.Type}, {"mes_nome", type text}, {"mes_abreviado", type text}, {"mes_ano", type date}, {"ano_mes", type date}, {"trimestre", Int64.Type}, {"semana_do_ano", Int64.Type}, {"dia", Int64.Type}, {"dia_semana_numero", Int64.Type}, {"dia_semana_nome", type text}, {"fim_de_semana", type logical}, {"feriado_nacional", type logical}, {"nome_feriado_nacional", type text}, {"dia_util", type logical}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"data", type date}, {"ano", Int64.Type}, {"mes_numero", Int64.Type}, {"mes_nome", type text}, {"mes_abreviado", type text}, {"mes_ano", type text}, {"ano_mes", type text}, {"trimestre", Int64.Type}, {"semana_do_ano", Int64.Type}, {"dia", Int64.Type}, {"dia_semana_numero", Int64.Type}, {"dia_semana_nome", type text}, {"fim_de_semana", type logical}, {"feriado_nacional", type logical}, {"nome_feriado_nacional", type text}, {"dia_util", type logical}})
 				in
 				    #"Tipo Alterado"
 

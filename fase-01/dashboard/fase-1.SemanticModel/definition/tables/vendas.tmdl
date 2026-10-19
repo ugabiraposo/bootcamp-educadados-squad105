@@ -11,13 +11,15 @@ table vendas
 		annotation SummarizationSetBy = Automatic
 
 	column data
-		dataType: int64
-		formatString: 0
+		dataType: dateTime
+		formatString: Long Date
 		lineageTag: 13bc8d47-37fa-4d9c-b96b-da75e10535f4
 		summarizeBy: none
 		sourceColumn: data
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column codigo_filial
 		dataType: int64
@@ -74,7 +76,7 @@ table vendas
 		annotation SummarizationSetBy = Automatic
 
 	column valor_bruto
-		dataType: int64
+		dataType: double
 		formatString: 0
 		lineageTag: 8fbb112f-75c6-45b0-8308-277a7bcf9068
 		summarizeBy: sum
@@ -125,7 +127,7 @@ table vendas
 				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\vendas.xlsx"), null, true),
 				    vendas_Sheet = Fonte{[Item="vendas",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(vendas_Sheet, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_venda", Int64.Type}, {"data", Int64.Type}, {"codigo_filial", Int64.Type}, {"codigo_cliente", Int64.Type}, {"codigo_profissional", Int64.Type}, {"codigo_vendedor", Int64.Type}, {"codigo_usuario", Int64.Type}, {"codigo_midia", Int64.Type}, {"valor_bruto", Int64.Type}, {"valor_desconto", type number}, {"valor_liquido", type number}, {"forma_pagamento", type text}, {"cliente_novo", type text}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_venda", Int64.Type}, {"data", type date}, {"codigo_filial", Int64.Type}, {"codigo_cliente", Int64.Type}, {"codigo_profissional", Int64.Type}, {"codigo_vendedor", Int64.Type}, {"codigo_usuario", Int64.Type}, {"codigo_midia", Int64.Type}, {"valor_bruto", type number}, {"valor_desconto", type number}, {"valor_liquido", type number}, {"forma_pagamento", type text}, {"cliente_novo", type text}})
 				in
 				    #"Tipo Alterado"
 

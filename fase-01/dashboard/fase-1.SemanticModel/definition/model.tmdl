@@ -15,8 +15,6 @@ annotation PBI_QueryOrder = ["calendario","cidades","filiais","grupos_servico","
 
 ref table calendario
 ref table DateTableTemplate_34e28ad4-7e82-4cc3-84d5-46d00dcf28f7
-ref table LocalDateTable_90d5cd5a-efac-4552-b2b4-05499a8b75c0
-ref table LocalDateTable_8979d286-7995-47d0-9b84-0c9711a1e0c7
 ref table cidades
 ref table filiais
 ref table grupos_servico
@@ -27,6 +25,11 @@ ref table profissionais
 ref table servicos
 ref table vendas
 ref table vendedores
+ref table LocalDateTable_dd9b61e8-cfcb-4e05-a908-e7d216380c35
+ref table LocalDateTable_7b63a100-0cd7-4c60-ace9-f52d2f031a86
+ref table LocalDateTable_75a110c7-8417-490d-9df4-979896d1cc54
+ref table LocalDateTable_0d826b55-4287-4e67-a484-b00447ee88db
+ref table LocalDateTable_f4c68073-9369-49ee-9711-282b34654614
 
 ref cultureInfo pt-BR
 

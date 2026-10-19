@@ -68,22 +68,36 @@ table filiais
 		annotation SummarizationSetBy = Automatic
 
 	column data_inauguracao
-		dataType: int64
-		formatString: 0
+		dataType: dateTime
+		formatString: Long Date
 		lineageTag: 77736d74-26b6-4b25-839e-8d8b3d01e2e7
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: data_inauguracao
 
+		variation Variação
+			isDefault
+			relationship: 1b3263e6-760b-4f8b-840f-fbfb0c53efb6
+			defaultHierarchy: LocalDateTable_7b63a100-0cd7-4c60-ace9-f52d2f031a86.'Hierarquia de datas'
+
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column data_encerramento
-		dataType: int64
-		formatString: 0
+		dataType: dateTime
+		formatString: Long Date
 		lineageTag: 4f9c2ac4-a72d-49c1-b35c-936f4643816a
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: data_encerramento
 
+		variation Variação
+			isDefault
+			relationship: 5ebce716-a39d-405e-bca3-a2b1298c13ca
+			defaultHierarchy: LocalDateTable_75a110c7-8417-490d-9df4-979896d1cc54.'Hierarquia de datas'
+
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	partition filiais = m
 		mode: import
@@ -92,7 +106,7 @@ table filiais
 				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\filiais.xlsx"), null, true),
 				    filiais_Sheet = Fonte{[Item="filiais",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(filiais_Sheet, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_filial", Int64.Type}, {"nome", type text}, {"nome_abreviado", type text}, {"codigo_cidade", Int64.Type}, {"regional", type text}, {"cluster", type text}, {"sabado_dia_util", type text}, {"unidade_ativa", type text}, {"data_inauguracao", Int64.Type}, {"data_encerramento", Int64.Type}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_filial", Int64.Type}, {"nome", type text}, {"nome_abreviado", type text}, {"codigo_cidade", Int64.Type}, {"regional", type text}, {"cluster", type text}, {"sabado_dia_util", type text}, {"unidade_ativa", type text}, {"data_inauguracao", type date}, {"data_encerramento", type date}})
 				in
 				    #"Tipo Alterado"
 

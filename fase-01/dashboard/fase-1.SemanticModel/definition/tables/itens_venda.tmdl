@@ -38,7 +38,7 @@ table itens_venda
 		annotation SummarizationSetBy = Automatic
 
 	column valor_unitario
-		dataType: int64
+		dataType: double
 		formatString: 0
 		lineageTag: 5e3d9675-7bc5-4b90-95d0-19a1bf23a723
 		summarizeBy: sum
@@ -47,7 +47,7 @@ table itens_venda
 		annotation SummarizationSetBy = Automatic
 
 	column valor_total
-		dataType: int64
+		dataType: double
 		formatString: 0
 		lineageTag: ac62cf1c-8aae-4f51-9b5f-c65d9c34e028
 		summarizeBy: sum
@@ -62,7 +62,7 @@ table itens_venda
 				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\itens_venda.xlsx"), null, true),
 				    itens_venda_Sheet = Fonte{[Item="itens_venda",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(itens_venda_Sheet, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_item_venda", Int64.Type}, {"codigo_venda", Int64.Type}, {"codigo_servico", Int64.Type}, {"quantidade", Int64.Type}, {"valor_unitario", Int64.Type}, {"valor_total", Int64.Type}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_item_venda", Int64.Type}, {"codigo_venda", Int64.Type}, {"codigo_servico", Int64.Type}, {"quantidade", Int64.Type}, {"valor_unitario", type number}, {"valor_total", type number}})
 				in
 				    #"Tipo Alterado"
 
