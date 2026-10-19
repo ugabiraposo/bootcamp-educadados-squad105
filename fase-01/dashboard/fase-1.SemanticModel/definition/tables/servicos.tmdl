@@ -28,7 +28,7 @@ table servicos
 		annotation SummarizationSetBy = Automatic
 
 	column valor_tabela
-		dataType: int64
+		dataType: double
 		formatString: 0
 		lineageTag: 35d54986-78d2-494d-9f4c-f88c2dc0d119
 		summarizeBy: sum
@@ -43,7 +43,7 @@ table servicos
 				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\servicos.xlsx"), null, true),
 				    servicos_Sheet = Fonte{[Item="servicos",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(servicos_Sheet, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_servico", Int64.Type}, {"servico", type text}, {"codigo_grupo_servico", Int64.Type}, {"valor_tabela", Int64.Type}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_servico", Int64.Type}, {"servico", type text}, {"codigo_grupo_servico", Int64.Type}, {"valor_tabela", type number}})
 				in
 				    #"Tipo Alterado"
 

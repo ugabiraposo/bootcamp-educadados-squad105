@@ -20,13 +20,20 @@ table metas_quantidade
 		annotation SummarizationSetBy = Automatic
 
 	column mes
-		dataType: int64
-		formatString: 0
+		dataType: dateTime
+		formatString: Long Date
 		lineageTag: c4283734-8c82-4944-8535-8750421d3d01
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: mes
 
+		variation Variação
+			isDefault
+			relationship: e7699a3b-25cd-4b68-8024-6c3e10840a2d
+			defaultHierarchy: LocalDateTable_0d826b55-4287-4e67-a484-b00447ee88db.'Hierarquia de datas'
+
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column nivel
 		dataType: string
@@ -55,17 +62,19 @@ table metas_quantidade
 		annotation SummarizationSetBy = Automatic
 
 	column codigo_vendedor
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: 01242fea-339d-42fd-a252-8d339dd7aefc
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: codigo_vendedor
 
 		annotation SummarizationSetBy = Automatic
 
 	column codigo_profissional
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: b0c5fa27-0eaf-4088-9154-91ef15bb8b76
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: codigo_profissional
 
 		annotation SummarizationSetBy = Automatic
@@ -86,7 +95,7 @@ table metas_quantidade
 				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\metas_quantidade.xlsx"), null, true),
 				    metas_quantidade_Sheet = Fonte{[Item="metas_quantidade",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(metas_quantidade_Sheet, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_meta_quantidade", Int64.Type}, {"codigo_filial", Int64.Type}, {"mes", Int64.Type}, {"nivel", type text}, {"codigo_grupo_servico", Int64.Type}, {"codigo_servico", Int64.Type}, {"codigo_vendedor", type any}, {"codigo_profissional", type any}, {"meta_quantidade", Int64.Type}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_meta_quantidade", Int64.Type}, {"codigo_filial", Int64.Type}, {"mes", type date}, {"nivel", type text}, {"codigo_grupo_servico", Int64.Type}, {"codigo_servico", Int64.Type}, {"codigo_vendedor", Int64.Type}, {"codigo_profissional", Int64.Type}, {"meta_quantidade", Int64.Type}})
 				in
 				    #"Tipo Alterado"
 
