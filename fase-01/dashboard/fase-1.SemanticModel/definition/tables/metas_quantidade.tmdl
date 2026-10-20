@@ -26,11 +26,6 @@ table metas_quantidade
 		summarizeBy: none
 		sourceColumn: mes
 
-		variation Variação
-			isDefault
-			relationship: e7699a3b-25cd-4b68-8024-6c3e10840a2d
-			defaultHierarchy: LocalDateTable_0d826b55-4287-4e67-a484-b00447ee88db.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date

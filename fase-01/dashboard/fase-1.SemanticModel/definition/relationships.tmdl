@@ -81,13 +81,26 @@ relationship 5ebce716-a39d-405e-bca3-a2b1298c13ca
 	fromColumn: filiais.data_encerramento
 	toColumn: LocalDateTable_75a110c7-8417-490d-9df4-979896d1cc54.Date
 
-relationship e7699a3b-25cd-4b68-8024-6c3e10840a2d
-	joinOnDateBehavior: datePartOnly
-	fromColumn: metas_quantidade.mes
-	toColumn: LocalDateTable_0d826b55-4287-4e67-a484-b00447ee88db.Date
+relationship 8a95d19e-6972-e018-4d2c-0a2c5c6d22b9
+	isActive: false
+	fromColumn: metas_quantidade.codigo_profissional
+	toColumn: profissionais.codigo_profissional
 
-relationship 2df746a3-21bf-4c23-b1b9-91f053192b5a
-	joinOnDateBehavior: datePartOnly
+relationship 7feb801d-169a-b4d7-d783-94636b5762f7
+	isActive: false
+	fromColumn: metas_quantidade.codigo_vendedor
+	toColumn: vendedores.codigo_vendedor
+
+relationship 6f759d8d-c1a8-74da-1cc7-5b7448f134a5
+	fromColumn: metas_quantidade.mes
+	toColumn: calendario.data
+
+relationship b3094470-d315-cf9e-e052-b289946a3203
+	isActive: false
+	fromColumn: metas_valor.codigo_profissional
+	toColumn: profissionais.codigo_profissional
+
+relationship 73efa987-a5f8-8351-500b-e0a66fa63662
 	fromColumn: metas_valor.mes
-	toColumn: LocalDateTable_f4c68073-9369-49ee-9711-282b34654614.Date
+	toColumn: calendario.data
 
