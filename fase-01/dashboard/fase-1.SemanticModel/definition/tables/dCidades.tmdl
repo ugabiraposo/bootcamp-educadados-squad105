@@ -1,4 +1,4 @@
-table cidades
+table dCidades
 	lineageTag: 4e75c66b-473e-4fc9-a419-d5a9b7b29d4a
 
 	column codigo_cidade
@@ -71,7 +71,7 @@ table cidades
 
 		annotation SummarizationSetBy = Automatic
 
-	partition cidades = m
+	partition dCidades = m
 		mode: import
 		source =
 				let
@@ -81,6 +81,8 @@ table cidades
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_cidade", Int64.Type}, {"cidade", type text}, {"uf", type text}, {"estado", type text}, {"regiao", type text}, {"latitude", type number}, {"longitude", type number}, {"populacao_aprox", Int64.Type}})
 				in
 				    #"Tipo Alterado"
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navegação
 

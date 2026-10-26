@@ -1,4 +1,4 @@
-table servicos
+table dServicos
 	lineageTag: fc0f97b0-2f64-4f1f-953e-bb935e14b6c8
 
 	column codigo_servico
@@ -36,7 +36,7 @@ table servicos
 
 		annotation SummarizationSetBy = Automatic
 
-	partition servicos = m
+	partition dServicos = m
 		mode: import
 		source =
 				let
@@ -46,6 +46,8 @@ table servicos
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_servico", Int64.Type}, {"servico", type text}, {"codigo_grupo_servico", Int64.Type}, {"valor_tabela", type number}})
 				in
 				    #"Tipo Alterado"
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navegação
 

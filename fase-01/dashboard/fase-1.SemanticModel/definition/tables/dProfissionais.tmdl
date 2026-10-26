@@ -1,11 +1,11 @@
-table profissionais
+table dProfissionais
 	lineageTag: 04502e6d-b79b-4187-9f01-65fad1a24542
 
 	column codigo_profissional
 		dataType: int64
 		formatString: 0
 		lineageTag: ed61c29c-fd03-4141-9657-ad28869d4e3e
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: codigo_profissional
 
 		annotation SummarizationSetBy = Automatic
@@ -30,7 +30,7 @@ table profissionais
 		dataType: int64
 		formatString: 0
 		lineageTag: b8fa4503-0fc0-494d-b798-6d85e1315d6f
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: codigo_filial
 
 		annotation SummarizationSetBy = Automatic
@@ -44,7 +44,7 @@ table profissionais
 
 		annotation SummarizationSetBy = Automatic
 
-	partition profissionais = m
+	partition dProfissionais = m
 		mode: import
 		source =
 				let
@@ -54,6 +54,8 @@ table profissionais
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_profissional", Int64.Type}, {"nome", type text}, {"especialidade", type text}, {"codigo_filial", Int64.Type}, {"ativo", type logical}})
 				in
 				    #"Tipo Alterado"
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navegação
 

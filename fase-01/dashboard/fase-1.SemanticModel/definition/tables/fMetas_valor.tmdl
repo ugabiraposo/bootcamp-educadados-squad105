@@ -1,4 +1,4 @@
-table metas_valor
+table fMetas_valor
 	lineageTag: 34526a14-a043-421f-aeb8-df9285f4ccae
 
 	column codigo_meta_valor
@@ -26,11 +26,6 @@ table metas_valor
 		summarizeBy: none
 		sourceColumn: mes
 
-		variation Variação
-			isDefault
-			relationship: 2df746a3-21bf-4c23-b1b9-91f053192b5a
-			defaultHierarchy: LocalDateTable_f4c68073-9369-49ee-9711-282b34654614.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -47,7 +42,7 @@ table metas_valor
 		dataType: int64
 		formatString: 0
 		lineageTag: 76d5a70b-9acd-4ae3-81ab-2fa79c17bf95
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: codigo_grupo_servico
 
 		annotation SummarizationSetBy = Automatic
@@ -65,7 +60,7 @@ table metas_valor
 		dataType: int64
 		formatString: 0
 		lineageTag: 55aa97f3-7f9c-4f4d-82db-2af6970a2b74
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: codigo_vendedor
 
 		annotation SummarizationSetBy = Automatic
@@ -74,7 +69,7 @@ table metas_valor
 		dataType: int64
 		formatString: 0
 		lineageTag: 5c7e1626-aff2-4f36-9eb7-5d82a6ded93b
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: codigo_profissional
 
 		annotation SummarizationSetBy = Automatic
@@ -89,7 +84,7 @@ table metas_valor
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	partition metas_valor = m
+	partition fMetas_valor = m
 		mode: import
 		source =
 				let
@@ -99,6 +94,8 @@ table metas_valor
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_meta_valor", Int64.Type}, {"codigo_filial", Int64.Type}, {"mes", type date}, {"nivel", type text}, {"codigo_grupo_servico", Int64.Type}, {"codigo_servico", Int64.Type}, {"codigo_vendedor", Int64.Type}, {"codigo_profissional", Int64.Type}, {"meta_valor", type number}})
 				in
 				    #"Tipo Alterado"
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navegação
 

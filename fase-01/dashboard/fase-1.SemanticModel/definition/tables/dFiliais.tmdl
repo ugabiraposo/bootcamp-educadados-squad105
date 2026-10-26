@@ -1,4 +1,4 @@
-table filiais
+table dFiliais
 	lineageTag: 31436c85-8749-4069-ba6a-40242687c471
 
 	column codigo_filial
@@ -99,7 +99,7 @@ table filiais
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	partition filiais = m
+	partition dFiliais = m
 		mode: import
 		source =
 				let
@@ -109,6 +109,8 @@ table filiais
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_filial", Int64.Type}, {"nome", type text}, {"nome_abreviado", type text}, {"codigo_cidade", Int64.Type}, {"regional", type text}, {"cluster", type text}, {"sabado_dia_util", type text}, {"unidade_ativa", type text}, {"data_inauguracao", type date}, {"data_encerramento", type date}})
 				in
 				    #"Tipo Alterado"
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navegação
 

@@ -1,4 +1,4 @@
-table itens_venda
+table fItens_venda
 	lineageTag: 072c6883-a670-42d2-9ad3-4152bc04ea59
 
 	column codigo_item_venda
@@ -55,7 +55,7 @@ table itens_venda
 
 		annotation SummarizationSetBy = Automatic
 
-	partition itens_venda = m
+	partition fItens_venda = m
 		mode: import
 		source =
 				let
@@ -65,6 +65,8 @@ table itens_venda
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_item_venda", Int64.Type}, {"codigo_venda", Int64.Type}, {"codigo_servico", Int64.Type}, {"quantidade", Int64.Type}, {"valor_unitario", type number}, {"valor_total", type number}})
 				in
 				    #"Tipo Alterado"
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navegação
 
