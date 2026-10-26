@@ -110,7 +110,7 @@ table LocalDateTable_75a110c7-8417-490d-9df4-979896d1cc54
 
 	partition LocalDateTable_75a110c7-8417-490d-9df4-979896d1cc54 = calculated
 		mode: import
-		source = Calendar(Date(Year(MIN('filiais'[data_encerramento])), 1, 1), Date(Year(MAX('filiais'[data_encerramento])), 12, 31))
+		source = Calendar(Date(Year(MIN('dFiliais'[data_encerramento])), 1, 1), Date(Year(MAX('dFiliais'[data_encerramento])), 12, 31))
 
 	annotation __PBI_LocalDateTable = true
 

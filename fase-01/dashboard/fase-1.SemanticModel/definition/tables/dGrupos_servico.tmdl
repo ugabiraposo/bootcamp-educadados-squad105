@@ -1,4 +1,4 @@
-table grupos_servico
+table dGrupos_servico
 	lineageTag: e57eb1cf-34de-4859-a8ab-5057b2bb9fcd
 
 	column codigo_grupo_servico
@@ -18,7 +18,7 @@ table grupos_servico
 
 		annotation SummarizationSetBy = Automatic
 
-	partition grupos_servico = m
+	partition dGrupos_servico = m
 		mode: import
 		source =
 				let
@@ -28,6 +28,8 @@ table grupos_servico
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_grupo_servico", Int64.Type}, {"grupo_servico", type text}})
 				in
 				    #"Tipo Alterado"
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navegação
 
