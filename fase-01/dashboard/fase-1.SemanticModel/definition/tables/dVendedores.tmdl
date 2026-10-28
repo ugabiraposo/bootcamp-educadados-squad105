@@ -10,11 +10,11 @@ table dVendedores
 
 		annotation SummarizationSetBy = Automatic
 
-	column nome
+	column vendedor
 		dataType: string
 		lineageTag: b4cfeb5f-c45c-4049-84e8-72a12bb84a1a
 		summarizeBy: none
-		sourceColumn: nome
+		sourceColumn: vendedor
 
 		annotation SummarizationSetBy = Automatic
 
@@ -43,9 +43,10 @@ table dVendedores
 				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\vendedores.xlsx"), null, true),
 				    vendedores_Sheet = Fonte{[Item="vendedores",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(vendedores_Sheet, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_vendedor", Int64.Type}, {"nome", type text}, {"codigo_filial", Int64.Type}, {"ativo", type logical}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_vendedor", Int64.Type}, {"nome", type text}, {"codigo_filial", Int64.Type}, {"ativo", type logical}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"nome", "vendedor"}})
 				in
-				    #"Tipo Alterado"
+				    #"Colunas Renomeadas"
 
 	changedProperty = Name
 

@@ -37,6 +37,9 @@ table dCalendario
 		lineageTag: bf4e879c-3a89-4438-b0b9-95d3cc2d71bc
 		summarizeBy: none
 		sourceColumn: mes_nome
+		sortByColumn: mes_numero
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -45,6 +48,9 @@ table dCalendario
 		lineageTag: 86ec38ba-8e35-452a-9b88-f4b3cc812e4e
 		summarizeBy: none
 		sourceColumn: mes_abreviado
+		sortByColumn: mes_numero
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -53,6 +59,9 @@ table dCalendario
 		lineageTag: 2a8fb8e6-5c87-4eb7-9dac-0b5aa8def51b
 		summarizeBy: none
 		sourceColumn: mes_ano
+		sortByColumn: ano_mes
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -105,6 +114,9 @@ table dCalendario
 		lineageTag: 4db720fb-76bc-4ea6-9535-61fb6bd876f0
 		summarizeBy: none
 		sourceColumn: dia_semana_nome
+		sortByColumn: dia_semana_numero
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

@@ -1,73 +1,3 @@
-relationship AutoDetected_7a14bb6c-a687-410a-94a2-443a3858b08d
-	fromColumn: fVendas.data
-	toColumn: dCalendario.data
-
-relationship AutoDetected_43a34418-3440-4841-853a-0ef5cf7585a1
-	fromColumn: dFiliais.codigo_cidade
-	toColumn: dCidades.codigo_cidade
-
-relationship AutoDetected_d835fb02-7bb3-4c84-9668-6f0f61c9258d
-	fromColumn: fMetas_quantidade.codigo_filial
-	toColumn: dFiliais.codigo_filial
-
-relationship AutoDetected_4c78f823-5b32-436c-a123-366d33d093a2
-	fromColumn: fMetas_valor.codigo_filial
-	toColumn: dFiliais.codigo_filial
-
-relationship AutoDetected_a086912e-dee9-428e-b6c1-34ea1e7aa868
-	isActive: false
-	fromColumn: dProfissionais.codigo_filial
-	toColumn: dFiliais.codigo_filial
-
-relationship AutoDetected_f3a243a0-caf2-4808-a2af-b705bbc2de35
-	fromColumn: fVendas.codigo_filial
-	toColumn: dFiliais.codigo_filial
-
-relationship AutoDetected_0905f3d3-72d3-48e3-8c48-4c1c971e3734
-	isActive: false
-	fromColumn: dVendedores.codigo_filial
-	toColumn: dFiliais.codigo_filial
-
-relationship AutoDetected_167ae591-f70a-4a2c-a8e8-49dfb1ca8a83
-	isActive: false
-	fromColumn: fMetas_quantidade.codigo_grupo_servico
-	toColumn: dGrupos_servico.codigo_grupo_servico
-
-relationship AutoDetected_68651aa7-63a2-4236-acae-2ec567df7d17
-	isActive: false
-	fromColumn: fMetas_valor.codigo_grupo_servico
-	toColumn: dGrupos_servico.codigo_grupo_servico
-
-relationship AutoDetected_31aa3664-c87d-4722-9e65-9f513b4333f8
-	fromColumn: dServicos.codigo_grupo_servico
-	toColumn: dGrupos_servico.codigo_grupo_servico
-
-relationship AutoDetected_36bd3830-41ab-4d26-a549-10135ff9b32c
-	fromColumn: fItens_venda.codigo_venda
-	toColumn: fVendas.codigo_venda
-
-relationship AutoDetected_42531090-ad6a-447e-96f4-2fab9786ab41
-	fromColumn: fItens_venda.codigo_servico
-	toColumn: dServicos.codigo_servico
-
-relationship AutoDetected_e4b28da7-52d2-4d4d-a0d9-fc8c80eb8497
-	isActive: false
-	fromColumn: fMetas_quantidade.codigo_servico
-	toColumn: dServicos.codigo_servico
-
-relationship AutoDetected_108268ab-e95b-4997-a488-7c2a1001557e
-	isActive: false
-	fromColumn: fMetas_valor.codigo_servico
-	toColumn: dServicos.codigo_servico
-
-relationship AutoDetected_fc5ca06b-ba85-4e72-97c1-60d396cb8aec
-	fromColumn: fVendas.codigo_profissional
-	toColumn: dProfissionais.codigo_profissional
-
-relationship AutoDetected_349172e7-e6ed-421c-9fa6-ab1377dc4512
-	fromColumn: fVendas.codigo_vendedor
-	toColumn: dVendedores.codigo_vendedor
-
 relationship 1b3263e6-760b-4f8b-840f-fbfb0c53efb6
 	joinOnDateBehavior: datePartOnly
 	fromColumn: dFiliais.data_inauguracao
@@ -78,27 +8,97 @@ relationship 5ebce716-a39d-405e-bca3-a2b1298c13ca
 	fromColumn: dFiliais.data_encerramento
 	toColumn: LocalDateTable_75a110c7-8417-490d-9df4-979896d1cc54.Date
 
-relationship 8a95d19e-6972-e018-4d2c-0a2c5c6d22b9
+relationship 483ec07c-3d47-acb1-1711-ad37bf693c16
+	fromColumn: fVendas.codigo_filial
+	toColumn: dFiliais.codigo_filial
+
+relationship ea2da2bb-d9a3-2f9c-43c8-ab7a2e3f9804
+	fromColumn: fVendas.data
+	toColumn: dCalendario.data
+
+relationship d87e1c52-ef79-ae20-9699-d90958c0b66e
+	fromColumn: fVendas.codigo_profissional
+	toColumn: dProfissionais.codigo_profissional
+
+relationship 09969605-ef9b-6bf0-1fa0-356ecf1e276b
+	fromColumn: dFiliais.codigo_cidade
+	toColumn: dCidades.codigo_cidade
+
+relationship 4b3f2225-f794-31c4-1ec2-606bfaced1e5
+	fromColumn: fItens_venda.codigo_venda
+	toColumn: fVendas.codigo_venda
+
+relationship c3722604-a2e5-b93d-4bf4-2ed8cbe87c4c
+	fromColumn: fItens_venda.codigo_servico
+	toColumn: dServicos.codigo_servico
+
+relationship 3f2577ad-3e15-c815-e779-3ceac4dabbee
+	fromColumn: fMetas_quantidade.codigo_filial
+	toColumn: dFiliais.codigo_filial
+
+relationship 56060f71-4d8d-4a6a-161b-c63025112c46
+	isActive: false
+	fromColumn: fMetas_quantidade.codigo_grupo_servico
+	toColumn: dGrupos_servico.codigo_grupo_servico
+
+relationship 17dfa7e6-b77e-feb9-0284-f77b3b73366f
 	fromColumn: fMetas_quantidade.codigo_profissional
 	toColumn: dProfissionais.codigo_profissional
 
-relationship 7feb801d-169a-b4d7-d783-94636b5762f7
+relationship e68d9da5-6644-87e1-19bb-a2cc48f35dd2
+	isActive: false
+	fromColumn: fMetas_quantidade.codigo_servico
+	toColumn: dServicos.codigo_servico
+
+relationship dd2e4de1-6f64-e763-f60f-c026619c772c
 	fromColumn: fMetas_quantidade.codigo_vendedor
 	toColumn: dVendedores.codigo_vendedor
 
-relationship 6f759d8d-c1a8-74da-1cc7-5b7448f134a5
-	fromColumn: fMetas_quantidade.mes
-	toColumn: dCalendario.data
+relationship 0a5b39b5-2679-c67b-4f83-c10de2ae1d70
+	fromColumn: fMetas_valor.codigo_filial
+	toColumn: dFiliais.codigo_filial
 
-relationship b3094470-d315-cf9e-e052-b289946a3203
+relationship 7fcf5d2f-c767-e295-5c26-6d6dd0b9387a
+	isActive: false
+	fromColumn: fMetas_valor.codigo_grupo_servico
+	toColumn: dGrupos_servico.codigo_grupo_servico
+
+relationship 7a9116a1-3d23-5228-1a2d-fb20adc9d884
 	fromColumn: fMetas_valor.codigo_profissional
 	toColumn: dProfissionais.codigo_profissional
 
-relationship 73efa987-a5f8-8351-500b-e0a66fa63662
+relationship 792ff7cd-442a-064a-1d72-7bd237bbdafc
+	isActive: false
+	fromColumn: fMetas_valor.codigo_servico
+	toColumn: dServicos.codigo_servico
+
+relationship d1fc04ac-d98a-bf7a-04a0-cc93899fc30c
+	fromColumn: fMetas_valor.codigo_vendedor
+	toColumn: dVendedores.codigo_vendedor
+
+relationship 88636205-d463-b277-dff0-266712ebff36
+	fromColumn: fMetas_quantidade.mes
+	toColumn: dCalendario.data
+
+relationship d2333b72-da48-2073-a25c-97c9aa2fdb44
 	fromColumn: fMetas_valor.mes
 	toColumn: dCalendario.data
 
-relationship bfe8a5d8-0900-f688-7e6d-d20768e4a25a
-	fromColumn: fMetas_valor.codigo_vendedor
+relationship cf84391a-0e3a-60ac-34ad-bae20d057768
+	isActive: false
+	fromColumn: dProfissionais.codigo_filial
+	toColumn: dFiliais.codigo_filial
+
+relationship ec34692b-bef7-b2d2-3652-47998958b65f
+	isActive: false
+	fromColumn: dVendedores.codigo_filial
+	toColumn: dFiliais.codigo_filial
+
+relationship 9e6aa48b-3941-e255-74ed-947ed66aa95b
+	fromColumn: dServicos.codigo_grupo_servico
+	toColumn: dGrupos_servico.codigo_grupo_servico
+
+relationship 85f612ed-489e-6752-7190-b54cfa96fe1d
+	fromColumn: fVendas.codigo_vendedor
 	toColumn: dVendedores.codigo_vendedor
 
