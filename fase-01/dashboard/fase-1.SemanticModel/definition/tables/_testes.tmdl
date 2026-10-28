@@ -1,0 +1,29 @@
+table _testes
+	lineageTag: 6694fa33-f342-40cb-be7e-cccf151dc5a2
+
+	measure 'vendas - valor liquido' = SUM(fVendas[valor_liquido])
+		lineageTag: 271f845e-db46-4d63-b3b6-d73fc23ca773
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% meta vendedor' = DIVIDE([vendas - valor liquido] - [meta valor por vendedor], [meta valor por vendedor])
+		formatString: 0%;-0%;0%
+		lineageTag: 7fffd888-25db-47dc-8515-9856717e9d20
+
+	measure 'meta valor por vendedor' = CALCULATE(SUM(fMetas_valor[meta_valor]), USERELATIONSHIP(fMetas_valor[codigo_vendedor], dVendedores[codigo_vendedor]))
+		lineageTag: f8f06868-c68b-4575-9212-743ed0ee34f2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition _testes = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

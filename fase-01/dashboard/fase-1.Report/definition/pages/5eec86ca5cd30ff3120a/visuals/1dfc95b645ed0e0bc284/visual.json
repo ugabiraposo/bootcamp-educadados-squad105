@@ -1,0 +1,113 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "1dfc95b645ed0e0bc284",
+  "position": {
+    "x": 23.333333333333336,
+    "y": 323.33333333333337,
+    "z": 0,
+    "height": 433.33333333333337,
+    "width": 853.33333333333337,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fVendas"
+                    }
+                  },
+                  "Property": "codigo_venda"
+                }
+              },
+              "queryRef": "fVendas.codigo_venda",
+              "nativeQueryRef": "codigo_venda"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fVendas"
+                    }
+                  },
+                  "Property": "data"
+                }
+              },
+              "queryRef": "fVendas.data",
+              "nativeQueryRef": "data"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fVendas"
+                    }
+                  },
+                  "Property": "codigo_profissional"
+                }
+              },
+              "queryRef": "fVendas.codigo_profissional",
+              "nativeQueryRef": "codigo_profissional"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fVendas"
+                    }
+                  },
+                  "Property": "codigo_filial"
+                }
+              },
+              "queryRef": "fVendas.codigo_filial",
+              "nativeQueryRef": "codigo_filial"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fVendas"
+                    }
+                  },
+                  "Property": "codigo_vendedor"
+                }
+              },
+              "queryRef": "fVendas.codigo_vendedor",
+              "nativeQueryRef": "codigo_vendedor"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fVendas"
+                        }
+                      },
+                      "Property": "valor_liquido"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fVendas.valor_liquido)",
+              "nativeQueryRef": "Soma de valor_liquido"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -18,11 +18,11 @@ table dFiliais
 
 		annotation SummarizationSetBy = Automatic
 
-	column nome_abreviado
+	column filial_abreviado
 		dataType: string
 		lineageTag: 450cd09f-22b2-438c-8b0b-0de4e2908a91
 		summarizeBy: none
-		sourceColumn: nome_abreviado
+		sourceColumn: filial_abreviado
 
 		annotation SummarizationSetBy = Automatic
 
@@ -106,9 +106,10 @@ table dFiliais
 				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\filiais.xlsx"), null, true),
 				    filiais_Sheet = Fonte{[Item="filiais",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(filiais_Sheet, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_filial", Int64.Type}, {"nome", type text}, {"nome_abreviado", type text}, {"codigo_cidade", Int64.Type}, {"regional", type text}, {"cluster", type text}, {"sabado_dia_util", type text}, {"unidade_ativa", type text}, {"data_inauguracao", type date}, {"data_encerramento", type date}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_filial", Int64.Type}, {"nome", type text}, {"nome_abreviado", type text}, {"codigo_cidade", Int64.Type}, {"regional", type text}, {"cluster", type text}, {"sabado_dia_util", type text}, {"unidade_ativa", type text}, {"data_inauguracao", type date}, {"data_encerramento", type date}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"nome_abreviado", "filial_abreviado"}})
 				in
-				    #"Tipo Alterado"
+				    #"Colunas Renomeadas"
 
 	changedProperty = Name
 

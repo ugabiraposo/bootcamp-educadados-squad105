@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "36d411ec030dd05a8208",
+  "position": {
+    "x": 23.333333333333336,
+    "y": 780,
+    "z": 7,
+    "height": 273.33333333333337,
+    "width": 683.33333333333337,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dVendedores"
+                    }
+                  },
+                  "Property": "vendedor"
+                }
+              },
+              "queryRef": "dVendedores.nome",
+              "nativeQueryRef": "vendedor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_testes"
+                    }
+                  },
+                  "Property": "vendas - valor liquido"
+                }
+              },
+              "queryRef": "_testes.vendas - valor liquido",
+              "nativeQueryRef": "vendas - valor liquido"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_testes"
+                    }
+                  },
+                  "Property": "meta valor por vendedor"
+                }
+              },
+              "queryRef": "_testes.meta valor por vendedor",
+              "nativeQueryRef": "meta valor por vendedor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_testes"
+                    }
+                  },
+                  "Property": "% meta vendedor"
+                }
+              },
+              "queryRef": "_testes.% meta vendedor",
+              "nativeQueryRef": "% meta vendedor"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
