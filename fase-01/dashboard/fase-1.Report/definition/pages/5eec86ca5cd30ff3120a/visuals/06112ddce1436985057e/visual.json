@@ -1,0 +1,83 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "06112ddce1436985057e",
+  "position": {
+    "x": 1312,
+    "y": 476.25,
+    "z": 11000,
+    "height": 167.5,
+    "width": 571.25,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dProfissionais"
+                    }
+                  },
+                  "Property": "profissional"
+                }
+              },
+              "queryRef": "dProfissionais.profissional",
+              "nativeQueryRef": "profissional"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "valor líquido"
+                }
+              },
+              "queryRef": "Medidas base.valor líquido",
+              "nativeQueryRef": "valor líquido"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "meta de valor nível"
+                }
+              },
+              "queryRef": "Medidas metas.meta de valor nível",
+              "nativeQueryRef": "meta de valor nível"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dProfissionais"
+                  }
+                },
+                "Property": "profissional"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

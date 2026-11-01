@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "4b0c595a02809e2c405d",
+  "position": {
+    "x": 24,
+    "y": 282,
+    "z": 7000,
+    "height": 652,
+    "width": 570,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dCidades"
+                    }
+                  },
+                  "Property": "cidade"
+                }
+              },
+              "queryRef": "dCidades.cidade",
+              "nativeQueryRef": "cidade",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas percentuais"
+                    }
+                  },
+                  "Property": "atingimento valor cidade %"
+                }
+              },
+              "queryRef": "Medidas percentuais.atingimento valor cidade %",
+              "nativeQueryRef": "atingimento valor cidade %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas percentuais"
+                  }
+                },
+                "Property": "atingimento valor cidade %"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

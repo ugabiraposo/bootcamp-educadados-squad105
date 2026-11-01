@@ -1,0 +1,21 @@
+table 'Medidas especiais'
+	lineageTag: 5eb9ac54-b2e6-4195-85ae-ba7ca1a03003
+
+	measure 'rótulo especial' = "R$ " & [valor líquido] & " | QTD " & [quantidade de itens]
+		lineageTag: 499d1c09-83c9-4317-899f-12b25571e957
+
+	measure 'status da meta nível' = if([atingimento quantidade nível %] >= 1, "🔺 ", "🔻 ")
+		lineageTag: 2bf6c5a0-4bf7-4d2e-805a-a94b823f6337
+
+	partition 'Medidas especiais' = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

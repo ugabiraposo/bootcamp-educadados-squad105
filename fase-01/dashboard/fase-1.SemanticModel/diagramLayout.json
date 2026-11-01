@@ -5,13 +5,13 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 0
+        "y": 24970.356030850828
       },
       "nodes": [
         {
           "location": {
             "x": 1077.3585770118596,
-            "y": 1311.19781013876
+            "y": 38732.92305138112
           },
           "nodeIndex": "dCalendario",
           "nodeLineageTag": "fea6cb85-efc6-4b79-891a-8572d064a459",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 1088.7935918767762,
-            "y": 512.25177388828035
+            "y": 37933.977015130644
           },
           "nodeIndex": "dCidades",
           "nodeLineageTag": "4e75c66b-473e-4fc9-a419-d5a9b7b29d4a",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 1089.5969669987796,
-            "y": 880.65789588106031
+            "y": 38302.383137123426
           },
           "nodeIndex": "dFiliais",
           "nodeLineageTag": "31436c85-8749-4069-ba6a-40242687c471",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 2222.4357584250556,
-            "y": 1230.8066905236251
+            "y": 38652.531931765989
           },
           "nodeIndex": "dGrupos_servico",
           "nodeLineageTag": "e57eb1cf-34de-4859-a8ab-5057b2bb9fcd",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 1069.6192101927652,
-            "y": 1630.8676257915772
+            "y": 39052.592867033934
           },
           "nodeIndex": "dProfissionais",
           "nodeLineageTag": "04502e6d-b79b-4187-9f01-65fad1a24542",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 1062.0592896834339,
-            "y": 1800.8127692297426
+            "y": 39222.5380104721
           },
           "nodeIndex": "dVendedores",
           "nodeLineageTag": "0c235ee2-8548-42cc-af81-5020886b3a31",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 1484.3770421610432,
-            "y": 616.611757641195
+            "y": 38038.336998883562
           },
           "nodeIndex": "dServicos",
           "nodeLineageTag": "fc0f97b0-2f64-4f1f-953e-bb935e14b6c8",
@@ -102,7 +102,7 @@
         {
           "location": {
             "x": 654.73055454590337,
-            "y": 363.5594306924562
+            "y": 37785.284671934816
           },
           "nodeIndex": "fItens_venda",
           "nodeLineageTag": "072c6883-a670-42d2-9ad3-4152bc04ea59",
@@ -115,7 +115,7 @@
         {
           "location": {
             "x": 1787.1165153153263,
-            "y": 1398.8277694695432
+            "y": 38820.5530107119
           },
           "nodeIndex": "fMetas_quantidade",
           "nodeLineageTag": "98f4970a-daa2-4bc0-ae46-7c30776d0caf",
@@ -128,7 +128,7 @@
         {
           "location": {
             "x": 1691.0060534448698,
-            "y": 869.98752492232063
+            "y": 38291.712766164681
           },
           "nodeIndex": "fMetas_valor",
           "nodeLineageTag": "34526a14-a043-421f-aeb8-df9285f4ccae",
@@ -141,7 +141,7 @@
         {
           "location": {
             "x": 671.47756807739268,
-            "y": 1185.9085644981926
+            "y": 38607.633805740552
           },
           "nodeIndex": "fVendas",
           "nodeLineageTag": "b0b38e8f-85a5-41be-8ce9-5904c693d0c9",
@@ -153,11 +153,62 @@
         },
         {
           "location": {
-            "x": 1851.7052038791521,
-            "y": 875.8131461661286
+            "x": 1891.4925151509358,
+            "y": 37861.74960262001
           },
-          "nodeIndex": "_testes",
-          "nodeLineageTag": "6694fa33-f342-40cb-be7e-cccf151dc5a2",
+          "nodeIndex": "Medidas base",
+          "nodeLineageTag": "3e07e608-f740-450a-b1ad-4f9c5071dbc8",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1851.7052038791521,
+            "y": 28425.406369304168
+          },
+          "nodeIndex": "Medidas metas",
+          "nodeLineageTag": "4f2dfb4e-855c-4f1b-a106-86af5e2773ff",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1851.7052038791521,
+            "y": 26213.440712481217
+          },
+          "nodeIndex": "Medidas especiais",
+          "nodeLineageTag": "5eb9ac54-b2e6-4195-85ae-ba7ca1a03003",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1851.7052038791521,
+            "y": 23496.157802189235
+          },
+          "nodeIndex": "Medidas percentuais",
+          "nodeLineageTag": "154b801d-6caa-4cc2-9a96-01deff88e3fb",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1851.7052038791521,
+            "y": 20225.883477691514
+          },
+          "nodeIndex": "aux_níveis",
           "size": {
             "height": 104,
             "width": 234
@@ -166,7 +217,7 @@
         }
       ],
       "name": "Todas as tabelas",
-      "zoomValue": 25.404770893136252,
+      "zoomValue": 35.18709747529109,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": true,

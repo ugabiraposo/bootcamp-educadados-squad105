@@ -1,0 +1,104 @@
+table 'Medidas metas'
+	lineageTag: 4f2dfb4e-855c-4f1b-a106-86af5e2773ff
+
+	measure 'meta de quantidade' = sum(fMetas_quantidade[meta_quantidade])
+		formatString: 0
+		lineageTag: d7b50de8-4076-4e68-a0fc-33f91eb2d636
+
+	measure 'meta de valor' = sum(fMetas_valor[meta_valor])
+		lineageTag: fb9f2666-d3bd-4f54-a5d6-d39b218e166a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'meta de valor nível' = ```
+			
+			VAR NivelSelecionado = SELECTEDVALUE('aux_níveis'[Nível])
+			var MetaNivelSelecionado = CALCULATE(
+			        [meta de valor], 
+			        fMetas_valor[nivel] = NivelSelecionado
+			    )
+			RETURN MetaNivelSelecionado
+			```
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: ee0b0550-dfb8-4006-b389-e4d59299411e
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'meta de quantidade nível' = ```
+			
+			VAR NivelSelecionado = SELECTEDVALUE('aux_níveis'[Nível])
+			var MetaNivelSelecionado = CALCULATE(
+			        [meta de quantidade], 
+			        fMetas_valor[nivel] = NivelSelecionado
+			    )
+			RETURN MetaNivelSelecionado
+			```
+		formatString: 0
+		lineageTag: fbd1f641-4700-47dc-b0db-f88cbef33f5c
+
+	measure 'meta de valor filial' = CALCULATE([meta de valor], fMetas_valor[nivel] = "Produto")
+		lineageTag: f37e1e36-a7a7-4123-898b-5e71484b274f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'meta de quantidade filial' = CALCULATE([meta de quantidade], fMetas_quantidade[nivel] = "Vendedor")
+		formatString: 0
+		lineageTag: dced8b15-ca8e-480d-892f-75e7ac2fccad
+
+	measure 'meta de valor cidade' = ```
+			CALCULATE([meta de valor filial], 
+			REMOVEFILTERS(dVendedores),
+			REMOVEFILTERS(dProfissionais),
+			REMOVEFILTERS(dGrupos_servico),
+			REMOVEFILTERS(dServicos),
+			REMOVEFILTERS(dFiliais[filial], dFiliais[filial_abreviado]))
+			```
+		lineageTag: 5217f4c6-503b-4505-adbc-076ba662df84
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'meta de quantidade cidade' = ```
+			CALCULATE([meta de quantidade filial], 
+			REMOVEFILTERS(dVendedores),
+			REMOVEFILTERS(dProfissionais),
+			REMOVEFILTERS(dGrupos_servico),
+			REMOVEFILTERS(dServicos),
+			REMOVEFILTERS(dFiliais[filial], dFiliais[filial_abreviado]))
+			```
+		formatString: 0
+		lineageTag: 90b45ed0-e735-497c-bfc5-e2fb95f325a8
+
+	measure 'meta de quantidade rede' =
+			CALCULATE([meta de quantidade filial],
+			REMOVEFILTERS(dFiliais),
+			REMOVEFILTERS(dVendedores),
+			REMOVEFILTERS(dProfissionais),
+			REMOVEFILTERS(dGrupos_servico),
+			REMOVEFILTERS(dServicos))
+		lineageTag: f45d4748-35bc-47ed-83a6-607befec9a75
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'meta de valor rede' =
+			CALCULATE([meta de valor filial],
+			REMOVEFILTERS(dFiliais),
+			REMOVEFILTERS(dVendedores),
+			REMOVEFILTERS(dProfissionais),
+			REMOVEFILTERS(dGrupos_servico),
+			REMOVEFILTERS(dServicos))
+		lineageTag: 265ab270-31a9-47f7-bf5f-b026cc0e820d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Medidas metas' = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

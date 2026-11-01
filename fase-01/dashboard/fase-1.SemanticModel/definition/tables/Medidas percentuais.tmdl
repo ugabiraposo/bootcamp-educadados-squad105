@@ -1,0 +1,47 @@
+table 'Medidas percentuais'
+	lineageTag: 154b801d-6caa-4cc2-9a96-01deff88e3fb
+
+	measure 'atingimento valor nível %' = divide([valor líquido], [meta de valor nível], "sem meta")
+		formatString: 0%;-0%;0%
+		lineageTag: 14c7993e-3cdf-4922-8155-dd89b2142c80
+
+	measure 'atingimento valor filial %' = divide([valor líquido], [meta de valor filial], "sem meta")
+		formatString: 0%;-0%;0%
+		lineageTag: 44665c2f-72d2-44ea-9daa-f83bcc5f8ee9
+
+	measure 'atingimento valor cidade %' = divide([valor líquido], [meta de valor cidade], "sem meta")
+		formatString: 0%;-0%;0%
+		lineageTag: 86056524-d0f3-48e9-951f-24904d58f553
+
+	measure 'atingimento valor rede %' = divide([valor líquido], 'Medidas metas'[meta de valor rede], "sem meta")
+		formatString: 0%;-0%;0%
+		lineageTag: 186efa91-233b-4f97-a6b2-80f163e9796f
+
+	measure 'atingimento quantidade nível %' = divide([quantidade de itens], 'Medidas metas'[meta de quantidade nível], "sem meta")
+		formatString: 0%;-0%;0%
+		lineageTag: 1fe60074-2e9f-445c-9cda-ad5c7597406d
+
+	measure 'atingimento quantidade filial %' = divide([quantidade de itens], 'Medidas metas'[meta de quantidade filial], "sem meta")
+		formatString: 0%;-0%;0%
+		lineageTag: 76cb8b6a-0f4b-4d02-a8b9-f383eb89be5e
+
+	measure 'atingimento quantidade cidade %' = divide([quantidade de itens], 'Medidas metas'[meta de quantidade cidade], "sem meta")
+		formatString: 0%;-0%;0%
+		lineageTag: b36c1b38-d0e6-41c1-b166-f5a49adb216a
+
+	measure 'atingimento quantidade rede %' = divide([quantidade de itens], 'Medidas metas'[meta de quantidade rede], "sem meta")
+		formatString: 0%;-0%;0%
+		lineageTag: a5e3ac61-7b52-4b8c-a241-88f23888ca25
+
+	partition 'Medidas percentuais' = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+
