@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "a81c489460d999d94809",
   "position": {
-    "x": 1460,
-    "y": 107.14285714285715,
+    "x": 1577.5,
+    "y": 107.5,
     "z": 14000,
     "height": 150,
     "width": 228,
@@ -20,14 +20,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas metas"
+                      "Entity": "Medidas base"
                     }
                   },
-                  "Property": "meta de valor cidade"
+                  "Property": "número de vendas"
                 }
               },
-              "queryRef": "Medidas metas.meta de valor cidade",
-              "nativeQueryRef": "meta de valor cidade"
+              "queryRef": "Medidas base.número de vendas",
+              "nativeQueryRef": "número de vendas"
             }
           ]
         }
@@ -39,10 +39,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas metas"
+                    "Entity": "Medidas base"
                   }
                 },
-                "Property": "meta de valor cidade"
+                "Property": "número de vendas"
               }
             },
             "direction": "Descending"

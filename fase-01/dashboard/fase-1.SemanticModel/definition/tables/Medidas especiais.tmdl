@@ -1,11 +1,44 @@
 table 'Medidas especiais'
-	lineageTag: 5eb9ac54-b2e6-4195-85ae-ba7ca1a03003
+	lineageTag: 1c862f21-c531-41d7-98d0-731ae36d51e1
 
-	measure 'rótulo especial' = "R$ " & [valor líquido] & " | QTD " & [quantidade de itens]
-		lineageTag: 499d1c09-83c9-4317-899f-12b25571e957
+	measure 'status val vendedor' =
+			CALCULATE( SWITCH(true(),
+			[val vendedor %] = "sem meta","FFFFFF",
+			[val vendedor %] > 1, "#D4EDDA",
+			[val vendedor %] < 1, "#F8D7DA"), fMetas_valor[nivel] = "Vendedor")
+		lineageTag: 7d01417f-afcd-47b6-bef2-533c01246de7
 
-	measure 'status da meta nível' = if([atingimento quantidade nível %] >= 1, "🔺 ", "🔻 ")
-		lineageTag: 2bf6c5a0-4bf7-4d2e-805a-a94b823f6337
+	measure 'status qtde vendedor' =
+			CALCULATE( SWITCH(true(),
+			[qtde vendedor %] = "sem meta","FFFFFF",
+			[qtde vendedor %] > 1, "#D4EDDA",
+			[qtde vendedor %] < 1, "#F8D7DA"), fMetas_quantidade[nivel] = "Vendedor")
+		lineageTag: b5e4162d-ba9a-45fd-a198-706bc84fc983
+
+	measure 'status val profissional' =
+			CALCULATE( SWITCH(true(),
+			[val profissional %] = "sem meta","FFFFFF",
+			[val profissional %] > 1, "#D4EDDA",
+			[val profissional %] < 1, "#F8D7DA"), fMetas_valor[nivel] = "Profissional")
+		lineageTag: 402b240c-b8d9-449a-b52e-958123c094bb
+
+	measure 'status qtde profissional' =
+			CALCULATE( SWITCH(true(),
+			[qtde profissional %] = "sem meta","FFFFFF",
+			[qtde profissional %] > 1, "#D4EDDA",
+			[qtde profissional %] < 1, "#F8D7DA"), fMetas_quantidade[nivel] = "Profissional")
+		lineageTag: 45a1e154-4505-49e0-b40f-f0ed183fdb5c
+
+	measure 'rótulo especial' =
+			
+			var valFormat = SWITCH(true(),
+			[valor líquido] > 999999999, format([valor líquido], "#\.###\.###\.###"),
+			[valor líquido] > 999999, format([valor líquido], "#\.###\.###"),
+			[valor líquido] > 999, format([valor líquido], "#\.###"),
+			format([valor líquido], "###"))
+			var qtdeFormat = if([número de vendas] > 999, format([número de vendas], "#\.###"), format([número de vendas], "###"))
+			return "R$ " & valformat & " | Qtd " & qtdeformat
+		lineageTag: 712cc494-5589-4975-ab6e-28474760c9ff
 
 	partition 'Medidas especiais' = m
 		mode: import
@@ -18,4 +51,6 @@ table 'Medidas especiais'
 				    #"Colunas Removidas"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
 

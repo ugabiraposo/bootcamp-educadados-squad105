@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "dfbe0aef30356da09811",
+  "position": {
+    "x": 252,
+    "y": 0,
+    "z": 14003,
+    "height": 150,
+    "width": 228,
+    "tabOrder": 14003
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "drillFilterOtherVisuals": true
+  }
+}

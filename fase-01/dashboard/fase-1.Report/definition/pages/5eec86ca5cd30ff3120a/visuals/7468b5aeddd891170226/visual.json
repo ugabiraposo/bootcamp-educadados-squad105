@@ -37,14 +37,45 @@
                       "Entity": "Medidas base"
                     }
                   },
-                  "Property": "quantidade de itens"
+                  "Property": "valor bruto"
                 }
               },
-              "queryRef": "Medidas base.quantidade de itens",
-              "nativeQueryRef": "quantidade de itens"
+              "queryRef": "Medidas base.valor bruto",
+              "nativeQueryRef": "valor bruto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "val grupos"
+                }
+              },
+              "queryRef": "Medidas metas.val grupos",
+              "nativeQueryRef": "val grupos"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dGrupos_servico"
+                  }
+                },
+                "Property": "grupo_servico"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "drillFilterOtherVisuals": true

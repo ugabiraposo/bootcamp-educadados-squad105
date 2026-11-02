@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "84d6992fb8c5e4b000c0",
   "position": {
-    "x": 1312,
-    "y": 842.85714285714289,
+    "x": 1311.4285714285713,
+    "y": 841.9591836734694,
     "z": 12000,
-    "height": 160,
-    "width": 488.57142857142861,
+    "height": 163.10204081632654,
+    "width": 573.0612244897959,
     "tabOrder": 12000
   },
   "visual": {
@@ -42,6 +42,20 @@
               },
               "queryRef": "Medidas base.valor bruto",
               "nativeQueryRef": "valor bruto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "val serviços"
+                }
+              },
+              "queryRef": "Medidas metas.val serviços",
+              "nativeQueryRef": "val serviços"
             }
           ]
         }

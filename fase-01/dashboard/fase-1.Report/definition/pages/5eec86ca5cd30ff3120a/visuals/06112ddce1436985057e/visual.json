@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "06112ddce1436985057e",
   "position": {
-    "x": 1312,
-    "y": 476.25,
+    "x": 1312.8571428571429,
+    "y": 468.57142857142861,
     "z": 11000,
     "height": 167.5,
     "width": 571.25,
@@ -51,11 +51,11 @@
                       "Entity": "Medidas metas"
                     }
                   },
-                  "Property": "meta de valor nível"
+                  "Property": "val profissional"
                 }
               },
-              "queryRef": "Medidas metas.meta de valor nível",
-              "nativeQueryRef": "meta de valor nível"
+              "queryRef": "Medidas metas.val profissional",
+              "nativeQueryRef": "val profissional"
             }
           ]
         }
@@ -64,16 +64,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dProfissionais"
+                    "Entity": "Medidas base"
                   }
                 },
-                "Property": "profissional"
+                "Property": "valor líquido"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }

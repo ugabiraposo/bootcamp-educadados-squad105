@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "853e5e07d3502d223b43",
   "position": {
-    "x": 1312,
-    "y": 654.28571428571433,
+    "x": 1311.4285714285713,
+    "y": 654.61224489795916,
     "z": 13000,
-    "height": 160,
-    "width": 488.57142857142861,
+    "height": 163.10204081632654,
+    "width": 573.0612244897959,
     "tabOrder": 13000
   },
   "visual": {
@@ -51,11 +51,11 @@
                       "Entity": "Medidas metas"
                     }
                   },
-                  "Property": "meta de valor nível"
+                  "Property": "val vendedor"
                 }
               },
-              "queryRef": "Medidas metas.meta de valor - nível",
-              "nativeQueryRef": "meta de valor nível"
+              "queryRef": "Medidas metas.val vendedor",
+              "nativeQueryRef": "val vendedor"
             }
           ]
         }

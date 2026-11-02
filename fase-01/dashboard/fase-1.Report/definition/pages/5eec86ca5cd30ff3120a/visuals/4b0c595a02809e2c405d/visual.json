@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "4b0c595a02809e2c405d",
   "position": {
-    "x": 24,
-    "y": 282,
+    "x": 23.333333333333336,
+    "y": 283.33333333333337,
     "z": 7000,
-    "height": 652,
+    "height": 270,
     "width": 570,
     "tabOrder": 7000
   },
@@ -39,14 +39,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas percentuais"
+                      "Entity": "Medidas base"
                     }
                   },
-                  "Property": "atingimento valor cidade %"
+                  "Property": "valor líquido"
                 }
               },
-              "queryRef": "Medidas percentuais.atingimento valor cidade %",
-              "nativeQueryRef": "atingimento valor cidade %"
+              "queryRef": "Medidas base.valor líquido",
+              "nativeQueryRef": "valor líquido"
             }
           ]
         }
@@ -58,10 +58,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas percentuais"
+                    "Entity": "Medidas base"
                   }
                 },
-                "Property": "atingimento valor cidade %"
+                "Property": "valor líquido"
               }
             },
             "direction": "Descending"
@@ -69,6 +69,47 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "dynamicLabelValue": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas especiais"
+                    }
+                  },
+                  "Property": "rótulo especial"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "highlightMatching": 1
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

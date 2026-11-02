@@ -7,7 +7,7 @@ table 'Medidas base'
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'número de vendas' = countrows(fVendas)
+	measure 'número de vendas' = DISTINCTCOUNT(fVendas[codigo_venda])
 		formatString: #,0
 		lineageTag: 7b613db3-ab36-479a-9bc9-d2694d6b29b8
 
@@ -20,6 +20,15 @@ table 'Medidas base'
 	measure 'quantidade de itens' = sum(fItens_venda[quantidade])
 		formatString: #,0
 		lineageTag: a3746fbe-5b00-4daf-a28d-db904c38467a
+
+	measure 'meta de valor' = sum(fMetas_valor[meta_valor])
+		lineageTag: 82fd6b2a-21e9-46dc-9752-31aff5fbf9fc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'meta de quantidade' = sum(fMetas_quantidade[meta_quantidade])
+		formatString: 0
+		lineageTag: 50510b64-bcd7-4b7a-968a-b3f4c2f9c90d
 
 	partition 'Medidas base' = m
 		mode: import
