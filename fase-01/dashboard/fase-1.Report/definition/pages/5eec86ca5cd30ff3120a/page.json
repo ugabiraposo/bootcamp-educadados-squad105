@@ -5,5 +5,57 @@
   "displayOption": "FitToPage",
   "height": 1080,
   "width": 1920,
-  "visibility": "HiddenInViewMode"
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "b7c5ef70ecb740750511",
+      "target": "4b0c595a02809e2c405d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "7468b5aeddd891170226",
+      "target": "4b0c595a02809e2c405d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "853e5e07d3502d223b43",
+      "target": "4b0c595a02809e2c405d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "84d6992fb8c5e4b000c0",
+      "target": "4b0c595a02809e2c405d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "06112ddce1436985057e",
+      "target": "4b0c595a02809e2c405d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "7e782727cbc0148014c0",
+      "target": "4b0c595a02809e2c405d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "bc16e3efb6157017de08",
+      "target": "4b0c595a02809e2c405d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "9e958cfd06d33eaee40a",
+      "target": "4b0c595a02809e2c405d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "af7de75054bbbb2ee150",
+      "target": "4b0c595a02809e2c405d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "7e782727cbc0148014c0",
+      "target": "a81c489460d999d94809",
+      "type": "DataFilter"
+    }
+  ]
 }

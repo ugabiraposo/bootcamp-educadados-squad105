@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "4a5561c73c39da0c02d8",
+  "position": {
+    "x": 634.28571428571433,
+    "y": 282.85714285714289,
+    "z": 14002,
+    "height": 270,
+    "width": 570,
+    "tabOrder": 14002
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dCidades"
+                    }
+                  },
+                  "Property": "cidade"
+                }
+              },
+              "queryRef": "dCidades.cidade",
+              "nativeQueryRef": "cidade",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "número de vendas"
+                }
+              },
+              "queryRef": "Medidas base.número de vendas",
+              "nativeQueryRef": "número de vendas"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas base"
+                  }
+                },
+                "Property": "número de vendas"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

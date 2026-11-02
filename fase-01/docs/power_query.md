@@ -50,7 +50,7 @@ As tabelas são mostradas sequencialmente em ordem alfabética para cada tabela 
 
 ### dFiliais
 
-| codigo_filial | nome | nome_abreviado | codigo_cidade | regional | cluster | sabado_dia_util | unidade_ativa | data_inauguracao | data_encerramento |
+| codigo_filial | filial | filial_abreviado | codigo_cidade | regional | cluster | sabado_dia_util | unidade_ativa | data_inauguracao | data_encerramento |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | inteiro | texto | texto | inteiro | texto | texto | texto | texto | data | data |
 

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "36d411ec030dd05a8208",
+  "name": "853e5e07d3502d223b43",
   "position": {
-    "x": 23.333333333333336,
-    "y": 780,
-    "z": 7,
-    "height": 273.33333333333337,
-    "width": 683.33333333333337,
-    "tabOrder": 7
+    "x": 1311.4285714285713,
+    "y": 654.61224489795916,
+    "z": 13000,
+    "height": 163.10204081632654,
+    "width": 573.0612244897959,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "tableEx",
@@ -26,7 +26,7 @@
                   "Property": "vendedor"
                 }
               },
-              "queryRef": "dVendedores.nome",
+              "queryRef": "dVendedores.vendedor",
               "nativeQueryRef": "vendedor"
             },
             {
@@ -34,42 +34,28 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_testes"
+                      "Entity": "Medidas base"
                     }
                   },
-                  "Property": "vendas - valor liquido"
+                  "Property": "valor líquido"
                 }
               },
-              "queryRef": "_testes.vendas - valor liquido",
-              "nativeQueryRef": "vendas - valor liquido"
+              "queryRef": "Medidas base.valor líquido",
+              "nativeQueryRef": "valor líquido"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_testes"
+                      "Entity": "Medidas metas"
                     }
                   },
-                  "Property": "meta valor por vendedor"
+                  "Property": "val vendedor"
                 }
               },
-              "queryRef": "_testes.meta valor por vendedor",
-              "nativeQueryRef": "meta valor por vendedor"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_testes"
-                    }
-                  },
-                  "Property": "% meta vendedor"
-                }
-              },
-              "queryRef": "_testes.% meta vendedor",
-              "nativeQueryRef": "% meta vendedor"
+              "queryRef": "Medidas metas.val vendedor",
+              "nativeQueryRef": "val vendedor"
             }
           ]
         }
