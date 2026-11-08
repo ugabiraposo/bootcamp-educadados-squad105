@@ -1,0 +1,149 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "796477631c90c66ccd1e",
+  "position": {
+    "x": 0,
+    "y": 560,
+    "z": 15000,
+    "height": 391.42857142857144,
+    "width": 560,
+    "tabOrder": 15000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dVendedores"
+                    }
+                  },
+                  "Property": "vendedor"
+                }
+              },
+              "queryRef": "dVendedores.vendedor",
+              "nativeQueryRef": "vendedor",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "valor líquido"
+                }
+              },
+              "queryRef": "Medidas base.valor líquido",
+              "nativeQueryRef": "valor líquido"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "val vendedor"
+                }
+              },
+              "queryRef": "Medidas metas.val vendedor",
+              "nativeQueryRef": "val vendedor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas percentuais"
+                    }
+                  },
+                  "Property": "val vendedor %"
+                }
+              },
+              "queryRef": "Medidas percentuais.val vendedor %",
+              "nativeQueryRef": "val vendedor %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dVendedores"
+                  }
+                },
+                "Property": "vendedor"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas especiais"
+                        }
+                      },
+                      "Property": "status val vendedor"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Medidas percentuais.val vendedor %"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Medidas base.valor líquido"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
