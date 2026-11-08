@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "990706a1ddbe227b236c",
+  "position": {
+    "x": 90,
+    "y": 1550,
+    "z": 22004,
+    "height": 98,
+    "width": 1424,
+    "tabOrder": 22003
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "AURORA ODONTOLOGIA • PAINEL COMERCIAL | EDUCADADOS — SQUAD 105 • PROJETO ACADÊMICO",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#b3c7c9"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

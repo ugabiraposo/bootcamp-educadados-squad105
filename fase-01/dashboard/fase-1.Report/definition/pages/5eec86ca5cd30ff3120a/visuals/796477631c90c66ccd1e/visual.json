@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 560,
-    "z": 14001,
+    "z": 15000,
     "height": 391.42857142857144,
     "width": 560,
-    "tabOrder": 14001
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -145,65 +145,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8977e1a48a0a20ec372a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dVendedores"
-              }
-            },
-            "Property": "vendedor"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "71d2e086b09c40651d02",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas base"
-              }
-            },
-            "Property": "valor líquido"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "771a532d3125ec19d0d6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas metas"
-              }
-            },
-            "Property": "val vendedor"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "24ff7842487bec6ac784",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas percentuais"
-              }
-            },
-            "Property": "val vendedor %"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
