@@ -30,6 +30,36 @@ table 'Medidas base'
 		formatString: 0
 		lineageTag: 50510b64-bcd7-4b7a-968a-b3f4c2f9c90d
 
+	measure 'Destaque - Filial Líder' = ```
+			
+			VAR Ranking =
+			    TOPN(
+			        1,
+			        FILTER(
+			            ADDCOLUMNS(
+			                VALUES('dFiliais'[filial_abreviado]),
+			                "@Valor", [valor líquido]
+			            ),
+			            NOT ISBLANK([@Valor])
+			        ),
+			        [@Valor], DESC,
+			        'dFiliais'[filial_abreviado], ASC
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY(Ranking),
+			        "Aguardando dados",
+			        CONCATENATEX(
+			            Ranking,
+			            'dFiliais'[filial_abreviado]
+			                & " · "
+			                & FORMAT([@Valor], "R$ #,##0.00")
+			        )
+			    )
+			
+			```
+		lineageTag: d7237a46-fc4a-4387-a505-e64d889d97a6
+
 	partition 'Medidas base' = m
 		mode: import
 		source =

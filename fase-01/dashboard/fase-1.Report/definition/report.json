@@ -50,6 +50,17 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "aurora_branco_horizontal25084840802783337.png",
+          "path": "aurora_branco_horizontal25084840802783337.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {

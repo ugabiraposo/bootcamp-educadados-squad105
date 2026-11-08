@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "36260d7e0c23cbd248d7",
+  "position": {
+    "x": 126,
+    "y": 226,
+    "z": 2000,
+    "height": 48,
+    "width": 548,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Exploracao por filial, cidade, pessoas, grupos e servicos",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#b3c7c9"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
