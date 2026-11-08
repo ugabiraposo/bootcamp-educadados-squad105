@@ -6,7 +6,7 @@
 
 **Quanto vendemos e se isso é bom ou ruim?**
 
-**Período:** 14 a 31 de outubro de 2026
+**Período:** 14 de outubro a 07 de novembro de 2026
 
 [← Voltar ao Squad 105](../README.md)
 
