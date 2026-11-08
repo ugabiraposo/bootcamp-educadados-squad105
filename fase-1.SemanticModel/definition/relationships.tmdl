@@ -1,0 +1,104 @@
+relationship 1b3263e6-760b-4f8b-840f-fbfb0c53efb6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dFiliais.data_inauguracao
+	toColumn: LocalDateTable_7b63a100-0cd7-4c60-ace9-f52d2f031a86.Date
+
+relationship 5ebce716-a39d-405e-bca3-a2b1298c13ca
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dFiliais.data_encerramento
+	toColumn: LocalDateTable_75a110c7-8417-490d-9df4-979896d1cc54.Date
+
+relationship 483ec07c-3d47-acb1-1711-ad37bf693c16
+	fromColumn: fVendas.codigo_filial
+	toColumn: dFiliais.codigo_filial
+
+relationship ea2da2bb-d9a3-2f9c-43c8-ab7a2e3f9804
+	fromColumn: fVendas.data
+	toColumn: dCalendario.data
+
+relationship d87e1c52-ef79-ae20-9699-d90958c0b66e
+	fromColumn: fVendas.codigo_profissional
+	toColumn: dProfissionais.codigo_profissional
+
+relationship 09969605-ef9b-6bf0-1fa0-356ecf1e276b
+	fromColumn: dFiliais.codigo_cidade
+	toColumn: dCidades.codigo_cidade
+
+relationship 4b3f2225-f794-31c4-1ec2-606bfaced1e5
+	fromColumn: fItens_venda.codigo_venda
+	toColumn: fVendas.codigo_venda
+
+relationship c3722604-a2e5-b93d-4bf4-2ed8cbe87c4c
+	fromColumn: fItens_venda.codigo_servico
+	toColumn: dServicos.codigo_servico
+
+relationship 3f2577ad-3e15-c815-e779-3ceac4dabbee
+	fromColumn: fMetas_quantidade.codigo_filial
+	toColumn: dFiliais.codigo_filial
+
+relationship 56060f71-4d8d-4a6a-161b-c63025112c46
+	isActive: false
+	fromColumn: fMetas_quantidade.codigo_grupo_servico
+	toColumn: dGrupos_servico.codigo_grupo_servico
+
+relationship 17dfa7e6-b77e-feb9-0284-f77b3b73366f
+	fromColumn: fMetas_quantidade.codigo_profissional
+	toColumn: dProfissionais.codigo_profissional
+
+relationship e68d9da5-6644-87e1-19bb-a2cc48f35dd2
+	isActive: false
+	fromColumn: fMetas_quantidade.codigo_servico
+	toColumn: dServicos.codigo_servico
+
+relationship dd2e4de1-6f64-e763-f60f-c026619c772c
+	fromColumn: fMetas_quantidade.codigo_vendedor
+	toColumn: dVendedores.codigo_vendedor
+
+relationship 0a5b39b5-2679-c67b-4f83-c10de2ae1d70
+	fromColumn: fMetas_valor.codigo_filial
+	toColumn: dFiliais.codigo_filial
+
+relationship 7fcf5d2f-c767-e295-5c26-6d6dd0b9387a
+	isActive: false
+	fromColumn: fMetas_valor.codigo_grupo_servico
+	toColumn: dGrupos_servico.codigo_grupo_servico
+
+relationship 7a9116a1-3d23-5228-1a2d-fb20adc9d884
+	fromColumn: fMetas_valor.codigo_profissional
+	toColumn: dProfissionais.codigo_profissional
+
+relationship 792ff7cd-442a-064a-1d72-7bd237bbdafc
+	isActive: false
+	fromColumn: fMetas_valor.codigo_servico
+	toColumn: dServicos.codigo_servico
+
+relationship d1fc04ac-d98a-bf7a-04a0-cc93899fc30c
+	fromColumn: fMetas_valor.codigo_vendedor
+	toColumn: dVendedores.codigo_vendedor
+
+relationship 88636205-d463-b277-dff0-266712ebff36
+	fromColumn: fMetas_quantidade.mes
+	toColumn: dCalendario.data
+
+relationship d2333b72-da48-2073-a25c-97c9aa2fdb44
+	fromColumn: fMetas_valor.mes
+	toColumn: dCalendario.data
+
+relationship cf84391a-0e3a-60ac-34ad-bae20d057768
+	isActive: false
+	fromColumn: dProfissionais.codigo_filial
+	toColumn: dFiliais.codigo_filial
+
+relationship ec34692b-bef7-b2d2-3652-47998958b65f
+	isActive: false
+	fromColumn: dVendedores.codigo_filial
+	toColumn: dFiliais.codigo_filial
+
+relationship 9e6aa48b-3941-e255-74ed-947ed66aa95b
+	fromColumn: dServicos.codigo_grupo_servico
+	toColumn: dGrupos_servico.codigo_grupo_servico
+
+relationship 85f612ed-489e-6752-7190-b54cfa96fe1d
+	fromColumn: fVendas.codigo_vendedor
+	toColumn: dVendedores.codigo_vendedor
+
