@@ -159,14 +159,12 @@ table dCalendario
 		mode: import
 		source =
 				let
-				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\calendario.xlsx"), null, true),
+				    Fonte = Excel.Workbook(File.Contents("C:\vscoide\bootcamp-educadados-squad105\fase-01\dados\calendario.xlsx"), null, true),
 				    calendario_Sheet = Fonte{[Item="calendario",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(calendario_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"data", type date}, {"ano", Int64.Type}, {"mes_numero", Int64.Type}, {"mes_nome", type text}, {"mes_abreviado", type text}, {"mes_ano", type text}, {"ano_mes", type text}, {"trimestre", Int64.Type}, {"semana_do_ano", Int64.Type}, {"dia", Int64.Type}, {"dia_semana_numero", Int64.Type}, {"dia_semana_nome", type text}, {"fim_de_semana", type logical}, {"feriado_nacional", type logical}, {"nome_feriado_nacional", type text}, {"dia_util", type logical}})
 				in
 				    #"Tipo Alterado"
-
-	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navegação
 
