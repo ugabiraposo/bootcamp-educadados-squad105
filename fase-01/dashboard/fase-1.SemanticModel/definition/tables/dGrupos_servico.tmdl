@@ -22,7 +22,7 @@ table dGrupos_servico
 		mode: import
 		source =
 				let
-				    Fonte = Excel.Workbook(File.Contents("C:\vscoide\bootcamp-educadados-squad105\fase-01\dados\grupos_servico.xlsx"), null, true),
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\dirce\Desktop\pen drive\Bootcamp_Squad105\bootcamp-educadados-squad105\fase-01\dados\grupos_servico.xlsx"), null, true),
 				    grupos_servico_Sheet = Fonte{[Item="grupos_servico",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(grupos_servico_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_grupo_servico", Int64.Type}, {"grupo_servico", type text}})

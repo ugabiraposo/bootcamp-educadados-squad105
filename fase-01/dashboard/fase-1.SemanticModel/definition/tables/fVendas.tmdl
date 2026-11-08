@@ -124,7 +124,7 @@ table fVendas
 		mode: import
 		source =
 				let
-				    Fonte = Excel.Workbook(File.Contents("C:\vscoide\bootcamp-educadados-squad105\fase-01\dados\vendas.xlsx"), null, true),
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\dirce\Desktop\pen drive\Bootcamp_Squad105\bootcamp-educadados-squad105\fase-01\dados\vendas.xlsx"), null, true),
 				    vendas_Sheet = Fonte{[Item="vendas",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(vendas_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_venda", Int64.Type}, {"data", type date}, {"codigo_filial", Int64.Type}, {"codigo_cliente", Int64.Type}, {"codigo_profissional", Int64.Type}, {"codigo_vendedor", Int64.Type}, {"codigo_usuario", Int64.Type}, {"codigo_midia", Int64.Type}, {"valor_bruto", type number}, {"valor_desconto", type number}, {"valor_liquido", type number}, {"forma_pagamento", type text}, {"cliente_novo", type text}})
