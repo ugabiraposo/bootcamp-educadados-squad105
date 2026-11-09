@@ -4,29 +4,29 @@ table 'Medidas especiais'
 	measure 'status val vendedor' =
 			CALCULATE( SWITCH(true(),
 			[val vendedor %] = "sem meta","FFFFFF",
-			[val vendedor %] > 1, "#D4EDDA",
-			[val vendedor %] < 1, "#F8D7DA"), fMetas_valor[nivel] = "Vendedor")
+			[val vendedor %] > 1, "#1E4D2B",
+			[val vendedor %] < 1, "#5C1D24"), fMetas_valor[nivel] = "Vendedor")
 		lineageTag: 7d01417f-afcd-47b6-bef2-533c01246de7
 
 	measure 'status qtde vendedor' =
 			CALCULATE( SWITCH(true(),
 			[qtde vendedor %] = "sem meta","FFFFFF",
-			[qtde vendedor %] > 1, "#D4EDDA",
-			[qtde vendedor %] < 1, "#F8D7DA"), fMetas_quantidade[nivel] = "Vendedor")
+			[qtde vendedor %] > 1, "#1E4D2B",
+			[qtde vendedor %] < 1, "#5C1D24"), fMetas_quantidade[nivel] = "Vendedor")
 		lineageTag: b5e4162d-ba9a-45fd-a198-706bc84fc983
 
 	measure 'status val profissional' =
 			CALCULATE( SWITCH(true(),
 			[val profissional %] = "sem meta","FFFFFF",
-			[val profissional %] > 1, "#D4EDDA",
-			[val profissional %] < 1, "#F8D7DA"), fMetas_valor[nivel] = "Profissional")
+			[val profissional %] > 1, "#1E4D2B",
+			[val profissional %] < 1, "#5C1D24"), fMetas_valor[nivel] = "Profissional")
 		lineageTag: 402b240c-b8d9-449a-b52e-958123c094bb
 
 	measure 'status qtde profissional' =
 			CALCULATE( SWITCH(true(),
 			[qtde profissional %] = "sem meta","FFFFFF",
-			[qtde profissional %] > 1, "#D4EDDA",
-			[qtde profissional %] < 1, "#F8D7DA"), fMetas_quantidade[nivel] = "Profissional")
+			[qtde profissional %] > 1, "#1E4D2B",
+			[qtde profissional %] < 1, "#5C1D24"), fMetas_quantidade[nivel] = "Profissional")
 		lineageTag: 45a1e154-4505-49e0-b40f-f0ed183fdb5c
 
 	measure 'rótulo especial' =
@@ -39,6 +39,156 @@ table 'Medidas especiais'
 			var qtdeFormat = if([número de vendas] > 999, format([número de vendas], "#\.###"), format([número de vendas], "###"))
 			return "R$ " & valformat & " | Qtd " & qtdeformat
 		lineageTag: 712cc494-5589-4975-ab6e-28474760c9ff
+
+	measure 'Destaque - Filial Líder' = ```
+			
+			VAR Ranking =
+			    TOPN(
+			        1,
+			        FILTER(
+			            ADDCOLUMNS(
+			                VALUES('dFiliais'[filial_abreviado]),
+			                "@Valor", [valor líquido]
+			            ),
+			            NOT ISBLANK([@Valor])
+			        ),
+			        [@Valor], DESC,
+			        'dFiliais'[filial_abreviado], ASC
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY(Ranking),
+			        "Aguardando dados",
+			        CONCATENATEX(
+			            Ranking,
+			            'dFiliais'[filial_abreviado]
+			                & " · "
+			                & FORMAT([@Valor], "R$ #,##0.00")
+			        )
+			    )
+			
+			```
+		lineageTag: 272d27df-01b8-4230-ab55-b8c9a555dd33
+
+	measure 'Destaque - Cidade Líder' = ```
+			
+			VAR Ranking =
+			    TOPN(
+			        1,
+			        FILTER(
+			            ADDCOLUMNS(
+			                VALUES('dCidades'[cidade]),
+			                "@Valor", [valor líquido]
+			            ),
+			            NOT ISBLANK([@Valor])
+			        ),
+			        [@Valor], DESC,
+			        'dCidades'[cidade], ASC
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY(Ranking),
+			        "Aguardando dados",
+			        CONCATENATEX(
+			            Ranking,
+			            'dCidades'[cidade]
+			                & " · "
+			                & FORMAT([@Valor], "R$ #,##0.00")
+			        )
+			    )
+			
+			```
+		lineageTag: 9e99dbc1-b83d-4fe2-83f7-3fd1d333d3f7
+
+	measure 'Destaque - Vendedor Líder' = ```
+			
+			VAR Ranking =
+			    TOPN(
+			        1,
+			        FILTER(
+			            ADDCOLUMNS(
+			                VALUES('dVendedores'[vendedor]),
+			                "@Valor", [valor líquido]
+			            ),
+			            NOT ISBLANK([@Valor])
+			        ),
+			        [@Valor], DESC,
+			        'dVendedores'[vendedor], ASC
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY(Ranking),
+			        "Aguardando dados",
+			        CONCATENATEX(
+			            Ranking,
+			            'dVendedores'[vendedor]
+			                & " · "
+			                & FORMAT([@Valor], "R$ #,##0.00")
+			        )
+			    )
+			
+			```
+		lineageTag: 86d60dbc-76da-41cc-bb64-7fb1502ee77e
+
+	measure 'Destaque - Serviço Líder' = ```
+			
+			VAR Ranking =
+			    TOPN(
+			        1,
+			        FILTER(
+			            ADDCOLUMNS(
+			                VALUES('dServicos'[servico]),
+			                "@Valor", [valor bruto]
+			            ),
+			            NOT ISBLANK([@Valor])
+			        ),
+			        [@Valor], DESC,
+			        'dServicos'[servico], ASC
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY(Ranking),
+			        "Aguardando dados",
+			        CONCATENATEX(
+			            Ranking,
+			            'dServicos'[servico]
+			                & " · "
+			                & FORMAT([@Valor], "R$ #,##0.00")
+			        )
+			    )
+			
+			```
+		lineageTag: 3aa709dd-6ea0-44b8-9c4c-739391529702
+
+	measure 'Destaque - Profissional Líder' = ```
+			
+			VAR Ranking =
+			    TOPN(
+			        1,
+			        FILTER(
+			            ADDCOLUMNS(
+			                VALUES('dProfissionais'[profissional]),
+			                "@Valor", [valor líquido]
+			            ),
+			            NOT ISBLANK([@Valor])
+			        ),
+			        [@Valor], DESC,
+			        'dProfissionais'[profissional], ASC
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY(Ranking),
+			        "Aguardando dados",
+			        CONCATENATEX(
+			            Ranking,
+			            'dProfissionais'[profissional]
+			                & " · "
+			                & FORMAT([@Valor], "R$ #,##0.00")
+			        )
+			    )
+			
+			```
+		lineageTag: acef5318-9731-405a-a126-56476dbbcf1b
 
 	partition 'Medidas especiais' = m
 		mode: import

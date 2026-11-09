@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "4c335fd9d4308691d0c0",
   "position": {
-    "x": 1055,
-    "y": 1270,
-    "z": 24000,
-    "height": 65,
-    "width": 435,
-    "tabOrder": 24000
+    "x": 1050,
+    "y": 1263.3333333333335,
+    "z": 18000,
+    "height": 93.333333333333343,
+    "width": 450,
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas base"
+                      "Entity": "Medidas especiais"
                     }
                   },
                   "Property": "Destaque - Filial Líder"
                 }
               },
-              "queryRef": "Medidas base.Destaque - Filial Líder",
+              "queryRef": "Medidas especiais.Destaque - Filial Líder",
               "nativeQueryRef": "Destaque - Filial Líder"
             }
           ]

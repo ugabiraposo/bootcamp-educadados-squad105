@@ -4,10 +4,10 @@
   "position": {
     "x": 90,
     "y": 680,
-    "z": 16000,
+    "z": 12000,
     "height": 57.5,
     "width": 1510,
-    "tabOrder": 16000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Evolucao e Desempenho",
+                    "value": "Evolução e Desempenho",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "24pt",

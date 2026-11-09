@@ -3,11 +3,11 @@
   "name": "638cd81d2a4bbd3800a8",
   "position": {
     "x": 90,
-    "y": 430,
-    "z": 10000,
+    "y": 274,
+    "z": 7000,
     "height": 61.666666666666671,
     "width": 390,
-    "tabOrder": 10000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Indicadores Estrategicos",
+                    "value": "Visão geral",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "24pt",
