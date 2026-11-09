@@ -70,5 +70,7 @@ table 'Medidas base'
 				in
 				    #"Colunas Removidas"
 
+	changedProperty = Name
+
 	annotation PBI_ResultType = Table
 

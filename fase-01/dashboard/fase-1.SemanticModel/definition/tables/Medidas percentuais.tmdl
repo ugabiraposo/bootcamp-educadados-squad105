@@ -105,8 +105,9 @@ table 'Medidas percentuais'
 			    [valor líquido],
 			    [val filial],
 			    "sem meta")
-		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 2a0cfe09-16dd-4ffc-ac9b-098abd572d38
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'val rede %' =
 			divide(

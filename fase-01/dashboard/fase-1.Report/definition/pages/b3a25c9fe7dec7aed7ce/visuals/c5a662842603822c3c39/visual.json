@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "c5a662842603822c3c39",
   "position": {
     "x": 1040,
     "y": 1200,
-    "z": 22000,
+    "z": 23000,
     "height": 290,
     "width": 470,
-    "tabOrder": 22000
+    "tabOrder": 23000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,11 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "  Destaques do Período",
+                    "value": "Destaques do Período",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "18pt",
-                      "color": "#172d33"
+                      "color": "#ffffff"
                     }
                   }
                 ]
@@ -31,10 +31,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "   Principais resultados da análise comercial",
+                    "value": "Principais resultados da análise comercial",
                     "textStyle": {
+                      "fontWeight": "bold",
                       "fontSize": "12pt",
-                      "color": "#172d33"
+                      "color": "#b3c7c9"
                     }
                   }
                 ]
@@ -67,7 +68,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#CBE5FF'"
+                      "Value": "'#172D33'"
                     }
                   }
                 }
@@ -94,19 +95,6 @@
                       "Value": "'#245459'"
                     }
                   }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }
