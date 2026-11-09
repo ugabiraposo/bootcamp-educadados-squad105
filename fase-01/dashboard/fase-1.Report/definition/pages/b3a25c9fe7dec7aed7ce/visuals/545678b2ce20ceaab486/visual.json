@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "545678b2ce20ceaab486",
   "position": {
-    "x": 670,
-    "y": 490,
-    "z": 13000,
+    "x": 660,
+    "y": 336,
+    "z": 10000,
     "height": 170,
     "width": 260,
-    "tabOrder": 13000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -27,8 +27,8 @@
                 }
               },
               "queryRef": "Medidas percentuais.val rede %",
-              "nativeQueryRef": "Atingimento de Metas",
-              "displayName": "Atingimento de Metas"
+              "nativeQueryRef": "Atingimento da meta",
+              "displayName": "Atingimento da meta"
             }
           ]
         }

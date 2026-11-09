@@ -4,10 +4,10 @@
   "position": {
     "x": 90,
     "y": 735,
-    "z": 17000,
+    "z": 13000,
     "height": 370,
     "width": 820,
-    "tabOrder": 17000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -57,14 +57,15 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas base"
+                      "Entity": "Medidas metas"
                     }
                   },
-                  "Property": "meta de valor"
+                  "Property": "val rede"
                 }
               },
-              "queryRef": "Medidas base.meta de valor",
-              "nativeQueryRef": "meta de valor"
+              "queryRef": "Medidas metas.val rede",
+              "nativeQueryRef": "meta de valor",
+              "displayName": "meta de valor"
             }
           ]
         }

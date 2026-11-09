@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "aee0ee202d4a442bb964",
+  "name": "d8e2d2ce2d300aa94b57",
   "position": {
-    "x": 1250,
-    "y": 490,
-    "z": 14000,
+    "x": 966,
+    "y": 336,
+    "z": 24001,
     "height": 170,
     "width": 260,
-    "tabOrder": 14000
+    "tabOrder": 24001
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,12 @@
                       "Entity": "Medidas base"
                     }
                   },
-                  "Property": "valor bruto"
+                  "Property": "valor líquido"
                 }
               },
-              "queryRef": "Medidas base.valor bruto",
-              "nativeQueryRef": "Valor Bruto",
-              "displayName": "Valor Bruto"
+              "queryRef": "Medidas base.valor líquido",
+              "nativeQueryRef": "Valor Líquido",
+              "displayName": "Valor Líquido"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "Medidas base"
                   }
                 },
-                "Property": "valor bruto"
+                "Property": "valor líquido"
               }
             },
             "direction": "Descending"

@@ -40,6 +40,66 @@ table 'Medidas especiais'
 			return "R$ " & valformat & " | Qtd " & qtdeformat
 		lineageTag: 712cc494-5589-4975-ab6e-28474760c9ff
 
+	measure 'Destaque - Filial Líder' = ```
+			
+			VAR Ranking =
+			    TOPN(
+			        1,
+			        FILTER(
+			            ADDCOLUMNS(
+			                VALUES('dFiliais'[filial_abreviado]),
+			                "@Valor", [valor líquido]
+			            ),
+			            NOT ISBLANK([@Valor])
+			        ),
+			        [@Valor], DESC,
+			        'dFiliais'[filial_abreviado], ASC
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY(Ranking),
+			        "Aguardando dados",
+			        CONCATENATEX(
+			            Ranking,
+			            'dFiliais'[filial_abreviado]
+			                & " · "
+			                & FORMAT([@Valor], "R$ #,##0.00")
+			        )
+			    )
+			
+			```
+		lineageTag: 272d27df-01b8-4230-ab55-b8c9a555dd33
+
+	measure 'Destaque - Cidade Líder' = ```
+			
+			VAR Ranking =
+			    TOPN(
+			        1,
+			        FILTER(
+			            ADDCOLUMNS(
+			                VALUES('dCidades'[cidade]),
+			                "@Valor", [valor líquido]
+			            ),
+			            NOT ISBLANK([@Valor])
+			        ),
+			        [@Valor], DESC,
+			        'dCidades'[cidade], ASC
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY(Ranking),
+			        "Aguardando dados",
+			        CONCATENATEX(
+			            Ranking,
+			            'dCidades'[cidade]
+			                & " · "
+			                & FORMAT([@Valor], "R$ #,##0.00")
+			        )
+			    )
+			
+			```
+		lineageTag: 9e99dbc1-b83d-4fe2-83f7-3fd1d333d3f7
+
 	partition 'Medidas especiais' = m
 		mode: import
 		source =

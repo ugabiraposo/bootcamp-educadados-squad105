@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "f2d5828d303ae84050c6",
+  "name": "da96a032520480a45583",
   "position": {
-    "x": 1058,
-    "y": 1402,
-    "z": 25001,
-    "height": 65,
-    "width": 435,
-    "tabOrder": 25001
+    "x": 1050,
+    "y": 1373.3333333333335,
+    "z": 24006,
+    "height": 93.333333333333343,
+    "width": 450,
+    "tabOrder": 24006
   },
   "visual": {
     "visualType": "cardVisual",
@@ -20,14 +20,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas base"
+                      "Entity": "Medidas especiais"
                     }
                   },
-                  "Property": "Destaque - Filial Líder"
+                  "Property": "Destaque - Cidade Líder"
                 }
               },
-              "queryRef": "Medidas base.Destaque - Filial Líder",
-              "nativeQueryRef": "Destaque - Filial Líder"
+              "queryRef": "Medidas especiais.Destaque - Cidade Líder",
+              "nativeQueryRef": "Destaque - Cidade Líder"
             }
           ]
         }

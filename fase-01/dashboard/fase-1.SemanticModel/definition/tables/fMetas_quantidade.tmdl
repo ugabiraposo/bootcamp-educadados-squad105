@@ -87,7 +87,7 @@ table fMetas_quantidade
 		mode: import
 		source =
 				let
-				    Fonte = Excel.Workbook(File.Contents("C:\vscoide\bootcamp-educadados-squad105\fase-01\dados\metas_quantidade.xlsx"), null, true),
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\metas_quantidade.xlsx"), null, true),
 				    metas_quantidade_Sheet = Fonte{[Item="metas_quantidade",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(metas_quantidade_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_meta_quantidade", Int64.Type}, {"codigo_filial", Int64.Type}, {"mes", type date}, {"nivel", type text}, {"codigo_grupo_servico", Int64.Type}, {"codigo_servico", Int64.Type}, {"codigo_vendedor", Int64.Type}, {"codigo_profissional", Int64.Type}, {"meta_quantidade", Int64.Type}})

@@ -4468,6 +4468,16 @@ cultureInfo pt-BR
 			          "val cidade": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Meta de valor": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4483,6 +4493,16 @@ cultureInfo pt-BR
 			        {
 			          "qtde cidade": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Meta de quantidade": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4500,6 +4520,16 @@ cultureInfo pt-BR
 			          "val rede": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Meta de valor": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4515,6 +4545,16 @@ cultureInfo pt-BR
 			        {
 			          "qtde rede": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Meta de quantidade": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5040,7 +5080,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Atingimento de Metas": {
+			          "Atingimento da meta": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5083,6 +5123,16 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "Atingimento da meta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5589,10 +5639,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_base.destaque__filial_líder": {
+			    "medidas_especiais.destaque__filial_líder": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas base",
+			          "ConceptualEntity": "Medidas especiais",
 			          "ConceptualProperty": "Destaque - Filial Líder"
 			        }
 			      },
@@ -5610,9 +5660,97 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medidas_especiais.destaque__cidade_líder": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas especiais",
+			          "ConceptualProperty": "Destaque - Cidade Líder"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "destaque - cidade líder": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "destaque cidade líder": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "d_filiais_data_encerramento_trimestre_has_d_filiais_data_encerramento_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dFiliais"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_filiais.data_encerramento.trimestre": {
+			          "Target": {
+			            "Entity": "d_filiais.data_encerramento.trimestre"
+			          }
+			        },
+			        "d_filiais.data_encerramento.mê": {
+			          "Target": {
+			            "Entity": "d_filiais.data_encerramento.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_filiais.data_encerramento.trimestre"
+			            },
+			            "Object": {
+			              "Role": "d_filiais.data_encerramento.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_filiais.data_encerramento.mê"
+			            },
+			            "Object": {
+			              "Role": "d_filiais.data_encerramento.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "d_filiais.data_encerramento.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "d_filiais.data_encerramento.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres1"
+			        }
+			      ]
+			    },
 			    "d_filiais_data_encerramento_ano_has_d_filiais_data_encerramento_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "dFiliais"
@@ -5939,7 +6077,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
+			          "ID": "trimestres_have_mê1"
 			        },
 			        {
 			          "Attribute": {
@@ -5952,7 +6090,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
+			          "ID": "mê_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -6943,20 +7081,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_base_has_medida_2": {
+			    "medidas_especiais_has_destaque__cidade_líder": {
 			      "Binding": {
-			        "ConceptualEntity": "Medidas base"
+			        "ConceptualEntity": "Medidas especiais"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "medidas_base": {
+			        "medidas_especiais": {
 			          "Target": {
-			            "Entity": "medidas_base"
+			            "Entity": "medidas_especiais"
 			          }
 			        },
-			        "medidas_base.medida_2": {
+			        "medidas_especiais.destaque__cidade_líder": {
 			          "Target": {
-			            "Entity": "medidas_base.medida_2"
+			            "Entity": "medidas_especiais.destaque__cidade_líder"
 			          }
 			        }
 			      },
@@ -6964,32 +7102,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "medidas_base"
+			              "Role": "medidas_especiais"
 			            },
 			            "Object": {
-			              "Role": "medidas_base.medida_2"
+			              "Role": "medidas_especiais.destaque__cidade_líder"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medidas_bases_have_medida_2"
+			          "ID": "medidas_especiaises_have_destaque__cidade_líder"
 			        }
 			      ]
 			    },
-			    "medidas_base_has_destaque__filial_líder": {
+			    "medidas_especiais_has_destaque__filial_líder": {
 			      "Binding": {
-			        "ConceptualEntity": "Medidas base"
+			        "ConceptualEntity": "Medidas especiais"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "medidas_base": {
+			        "medidas_especiais": {
 			          "Target": {
-			            "Entity": "medidas_base"
+			            "Entity": "medidas_especiais"
 			          }
 			        },
-			        "medidas_base.destaque__filial_líder": {
+			        "medidas_especiais.destaque__filial_líder": {
 			          "Target": {
-			            "Entity": "medidas_base.destaque__filial_líder"
+			            "Entity": "medidas_especiais.destaque__filial_líder"
 			          }
 			        }
 			      },
@@ -6997,15 +7135,15 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "medidas_base"
+			              "Role": "medidas_especiais"
 			            },
 			            "Object": {
-			              "Role": "medidas_base.destaque__filial_líder"
+			              "Role": "medidas_especiais.destaque__filial_líder"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medidas_bases_have_destaque__filial_líder"
+			          "ID": "medidas_especiaises_have_destaque__filial_líder"
 			        }
 			      ]
 			    },
@@ -11296,72 +11434,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_calendarios_have_data"
-			        }
-			      ]
-			    },
-			    "d_filiais_data_encerramento_trimestre_has_d_filiais_data_encerramento_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "dFiliais"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_filiais.data_encerramento.trimestre": {
-			          "Target": {
-			            "Entity": "d_filiais.data_encerramento.trimestre"
-			          }
-			        },
-			        "d_filiais.data_encerramento.mê": {
-			          "Target": {
-			            "Entity": "d_filiais.data_encerramento.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_filiais.data_encerramento.trimestre"
-			            },
-			            "Object": {
-			              "Role": "d_filiais.data_encerramento.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_filiais.data_encerramento.mê"
-			            },
-			            "Object": {
-			              "Role": "d_filiais.data_encerramento.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "d_filiais.data_encerramento.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "d_filiais.data_encerramento.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres1"
 			        }
 			      ]
 			    },

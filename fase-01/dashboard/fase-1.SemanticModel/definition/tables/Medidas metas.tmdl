@@ -61,9 +61,10 @@ table 'Medidas metas'
 			REMOVEFILTERS( dVendedores[vendedor]),
 			REMOVEFILTERS(dProfissionais[profissional]))
 			```
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: d204e122-6976-4b36-9598-1625ca14b54b
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure 'qtde cidade' = ```
 			calculate([qtde filial], 
@@ -88,9 +89,10 @@ table 'Medidas metas'
 			dCidades[regiao],
 			dCidades[estado]))
 			```
+		formatString: 0
 		lineageTag: 19a37ed6-d02b-42ce-944d-402f075db76e
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'qtde rede' = ```
 			calculate([qtde filial], 

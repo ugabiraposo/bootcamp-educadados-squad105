@@ -4,10 +4,10 @@
   "position": {
     "x": 90,
     "y": 1200,
-    "z": 21000,
+    "z": 16000,
     "height": 290,
-    "width": 450,
-    "tabOrder": 21000
+    "width": 497.5,
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -69,6 +69,47 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "dynamicLabelValue": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas especiais"
+                    }
+                  },
+                  "Property": "rótulo especial"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "highlightMatching": 1
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "background": [

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "6170a05621a85bda199a",
   "position": {
-    "x": 960,
-    "y": 490,
-    "z": 15000,
+    "x": 90,
+    "y": 510,
+    "z": 11000,
     "height": 170,
     "width": 260,
-    "tabOrder": 15000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "Medidas base.número de vendas",
-              "nativeQueryRef": "Número de Vendas",
+              "nativeQueryRef": "número de vendas",
               "displayName": "Número de Vendas"
             }
           ]

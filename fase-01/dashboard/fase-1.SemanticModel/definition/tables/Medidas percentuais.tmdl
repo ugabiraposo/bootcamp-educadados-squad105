@@ -114,18 +114,16 @@ table 'Medidas percentuais'
 			    [valor líquido],
 			    [val rede],
 			    "sem meta")
+		formatString: 0%;-0%;0%
 		lineageTag: e67ee25f-6269-48a9-9b56-38c551b47b61
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'qtde rede %' =
 			divide(
 			    [número de vendas],
 			    [qtde rede],
 			    "sem meta")
+		formatString: 0%;-0%;0%
 		lineageTag: 2d957290-c3f5-4a73-84c9-ed7cd568de04
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition 'Medidas percentuais' = m
 		mode: import

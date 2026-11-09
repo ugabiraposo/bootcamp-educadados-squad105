@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "8e85134dded4d9830174",
   "position": {
-    "x": 380,
-    "y": 490,
-    "z": 12000,
+    "x": 374,
+    "y": 336,
+    "z": 9000,
     "height": 170,
     "width": 260,
-    "tabOrder": 12000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -20,15 +20,15 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas base"
+                      "Entity": "Medidas metas"
                     }
                   },
-                  "Property": "meta de valor"
+                  "Property": "val rede"
                 }
               },
-              "queryRef": "Medidas base.meta de valor",
-              "nativeQueryRef": "Meta de Valor",
-              "displayName": "Meta de Valor"
+              "queryRef": "Medidas metas.val rede",
+              "nativeQueryRef": "Meta de valor",
+              "displayName": "Meta de valor"
             }
           ]
         }
@@ -40,10 +40,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas base"
+                    "Entity": "Medidas metas"
                   }
                 },
-                "Property": "meta de valor"
+                "Property": "val rede"
               }
             },
             "direction": "Descending"
