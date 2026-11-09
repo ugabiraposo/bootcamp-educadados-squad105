@@ -4,10 +4,10 @@
   "position": {
     "x": 1250,
     "y": 335,
-    "z": 24004,
+    "z": 25000,
     "height": 170,
     "width": 260,
-    "tabOrder": 24004
+    "tabOrder": 25000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -262,23 +262,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2d585290ae683085411a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas metas"
-              }
-            },
-            "Property": "val cidade"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

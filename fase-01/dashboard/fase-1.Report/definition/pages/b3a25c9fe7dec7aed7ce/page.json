@@ -33,16 +33,6 @@
   },
   "visualInteractions": [
     {
-      "source": "c8ab85e9d62e6d99b581",
-      "target": "d62d1450ecb08cb58d18",
-      "type": "NoFilter"
-    },
-    {
-      "source": "c8ab85e9d62e6d99b581",
-      "target": "6170a05621a85bda199a",
-      "type": "NoFilter"
-    },
-    {
       "source": "c257b3fec3e715e903b8",
       "target": "6170a05621a85bda199a",
       "type": "NoFilter"
@@ -50,21 +40,6 @@
     {
       "source": "c257b3fec3e715e903b8",
       "target": "d62d1450ecb08cb58d18",
-      "type": "NoFilter"
-    },
-    {
-      "source": "c257b3fec3e715e903b8",
-      "target": "c8ab85e9d62e6d99b581",
-      "type": "NoFilter"
-    },
-    {
-      "source": "4c12c816e69360d637d6",
-      "target": "c8ab85e9d62e6d99b581",
-      "type": "NoFilter"
-    },
-    {
-      "source": "af9a8bfc7ec1d316cdc7",
-      "target": "c8ab85e9d62e6d99b581",
       "type": "NoFilter"
     },
     {
@@ -233,14 +208,9 @@
       "type": "NoFilter"
     },
     {
-      "source": "c8ab85e9d62e6d99b581",
-      "target": "f64c81b37b97947b6000",
-      "type": "NoFilter"
-    },
-    {
-      "source": "f64c81b37b97947b6000",
-      "target": "c8ab85e9d62e6d99b581",
-      "type": "NoFilter"
+      "source": "4c12c816e69360d637d6",
+      "target": "c257b3fec3e715e903b8",
+      "type": "DataFilter"
     }
   ]
 }
