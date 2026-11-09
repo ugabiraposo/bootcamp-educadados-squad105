@@ -40,7 +40,7 @@ table dServicos
 		mode: import
 		source =
 				let
-				    Fonte = Excel.Workbook(File.Contents("C:\Users\dirce\Desktop\pen drive\Bootcamp_Squad105\bootcamp-educadados-squad105\fase-01\dados\servicos.xlsx"), null, true),
+				    Fonte = Excel.Workbook(File.Contents("C:\vscoide\bootcamp-educadados-squad105\fase-01\dados\servicos.xlsx"), null, true),
 				    servicos_Sheet = Fonte{[Item="servicos",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(servicos_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_servico", Int64.Type}, {"servico", type text}, {"codigo_grupo_servico", Int64.Type}, {"valor_tabela", type number}})
