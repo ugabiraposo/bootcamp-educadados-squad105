@@ -6,36 +6,32 @@ table 'Medidas percentuais'
 			    [valor líquido],
 			    [val vendedor],
 			    "sem meta")
+		formatString: 0%;-0%;0%
 		lineageTag: 81bad78d-e3ed-4726-9a29-8cc3a6a70c19
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'qtde vendedor %' =
 			divide(
 			    [número de vendas],
 			    [qtde vendedor],
 			    "sem meta")
+		formatString: 0%;-0%;0%
 		lineageTag: bd1cad70-8a95-4202-ad67-35e4a38817d4
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'val profissional %' =
 			divide(
 			    [valor líquido],
 			    [val profissional],
 			    "sem meta")
+		formatString: 0%;-0%;0%
 		lineageTag: 33b575cf-69c6-45d6-83da-7d346474c317
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'qtde profissional %' =
 			divide(
 			    [número de vendas],
 			    [qtde profissional],
 			    "sem meta")
+		formatString: 0%;-0%;0%
 		lineageTag: fb9ec09b-0265-4d5a-b3b1-e9e16edc9b3e
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'val grupos %' =
 			divide(
@@ -60,18 +56,16 @@ table 'Medidas percentuais'
 			    [valor bruto],
 			    [val serviços],
 			    "sem meta")
+		formatString: 0%;-0%;0%
 		lineageTag: 3534fa22-5b01-4443-bfe2-bde20efba3f1
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'qtde serviços %' =
 			divide(
 			    [quantidade de itens],
 			    [qtde serviços],
 			    "sem meta")
+		formatString: 0%;-0%;0%
 		lineageTag: fb648210-15d3-46af-b086-c2f94ba74186
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'qtde cidade %' =
 			divide(

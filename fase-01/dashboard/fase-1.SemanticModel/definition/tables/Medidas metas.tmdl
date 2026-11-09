@@ -2,21 +2,23 @@ table 'Medidas metas'
 	lineageTag: 84e2f1c0-cf55-4547-add2-f710f35ffe55
 
 	measure 'val vendedor' = CALCULATE([meta de valor], fMetas_valor[nivel] = "Vendedor")
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: bc7743ce-6338-4c27-b5d0-d34384d420f5
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure 'qtde vendedor' = CALCULATE([meta de quantidade], fMetas_quantidade[nivel] = "Vendedor")
-		formatString: 0
+		formatString: #,0
 		lineageTag: fd2966dc-1af5-4faa-8cad-c2bebb222e82
 
 	measure 'val profissional' = CALCULATE([meta de valor], fMetas_valor[nivel] = "Profissional")
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: f9461f28-55a4-4703-bb95-16f40de0d5e5
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure 'qtde profissional' = CALCULATE([meta de quantidade], fMetas_quantidade[nivel] = "Profissional")
-		formatString: 0
+		formatString: #,0
 		lineageTag: 28b6a8b3-89a3-474f-b5a2-880bed157750
 
 	measure 'val grupos' = ```
@@ -41,16 +43,17 @@ table 'Medidas metas'
 			USERELATIONSHIP(dServicos[codigo_servico], fMetas_valor[codigo_servico]), 
 			fMetas_valor[nivel] = "Serviço")
 			```
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: 65f11e3f-e5bb-4eb0-b5d0-d6d9697672b7
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure 'qtde serviços' = ```
 			CALCULATE([meta de quantidade], 
 			USERELATIONSHIP(dServicos[codigo_servico], fMetas_quantidade[codigo_servico]), 
 			fMetas_quantidade[nivel] = "Serviço")
 			```
-		formatString: 0
+		formatString: #,0
 		lineageTag: 1e404201-ad23-4c45-a1c6-039728bba94f
 
 	measure 'val cidade' = ```
