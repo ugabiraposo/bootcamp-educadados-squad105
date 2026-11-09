@@ -1,0 +1,787 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Serviço",
+  "name": "51e7f63da4c240e7d53d",
+  "options": {
+    "targetVisualNames": [],
+    "suppressData": true,
+    "preserveNewVisualVisibility": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "dc443ad11edd56044ed0",
+    "sections": {
+      "dc443ad11edd56044ed0": {
+        "visualContainers": {
+          "01288fa625093c89c30c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "422d312edda282745bae",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "mes_ano"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "96680b2054a1402e051a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas base"
+                        }
+                      },
+                      "Property": "valor líquido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "40c88a3c7e3ab7382eeb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas metas"
+                        }
+                      },
+                      "Property": "val rede"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "mes_ano"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "3356ca35b6cb0b325074": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "409e34e33980bba08513": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e32bec78a5ad6e1359c5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "ano"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "ano"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "416672a8790820934058": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "482a57899acc9d9b71c7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dVendedores"
+                        }
+                      },
+                      "Property": "vendedor"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f9a027af4d3867046d58",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas base"
+                        }
+                      },
+                      "Property": "valor líquido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f99f19feab92e5585ada",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas metas"
+                        }
+                      },
+                      "Property": "val vendedor"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "81da2f375a2882011210",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas percentuais"
+                        }
+                      },
+                      "Property": "val vendedor %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "239247d834aa0e02dddd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas base"
+                        }
+                      },
+                      "Property": "número de vendas"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2d18b76ea6b76693c6dd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas metas"
+                        }
+                      },
+                      "Property": "qtde vendedor"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "127d57e7dd35965b0a05",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas percentuais"
+                        }
+                      },
+                      "Property": "qtde vendedor %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "activeProjections": {
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dVendedores"
+                        }
+                      },
+                      "Property": "vendedor"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "545ed4541d4caac2c350": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "80044454770acc035998": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "908dcb18317bad023ce9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dProfissionais"
+                        }
+                      },
+                      "Property": "profissional"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5782b47ac2924c0102d2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas base"
+                        }
+                      },
+                      "Property": "valor líquido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c5e2f200ec692eb0305b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas metas"
+                        }
+                      },
+                      "Property": "val profissional"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1b6b65ff39900760018e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas percentuais"
+                        }
+                      },
+                      "Property": "val profissional %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6582ed839570550307c5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas base"
+                        }
+                      },
+                      "Property": "número de vendas"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a07d4c1eb8da93518ca8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas metas"
+                        }
+                      },
+                      "Property": "qtde profissional"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b5a05519a10b171836d1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas percentuais"
+                        }
+                      },
+                      "Property": "qtde profissional %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "activeProjections": {
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dProfissionais"
+                        }
+                      },
+                      "Property": "profissional"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "842551247556e4430a80": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "182b12a67d0a72cbde71",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dServicos"
+                        }
+                      },
+                      "Property": "servico"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "87556317049693c56d2c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas base"
+                        }
+                      },
+                      "Property": "valor bruto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1207d5a0a3953ccb53e5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas metas"
+                        }
+                      },
+                      "Property": "val serviços"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4e5b5d084dc02a04a2b2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas percentuais"
+                        }
+                      },
+                      "Property": "val serviços %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9e1a41a1ae75d772870c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas base"
+                        }
+                      },
+                      "Property": "quantidade de itens"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c82b430f62290c760019",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas metas"
+                        }
+                      },
+                      "Property": "qtde serviços"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7ba7f2c459243d914984",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas percentuais"
+                        }
+                      },
+                      "Property": "qtde serviços %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {}
+            }
+          },
+          "8b319400d7d68b19bb7e": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d87d09e55600579a52a8": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "e427ebe3ec764c889305": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "e6871ece1609d717aec6": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "ecab8c1922e3240ae178": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a1bac0e54016b2c19d01",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "mes_nome"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "mes_nome"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "6bce7eb11b490ee2c5a5": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "fac4e32fd656a7b587d2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas especiais"
+                        }
+                      },
+                      "Property": "Destaque - Vendedor Líder"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "dc00fd32d404289b4392": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "34b8701101d300857099": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "588e20100ce600a2c167",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "mes_ano"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9cda030408e65079db0e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas base"
+                        }
+                      },
+                      "Property": "meta de quantidade"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7c61f47731c951054708",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas base"
+                        }
+                      },
+                      "Property": "quantidade de itens"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "mes_ano"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "66d9f1406e4a147561e0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f6b41adcd240d084315d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas especiais"
+                        }
+                      },
+                      "Property": "Destaque - Serviço Líder"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "f2e2f10566c1bec837c8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "468b272f98406958b0da",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas especiais"
+                        }
+                      },
+                      "Property": "Destaque - Profissional Líder"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "0b235d8645802490cd2b": {
+            "singleVisual": {
+              "visualType": "bookmarkNavigator",
+              "objects": {}
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

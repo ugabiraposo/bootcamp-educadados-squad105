@@ -1,0 +1,231 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "842551247556e4430a80",
+  "position": {
+    "x": 90,
+    "y": 360,
+    "z": 11000,
+    "height": 380,
+    "width": 1083.3333333333335,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dServicos"
+                    }
+                  },
+                  "Property": "servico"
+                }
+              },
+              "queryRef": "dServicos.servico",
+              "nativeQueryRef": "servico"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "valor bruto"
+                }
+              },
+              "queryRef": "Medidas base.valor bruto",
+              "nativeQueryRef": "valor bruto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "val serviços"
+                }
+              },
+              "queryRef": "Medidas metas.val serviços",
+              "nativeQueryRef": "meta de valor",
+              "displayName": "meta de valor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas percentuais"
+                    }
+                  },
+                  "Property": "val serviços %"
+                }
+              },
+              "queryRef": "Medidas percentuais.val serviços %",
+              "nativeQueryRef": "atingimento de valor %",
+              "displayName": "atingimento de valor %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "quantidade de itens"
+                }
+              },
+              "queryRef": "Medidas base.quantidade de itens",
+              "nativeQueryRef": "quantidade de itens"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "qtde serviços"
+                }
+              },
+              "queryRef": "Medidas metas.qtde serviços",
+              "nativeQueryRef": "meta de quantidade",
+              "displayName": "meta de quantidade"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas percentuais"
+                    }
+                  },
+                  "Property": "qtde serviços %"
+                }
+              },
+              "queryRef": "Medidas percentuais.qtde serviços %",
+              "nativeQueryRef": "atingimento de qtde %",
+              "displayName": "atingimento de qtde %"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#CBE5FF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#172D33'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "isHidden": true
+}

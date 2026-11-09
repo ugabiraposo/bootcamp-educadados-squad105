@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "e6871ece1609d717aec6",
+  "position": {
+    "x": 125,
+    "y": 225,
+    "z": 3000,
+    "height": 48.333333333333336,
+    "width": 535,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Exploração por pessoas, profissionais e serviços",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#b3c7c9"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
