@@ -9,7 +9,7 @@
 | **CT-02** | Maior Valor Liquido vs. Atingimento | Verificar se o maior valor liquido corresponde ao maior atingimento | [] | `Aprovado — Brasilia` ([Ver Print](#visao-executiva)) |
 | **CT-03** | Cidade Lider em Vendas | Identificar a cidade 1a colocada em volume e seu valor financeiro | [] | `Aprovado — Brasilia` (2.629 vendas) ([Ver Print](#visao-executiva)) |
 | **CT-04** | Vendedor com Menor Atingimento | Identificar o vendedor com menor % de atingimento (considerando Meta > 0) | [x] | `Aprovado — Juan Sampaio (58,73%)` ([Ver Print](#analise-detalhada)) |
-| **CT-05** | Grupo de Servico Lider | Identificar o grupo de servico lider em valor bruto e seu % do total | [] | `Aprovado — Protocolo (27,81%)` ([Ver Print](#analise-detalhada)) |
+| **CT-05** | Grupo de Servico Lider | Identificar o grupo de servico lider em valor bruto e seu % do total | [x] | `Aprovado — Grupo de Serviço 5 (27,82%)` ([Ver Print](#analise-detalhada)) |
 | **CT-06** | Inspecao de Erros no Power Query | Validar tipos de dados, nulos e inconsistencias na carga | [] | `Aprovado (Zero erros de carga)` |
 | **CT-07** | Requisicao de Homologacao | Registrar e acompanhar a correcao dos bugs identificados | [x] | `Aprovado (Sem bugs abertos)` |
 | **CT-08** | Exportacao e Envio por E-mail | Validar exportacao em PDF dos endpoints e envio das informacoes | [] | `Aprovado (PDF gerado e enviado)` |
