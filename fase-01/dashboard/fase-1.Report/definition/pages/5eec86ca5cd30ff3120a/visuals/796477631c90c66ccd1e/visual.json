@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "796477631c90c66ccd1e",
   "position": {
     "x": 0,
     "y": 560,
     "z": 15000,
-    "height": 391.42857142857144,
-    "width": 560,
+    "height": 391,
+    "width": 594,
     "tabOrder": 15000
   },
   "visual": {
@@ -83,13 +83,13 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dVendedores"
+                    "Entity": "Medidas percentuais"
                   }
                 },
-                "Property": "vendedor"
+                "Property": "val vendedor %"
               }
             },
             "direction": "Ascending"

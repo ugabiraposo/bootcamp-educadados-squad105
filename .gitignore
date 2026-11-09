@@ -1,2 +1,15 @@
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
+
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/Medidas percentuais.tmdl
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/dCalendario.tmdl
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/dCidades.tmdl
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/dFiliais.tmdl
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/dGrupos_servico.tmdl
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/dProfissionais.tmdl
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/dServicos.tmdl
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/dVendedores.tmdl
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/fItens_venda.tmdl
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/fMetas_quantidade.tmdl
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/fMetas_valor.tmdl
+fase-01/dashboard/fase-1.SemanticModel/definition/tables/fVendas.tmdl
