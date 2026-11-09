@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "3abee2419e0d79a60e65",
   "position": {
     "x": 90,
@@ -19,19 +19,12 @@
               {
                 "textRuns": [
                   {
-                    "value": "Evolucao e Desempenho",
+                    "value": "Evolução e Desempenho",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "24pt",
                       "color": "#ffffff"
                     }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }

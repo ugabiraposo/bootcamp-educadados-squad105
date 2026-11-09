@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "af9a8bfc7ec1d316cdc7",
   "position": {
     "x": 565,
     "y": 1200,
-    "z": 22000,
+    "z": 21000,
     "height": 290,
     "width": 450,
-    "tabOrder": 22000
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -70,6 +70,39 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "background": [
         {
@@ -79,7 +112,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#172D33'"
+                      "Value": "'#CBE5FF'"
                     }
                   }
                 }
@@ -110,7 +143,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F2F8F7'"
+                      "Value": "'#172D33'"
                     }
                   }
                 }
@@ -141,7 +174,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B3C7C9'"
+                      "Value": "'#172D33'"
                     }
                   }
                 }

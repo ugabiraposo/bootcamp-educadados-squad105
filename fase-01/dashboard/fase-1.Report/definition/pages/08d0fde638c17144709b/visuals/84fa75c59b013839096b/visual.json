@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "84fa75c59b013839096b",
   "position": {
     "x": 90,
     "y": 1145,
-    "z": 20000,
+    "z": 14000,
     "height": 45,
     "width": 650,
-    "tabOrder": 20000
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,19 +19,12 @@
               {
                 "textRuns": [
                   {
-                    "value": "Composicao das Vendas",
+                    "value": "Composição das Vendas",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "24pt",
                       "color": "#ffffff"
                     }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }

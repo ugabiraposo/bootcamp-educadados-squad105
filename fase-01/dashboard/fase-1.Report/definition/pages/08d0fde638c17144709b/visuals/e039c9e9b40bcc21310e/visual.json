@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "e039c9e9b40bcc21310e",
   "position": {
     "x": 90,
     "y": 412.5,
-    "z": 22002,
+    "z": 18000,
     "height": 250,
     "width": 1417.5,
-    "tabOrder": 22002
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -88,6 +88,80 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas base.meta de valor"
+          }
+        }
+      ],
+      "seriesLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "background": [
         {
@@ -97,7 +171,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#172D33'"
+                      "Value": "'#CBE5FF'"
                     }
                   }
                 }
@@ -152,7 +226,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F2F8F7'"
+                      "Value": "'#172D33'"
                     }
                   }
                 }
@@ -176,7 +250,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B3C7C9'"
+                      "Value": "'#172D33'"
                     }
                   }
                 }
