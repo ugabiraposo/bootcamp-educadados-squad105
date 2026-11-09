@@ -1,0 +1,293 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/semanticModel/unappliedChanges/1.0.0/schema.json",
+  "conceptualSchemaSettings": {},
+  "queries": [
+    {
+      "name": "dCalendario",
+      "lineageTag": "fea6cb85-efc6-4b79-891a-8572d064a459",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Excel.Workbook(File.Contents(\"C:\\vscoide\\bootcamp-educadados-squad105\\fase-01\\dados\\calendario.xlsx\"), null, true),",
+        "    calendario_Sheet = Fonte{[Item=\"calendario\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(calendario_Sheet, [PromoteAllScalars=true]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"data\", type date}, {\"ano\", Int64.Type}, {\"mes_numero\", Int64.Type}, {\"mes_nome\", type text}, {\"mes_abreviado\", type text}, {\"mes_ano\", type text}, {\"ano_mes\", type text}, {\"trimestre\", Int64.Type}, {\"semana_do_ano\", Int64.Type}, {\"dia\", Int64.Type}, {\"dia_semana_numero\", Int64.Type}, {\"dia_semana_nome\", type text}, {\"fim_de_semana\", type logical}, {\"feriado_nacional\", type logical}, {\"nome_feriado_nacional\", type text}, {\"dia_util\", type logical}})",
+        "in",
+        "    #\"Tipo Alterado\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Excel.Workbook(File.Contents(\\\"C:\\\\vscoide\\\\bootcamp-educadados-squad105\\\\fase-01\\\\dados\\\\calendario.xlsx\\\"), null, true),\\n    calendario_Sheet = Fonte{[Item=\\\"calendario\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Cabeçalhos Promovidos\\\" = Table.PromoteHeaders(calendario_Sheet, [PromoteAllScalars=true]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(#\\\"Cabeçalhos Promovidos\\\",{{\\\"data\\\", type date}, {\\\"ano\\\", Int64.Type}, {\\\"mes_numero\\\", Int64.Type}, {\\\"mes_nome\\\", type text}, {\\\"mes_abreviado\\\", type text}, {\\\"mes_ano\\\", type text}, {\\\"ano_mes\\\", type text}, {\\\"trimestre\\\", Int64.Type}, {\\\"semana_do_ano\\\", Int64.Type}, {\\\"dia\\\", Int64.Type}, {\\\"dia_semana_numero\\\", Int64.Type}, {\\\"dia_semana_nome\\\", type text}, {\\\"fim_de_semana\\\", type logical}, {\\\"feriado_nacional\\\", type logical}, {\\\"nome_feriado_nacional\\\", type text}, {\\\"dia_util\\\", type logical}})\\nin\\n    #\\\"Tipo Alterado\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "dCidades",
+      "lineageTag": "4e75c66b-473e-4fc9-a419-d5a9b7b29d4a",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Excel.Workbook(File.Contents(\"C:\\vscoide\\bootcamp-educadados-squad105\\fase-01\\dados\\cidades.xlsx\"), null, true),",
+        "    cidades_Sheet = Fonte{[Item=\"cidades\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(cidades_Sheet, [PromoteAllScalars=true]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"codigo_cidade\", Int64.Type}, {\"cidade\", type text}, {\"uf\", type text}, {\"estado\", type text}, {\"regiao\", type text}, {\"latitude\", type number}, {\"longitude\", type number}, {\"populacao_aprox\", Int64.Type}})",
+        "in",
+        "    #\"Tipo Alterado\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Excel.Workbook(File.Contents(\\\"C:\\\\vscoide\\\\bootcamp-educadados-squad105\\\\fase-01\\\\dados\\\\cidades.xlsx\\\"), null, true),\\n    cidades_Sheet = Fonte{[Item=\\\"cidades\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Cabeçalhos Promovidos\\\" = Table.PromoteHeaders(cidades_Sheet, [PromoteAllScalars=true]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(#\\\"Cabeçalhos Promovidos\\\",{{\\\"codigo_cidade\\\", Int64.Type}, {\\\"cidade\\\", type text}, {\\\"uf\\\", type text}, {\\\"estado\\\", type text}, {\\\"regiao\\\", type text}, {\\\"latitude\\\", type number}, {\\\"longitude\\\", type number}, {\\\"populacao_aprox\\\", Int64.Type}})\\nin\\n    #\\\"Tipo Alterado\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "dFiliais",
+      "lineageTag": "31436c85-8749-4069-ba6a-40242687c471",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Excel.Workbook(File.Contents(\"C:\\vscoide\\bootcamp-educadados-squad105\\fase-01\\dados\\filiais.xlsx\"), null, true),",
+        "    filiais_Sheet = Fonte{[Item=\"filiais\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(filiais_Sheet, [PromoteAllScalars=true]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"codigo_filial\", Int64.Type}, {\"nome\", type text}, {\"nome_abreviado\", type text}, {\"codigo_cidade\", Int64.Type}, {\"regional\", type text}, {\"cluster\", type text}, {\"sabado_dia_util\", type text}, {\"unidade_ativa\", type text}, {\"data_inauguracao\", type date}, {\"data_encerramento\", type date}}),",
+        "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado\",{{\"nome_abreviado\", \"filial_abreviado\"}, {\"nome\", \"filial\"}})",
+        "in",
+        "    #\"Colunas Renomeadas\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Excel.Workbook(File.Contents(\\\"C:\\\\vscoide\\\\bootcamp-educadados-squad105\\\\fase-01\\\\dados\\\\filiais.xlsx\\\"), null, true),\\n    filiais_Sheet = Fonte{[Item=\\\"filiais\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Cabeçalhos Promovidos\\\" = Table.PromoteHeaders(filiais_Sheet, [PromoteAllScalars=true]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(#\\\"Cabeçalhos Promovidos\\\",{{\\\"codigo_filial\\\", Int64.Type}, {\\\"nome\\\", type text}, {\\\"nome_abreviado\\\", type text}, {\\\"codigo_cidade\\\", Int64.Type}, {\\\"regional\\\", type text}, {\\\"cluster\\\", type text}, {\\\"sabado_dia_util\\\", type text}, {\\\"unidade_ativa\\\", type text}, {\\\"data_inauguracao\\\", type date}, {\\\"data_encerramento\\\", type date}}),\\n    #\\\"Colunas Renomeadas\\\" = Table.RenameColumns(#\\\"Tipo Alterado\\\",{{\\\"nome_abreviado\\\", \\\"filial_abreviado\\\"}, {\\\"nome\\\", \\\"filial\\\"}})\\nin\\n    #\\\"Colunas Renomeadas\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "dGrupos_servico",
+      "lineageTag": "e57eb1cf-34de-4859-a8ab-5057b2bb9fcd",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Excel.Workbook(File.Contents(\"C:\\vscoide\\bootcamp-educadados-squad105\\fase-01\\dados\\grupos_servico.xlsx\"), null, true),",
+        "    grupos_servico_Sheet = Fonte{[Item=\"grupos_servico\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(grupos_servico_Sheet, [PromoteAllScalars=true]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"codigo_grupo_servico\", Int64.Type}, {\"grupo_servico\", type text}})",
+        "in",
+        "    #\"Tipo Alterado\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Excel.Workbook(File.Contents(\\\"C:\\\\vscoide\\\\bootcamp-educadados-squad105\\\\fase-01\\\\dados\\\\grupos_servico.xlsx\\\"), null, true),\\n    grupos_servico_Sheet = Fonte{[Item=\\\"grupos_servico\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Cabeçalhos Promovidos\\\" = Table.PromoteHeaders(grupos_servico_Sheet, [PromoteAllScalars=true]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(#\\\"Cabeçalhos Promovidos\\\",{{\\\"codigo_grupo_servico\\\", Int64.Type}, {\\\"grupo_servico\\\", type text}})\\nin\\n    #\\\"Tipo Alterado\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "fItens_venda",
+      "lineageTag": "072c6883-a670-42d2-9ad3-4152bc04ea59",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Excel.Workbook(File.Contents(\"C:\\vscoide\\bootcamp-educadados-squad105\\fase-01\\dados\\itens_venda.xlsx\"), null, true),",
+        "    itens_venda_Sheet = Fonte{[Item=\"itens_venda\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(itens_venda_Sheet, [PromoteAllScalars=true]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"codigo_item_venda\", Int64.Type}, {\"codigo_venda\", Int64.Type}, {\"codigo_servico\", Int64.Type}, {\"quantidade\", Int64.Type}, {\"valor_unitario\", type number}, {\"valor_total\", type number}})",
+        "in",
+        "    #\"Tipo Alterado\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Excel.Workbook(File.Contents(\\\"C:\\\\vscoide\\\\bootcamp-educadados-squad105\\\\fase-01\\\\dados\\\\itens_venda.xlsx\\\"), null, true),\\n    itens_venda_Sheet = Fonte{[Item=\\\"itens_venda\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Cabeçalhos Promovidos\\\" = Table.PromoteHeaders(itens_venda_Sheet, [PromoteAllScalars=true]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(#\\\"Cabeçalhos Promovidos\\\",{{\\\"codigo_item_venda\\\", Int64.Type}, {\\\"codigo_venda\\\", Int64.Type}, {\\\"codigo_servico\\\", Int64.Type}, {\\\"quantidade\\\", Int64.Type}, {\\\"valor_unitario\\\", type number}, {\\\"valor_total\\\", type number}})\\nin\\n    #\\\"Tipo Alterado\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "fMetas_quantidade",
+      "lineageTag": "98f4970a-daa2-4bc0-ae46-7c30776d0caf",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Excel.Workbook(File.Contents(\"C:\\vscoide\\bootcamp-educadados-squad105\\fase-01\\dados\\metas_quantidade.xlsx\"), null, true),",
+        "    metas_quantidade_Sheet = Fonte{[Item=\"metas_quantidade\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(metas_quantidade_Sheet, [PromoteAllScalars=true]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"codigo_meta_quantidade\", Int64.Type}, {\"codigo_filial\", Int64.Type}, {\"mes\", type date}, {\"nivel\", type text}, {\"codigo_grupo_servico\", Int64.Type}, {\"codigo_servico\", Int64.Type}, {\"codigo_vendedor\", Int64.Type}, {\"codigo_profissional\", Int64.Type}, {\"meta_quantidade\", Int64.Type}})",
+        "in",
+        "    #\"Tipo Alterado\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Excel.Workbook(File.Contents(\\\"C:\\\\vscoide\\\\bootcamp-educadados-squad105\\\\fase-01\\\\dados\\\\metas_quantidade.xlsx\\\"), null, true),\\n    metas_quantidade_Sheet = Fonte{[Item=\\\"metas_quantidade\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Cabeçalhos Promovidos\\\" = Table.PromoteHeaders(metas_quantidade_Sheet, [PromoteAllScalars=true]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(#\\\"Cabeçalhos Promovidos\\\",{{\\\"codigo_meta_quantidade\\\", Int64.Type}, {\\\"codigo_filial\\\", Int64.Type}, {\\\"mes\\\", type date}, {\\\"nivel\\\", type text}, {\\\"codigo_grupo_servico\\\", Int64.Type}, {\\\"codigo_servico\\\", Int64.Type}, {\\\"codigo_vendedor\\\", Int64.Type}, {\\\"codigo_profissional\\\", Int64.Type}, {\\\"meta_quantidade\\\", Int64.Type}})\\nin\\n    #\\\"Tipo Alterado\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "fMetas_valor",
+      "lineageTag": "34526a14-a043-421f-aeb8-df9285f4ccae",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Excel.Workbook(File.Contents(\"C:\\vscoide\\bootcamp-educadados-squad105\\fase-01\\dados\\metas_valor.xlsx\"), null, true),",
+        "    metas_valor_Sheet = Fonte{[Item=\"metas_valor\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(metas_valor_Sheet, [PromoteAllScalars=true]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"codigo_meta_valor\", Int64.Type}, {\"codigo_filial\", Int64.Type}, {\"mes\", type date}, {\"nivel\", type text}, {\"codigo_grupo_servico\", Int64.Type}, {\"codigo_servico\", Int64.Type}, {\"codigo_vendedor\", Int64.Type}, {\"codigo_profissional\", Int64.Type}, {\"meta_valor\", type number}})",
+        "in",
+        "    #\"Tipo Alterado\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Excel.Workbook(File.Contents(\\\"C:\\\\vscoide\\\\bootcamp-educadados-squad105\\\\fase-01\\\\dados\\\\metas_valor.xlsx\\\"), null, true),\\n    metas_valor_Sheet = Fonte{[Item=\\\"metas_valor\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Cabeçalhos Promovidos\\\" = Table.PromoteHeaders(metas_valor_Sheet, [PromoteAllScalars=true]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(#\\\"Cabeçalhos Promovidos\\\",{{\\\"codigo_meta_valor\\\", Int64.Type}, {\\\"codigo_filial\\\", Int64.Type}, {\\\"mes\\\", type date}, {\\\"nivel\\\", type text}, {\\\"codigo_grupo_servico\\\", Int64.Type}, {\\\"codigo_servico\\\", Int64.Type}, {\\\"codigo_vendedor\\\", Int64.Type}, {\\\"codigo_profissional\\\", Int64.Type}, {\\\"meta_valor\\\", type number}})\\nin\\n    #\\\"Tipo Alterado\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "dProfissionais",
+      "lineageTag": "04502e6d-b79b-4187-9f01-65fad1a24542",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Excel.Workbook(File.Contents(\"C:\\vscoide\\bootcamp-educadados-squad105\\fase-01\\dados\\profissionais.xlsx\"), null, true),",
+        "    profissionais_Sheet = Fonte{[Item=\"profissionais\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(profissionais_Sheet, [PromoteAllScalars=true]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"codigo_profissional\", Int64.Type}, {\"nome\", type text}, {\"especialidade\", type text}, {\"codigo_filial\", Int64.Type}, {\"ativo\", type logical}}),",
+        "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado\",{{\"nome\", \"profissional\"}})",
+        "in",
+        "    #\"Colunas Renomeadas\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Excel.Workbook(File.Contents(\\\"C:\\\\vscoide\\\\bootcamp-educadados-squad105\\\\fase-01\\\\dados\\\\profissionais.xlsx\\\"), null, true),\\n    profissionais_Sheet = Fonte{[Item=\\\"profissionais\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Cabeçalhos Promovidos\\\" = Table.PromoteHeaders(profissionais_Sheet, [PromoteAllScalars=true]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(#\\\"Cabeçalhos Promovidos\\\",{{\\\"codigo_profissional\\\", Int64.Type}, {\\\"nome\\\", type text}, {\\\"especialidade\\\", type text}, {\\\"codigo_filial\\\", Int64.Type}, {\\\"ativo\\\", type logical}}),\\n    #\\\"Colunas Renomeadas\\\" = Table.RenameColumns(#\\\"Tipo Alterado\\\",{{\\\"nome\\\", \\\"profissional\\\"}})\\nin\\n    #\\\"Colunas Renomeadas\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "dServicos",
+      "lineageTag": "fc0f97b0-2f64-4f1f-953e-bb935e14b6c8",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Excel.Workbook(File.Contents(\"C:\\vscoide\\bootcamp-educadados-squad105\\fase-01\\dados\\servicos.xlsx\"), null, true),",
+        "    servicos_Sheet = Fonte{[Item=\"servicos\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(servicos_Sheet, [PromoteAllScalars=true]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"codigo_servico\", Int64.Type}, {\"servico\", type text}, {\"codigo_grupo_servico\", Int64.Type}, {\"valor_tabela\", type number}})",
+        "in",
+        "    #\"Tipo Alterado\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Excel.Workbook(File.Contents(\\\"C:\\\\vscoide\\\\bootcamp-educadados-squad105\\\\fase-01\\\\dados\\\\servicos.xlsx\\\"), null, true),\\n    servicos_Sheet = Fonte{[Item=\\\"servicos\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Cabeçalhos Promovidos\\\" = Table.PromoteHeaders(servicos_Sheet, [PromoteAllScalars=true]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(#\\\"Cabeçalhos Promovidos\\\",{{\\\"codigo_servico\\\", Int64.Type}, {\\\"servico\\\", type text}, {\\\"codigo_grupo_servico\\\", Int64.Type}, {\\\"valor_tabela\\\", type number}})\\nin\\n    #\\\"Tipo Alterado\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "fVendas",
+      "lineageTag": "b0b38e8f-85a5-41be-8ce9-5904c693d0c9",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Excel.Workbook(File.Contents(\"C:\\vscoide\\bootcamp-educadados-squad105\\fase-01\\dados\\vendas.xlsx\"), null, true),",
+        "    vendas_Sheet = Fonte{[Item=\"vendas\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(vendas_Sheet, [PromoteAllScalars=true]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"codigo_venda\", Int64.Type}, {\"data\", type date}, {\"codigo_filial\", Int64.Type}, {\"codigo_cliente\", Int64.Type}, {\"codigo_profissional\", Int64.Type}, {\"codigo_vendedor\", Int64.Type}, {\"codigo_usuario\", Int64.Type}, {\"codigo_midia\", Int64.Type}, {\"valor_bruto\", type number}, {\"valor_desconto\", type number}, {\"valor_liquido\", type number}, {\"forma_pagamento\", type text}, {\"cliente_novo\", type text}})",
+        "in",
+        "    #\"Tipo Alterado\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Excel.Workbook(File.Contents(\\\"C:\\\\vscoide\\\\bootcamp-educadados-squad105\\\\fase-01\\\\dados\\\\vendas.xlsx\\\"), null, true),\\n    vendas_Sheet = Fonte{[Item=\\\"vendas\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Cabeçalhos Promovidos\\\" = Table.PromoteHeaders(vendas_Sheet, [PromoteAllScalars=true]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(#\\\"Cabeçalhos Promovidos\\\",{{\\\"codigo_venda\\\", Int64.Type}, {\\\"data\\\", type date}, {\\\"codigo_filial\\\", Int64.Type}, {\\\"codigo_cliente\\\", Int64.Type}, {\\\"codigo_profissional\\\", Int64.Type}, {\\\"codigo_vendedor\\\", Int64.Type}, {\\\"codigo_usuario\\\", Int64.Type}, {\\\"codigo_midia\\\", Int64.Type}, {\\\"valor_bruto\\\", type number}, {\\\"valor_desconto\\\", type number}, {\\\"valor_liquido\\\", type number}, {\\\"forma_pagamento\\\", type text}, {\\\"cliente_novo\\\", type text}})\\nin\\n    #\\\"Tipo Alterado\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "dVendedores",
+      "lineageTag": "0c235ee2-8548-42cc-af81-5020886b3a31",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Excel.Workbook(File.Contents(\"C:\\vscoide\\bootcamp-educadados-squad105\\fase-01\\dados\\vendedores.xlsx\"), null, true),",
+        "    vendedores_Sheet = Fonte{[Item=\"vendedores\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(vendedores_Sheet, [PromoteAllScalars=true]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"codigo_vendedor\", Int64.Type}, {\"nome\", type text}, {\"codigo_filial\", Int64.Type}, {\"ativo\", type logical}}),",
+        "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado\",{{\"nome\", \"vendedor\"}})",
+        "in",
+        "    #\"Colunas Renomeadas\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Excel.Workbook(File.Contents(\\\"C:\\\\vscoide\\\\bootcamp-educadados-squad105\\\\fase-01\\\\dados\\\\vendedores.xlsx\\\"), null, true),\\n    vendedores_Sheet = Fonte{[Item=\\\"vendedores\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Cabeçalhos Promovidos\\\" = Table.PromoteHeaders(vendedores_Sheet, [PromoteAllScalars=true]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(#\\\"Cabeçalhos Promovidos\\\",{{\\\"codigo_vendedor\\\", Int64.Type}, {\\\"nome\\\", type text}, {\\\"codigo_filial\\\", Int64.Type}, {\\\"ativo\\\", type logical}}),\\n    #\\\"Colunas Renomeadas\\\" = Table.RenameColumns(#\\\"Tipo Alterado\\\",{{\\\"nome\\\", \\\"vendedor\\\"}})\\nin\\n    #\\\"Colunas Renomeadas\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "Medidas base",
+      "lineageTag": "3e07e608-f740-450a-b1ad-4f9c5071dbc8",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Coluna 1\" = _t]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(Fonte,{{\"Coluna 1\", type text}}),",
+        "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado\",{\"Coluna 1\"})",
+        "in",
+        "    #\"Colunas Removidas\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\\\"i44FAA==\\\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\\\"Coluna 1\\\" = _t]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(Fonte,{{\\\"Coluna 1\\\", type text}}),\\n    #\\\"Colunas Removidas\\\" = Table.RemoveColumns(#\\\"Tipo Alterado\\\",{\\\"Coluna 1\\\"})\\nin\\n    #\\\"Colunas Removidas\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "Medidas metas",
+      "lineageTag": "84e2f1c0-cf55-4547-add2-f710f35ffe55",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Coluna 1\" = _t]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(Fonte,{{\"Coluna 1\", type text}}),",
+        "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado\",{\"Coluna 1\"})",
+        "in",
+        "    #\"Colunas Removidas\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\\\"i44FAA==\\\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\\\"Coluna 1\\\" = _t]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(Fonte,{{\\\"Coluna 1\\\", type text}}),\\n    #\\\"Colunas Removidas\\\" = Table.RemoveColumns(#\\\"Tipo Alterado\\\",{\\\"Coluna 1\\\"})\\nin\\n    #\\\"Colunas Removidas\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "Medidas percentuais",
+      "lineageTag": "1e2fa61a-1b4f-4c69-9a42-8fce15bacccc",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Coluna 1\" = _t]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(Fonte,{{\"Coluna 1\", type text}}),",
+        "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado\",{\"Coluna 1\"})",
+        "in",
+        "    #\"Colunas Removidas\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\\\"i44FAA==\\\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\\\"Coluna 1\\\" = _t]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(Fonte,{{\\\"Coluna 1\\\", type text}}),\\n    #\\\"Colunas Removidas\\\" = Table.RemoveColumns(#\\\"Tipo Alterado\\\",{\\\"Coluna 1\\\"})\\nin\\n    #\\\"Colunas Removidas\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "Medidas especiais",
+      "lineageTag": "1c862f21-c531-41d7-98d0-731ae36d51e1",
+      "navigationStepName": "Navegação",
+      "text": [
+        "let",
+        "    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Coluna 1\" = _t]),",
+        "    #\"Tipo Alterado\" = Table.TransformColumnTypes(Fonte,{{\"Coluna 1\", type text}}),",
+        "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado\",{\"Coluna 1\"})",
+        "in",
+        "    #\"Colunas Removidas\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\\\"i44FAA==\\\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\\\"Coluna 1\\\" = _t]),\\n    #\\\"Tipo Alterado\\\" = Table.TransformColumnTypes(Fonte,{{\\\"Coluna 1\\\", type text}}),\\n    #\\\"Colunas Removidas\\\" = Table.RemoveColumns(#\\\"Tipo Alterado\\\",{\\\"Coluna 1\\\"})\\nin\\n    #\\\"Colunas Removidas\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    }
+  ],
+  "queryGroups": [],
+  "culture": "pt-BR",
+  "firewallEnabled": true
+}
