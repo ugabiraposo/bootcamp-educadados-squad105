@@ -6,7 +6,7 @@
 | :--- | :--- | :--- | :---: | :--- |
 | **CT-00** | Requisitos Visuais da Cliente | Validar a presenca e formatacao dos 8 elementos visuais solicitados | [x] | `Aprovado (8/8 visuais)` ([Ver Print](#visao-executiva)) |
 | **CT-01** | Valor Liquido da Rede | Validar o valor liquido total consolidado da rede | [x] | `Aprovado — R$ 234.999.312` ([Ver Print](#visao-executiva)) |
-| **CT-02** | Maior Valor Liquido vs. Atingimento | Verificar se o maior valor liquido corresponde ao maior atingimento | [] | `Aprovado — Brasilia` ([Ver Print](#visao-executiva)) |
+| **CT-02** | Maior Valor Liquido vs. Atingimento | Verificar se o maior valor liquido corresponde ao maior atingimento | [x] | `Reprovado — Brasilia tem maior valor líquido R$ 13.298.929,19 mas Sobradinho tem maior atingimento com 105,09%` ([Ver Print](#visao-executiva)) |
 | **CT-03** | Cidade Lider em Vendas | Identificar a cidade 1a colocada em valor financeiro | [x] | `Aprovado — Brasilia R$ 13.298.929,19` ([Ver Print](#visao-executiva)) |
 | **CT-04** | Vendedor com Menor Atingimento | Identificar o vendedor com menor % de atingimento (considerando Meta > 0) | [x] | `Aprovado — Juan Sampaio (58,73%)` ([Ver Print](#analise-detalhada)) |
 | **CT-05** | Grupo de Servico Lider | Identificar o grupo de servico lider em valor bruto e seu % do total | [x] | `Aprovado — Grupo de Serviço 5 (27,82%)` ([Ver Print](#analise-detalhada)) |
