@@ -129,16 +129,16 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas percentuais"
+                    "Entity": "dVendedores"
                   }
                 },
-                "Property": "qtde vendedor %"
+                "Property": "vendedor"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -601,6 +601,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "isHidden": true
+  }
 }

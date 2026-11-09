@@ -4,10 +4,10 @@
   "position": {
     "x": 1265,
     "y": 31,
-    "z": 20001,
+    "z": 21000,
     "height": 68,
     "width": 89,
-    "tabOrder": 20001
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "image",
@@ -142,6 +142,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'ClearAllSlicers'"
+                }
+              }
+            },
+            "tooltip": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Limpar filtros'"
                 }
               }
             }
