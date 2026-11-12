@@ -59,7 +59,7 @@ table fItens_venda
 		mode: import
 		source =
 				let
-				    Fonte = Excel.Workbook(File.Contents("C:\Users\pablo\OneDrive\Desktop\bootcamp-educadados-squad105\fase-01\dados\itens_venda.xlsx"), null, true),
+				    Fonte = Excel.Workbook(File.Contents("C:\squad105\dados\itens_venda.xlsx"), null, true),
 				    itens_venda_Sheet = Fonte{[Item="itens_venda",Kind="Sheet"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(itens_venda_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_item_venda", Int64.Type}, {"codigo_venda", Int64.Type}, {"codigo_servico", Int64.Type}, {"quantidade", Int64.Type}, {"valor_unitario", type number}, {"valor_total", type number}})
