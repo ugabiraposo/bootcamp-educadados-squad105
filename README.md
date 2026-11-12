@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/squad105-banner-unico.png" alt="Squad 105 — Bootcamp Educadados" width="100%">
+  <img src="./assets/banner_squad105.png" alt="Squad 105 - Bootcamp Educadados" width="100%">
 </div>
 
 
@@ -27,8 +27,9 @@ Cada fase possui sua própria documentação, permitindo acompanhar a evolução
 |:--|:--|:--|
 | **Gabriela Raposo** | [![GitHub](https://img.shields.io/badge/@ugabiraposo-24292F?style=flat-square&logo=github&logoColor=white)](https://github.com/ugabiraposo) | [![LinkedIn](https://img.shields.io/badge/in-@gabiiraposo-0A66C2?style=flat-square&labelColor=075A9B)](https://www.linkedin.com/in/gabiiraposo/) |
 | **Pablo Leon Pereira** | [![GitHub](https://img.shields.io/badge/@pablopereira70-24292F?style=flat-square&logo=github&logoColor=white)](https://github.com/pablopereira70) | [![LinkedIn](https://img.shields.io/badge/in-@pablopereira70-0A66C2?style=flat-square&labelColor=075A9B)](https://www.linkedin.com/in/pablopereira70/) |
-| **Pedro Azevedo** | A adicionar | A adicionar |
-| **Isabela Colling** | A adicionar | A adicionar |
+| **Pedro Sousa** | [![GitHub](https://img.shields.io/badge/@P3drosous4-24292F?style=flat-square&logo=github&logoColor=white)](https://github.com/P3drosous4) | [![LinkedIn](https://img.shields.io/badge/in-@pedro--sous4-0A66C2?style=flat-square&labelColor=075A9B)](https://www.linkedin.com/in/pedro-sous4/) |
+| **Matheus Ylan** | [![GitHub](https://img.shields.io/badge/@matheusydev-24292F?style=flat-square&logo=github&logoColor=white)](https://github.com/matheusydev) | [![LinkedIn](https://img.shields.io/badge/in-@matheusylan-0A66C2?style=flat-square&labelColor=075A9B)](https://www.linkedin.com/in/matheusylan/) |
+| **Dirceu Silvestre** | [![GitHub](https://img.shields.io/badge/@DirceuSilvestre-24292F?style=flat-square&logo=github&logoColor=white)](https://github.com/DirceuSilvestre) | [![LinkedIn](https://img.shields.io/badge/in-@dirceu--silvestre-0A66C2?style=flat-square&labelColor=075A9B)](https://www.linkedin.com/in/dirceu-silvestre/) |
 
 
 
