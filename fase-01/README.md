@@ -70,8 +70,8 @@ O relatório será dividido em uma **visão executiva** e uma **visão detalhada
 
 | Entregável | Acesso |
 |:--|:--|
-| Dashboard interativo | Em desenvolvimento |
-| Arquivo Power BI (`.pbix`) | Em desenvolvimento |
+| Dashboard interativo | [![Power BI](https://img.shields.io/badge/Abrir_dashboard-192D35?style=flat-square&logo=powerbi&logoColor=white)](https://app.powerbi.com/view?r=eyJrIjoiODM5Y2JmZDUtN2Y3NS00MThiLTk1YzUtZDZmYTY0Mzg5YjE1IiwidCI6IjYzOWRiMzdjLWIxODEtNDFmMC05YWQwLTRjOWMzNmE3MjdkYSJ9) |
+| Arquivo Power BI (`.pbix`) | [![Google Drive](https://img.shields.io/badge/Baixar_arquivo-192D35?style=flat-square&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1msut1Otcy8WT8q7CUFS1qN7sLta2z3XJ/view?usp=sharing) |
 
 ## Materiais oficiais
 
