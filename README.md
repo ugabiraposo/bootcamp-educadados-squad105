@@ -40,8 +40,8 @@ O projeto está organizado em seis etapas, cada uma com sua própria documentaç
 
 | Fase | Período oficial | Documentação |
 |:--|:--|:--|
-| ![Fase 01](https://img.shields.io/badge/01-Comercial-192D35?style=flat-square&labelColor=087F75) | 14–31 out 2026 | [![Explorar](https://img.shields.io/badge/Explorar_Fase_01-192D35?style=flat-square&logo=github&logoColor=white)](fase-01/README.md) |
-| ![Fase 02](https://img.shields.io/badge/02-Fase_02-192D35?style=flat-square&labelColor=34454C) | 01–15 nov 2026 | [![Explorar](https://img.shields.io/badge/Explorar_Fase_02-192D35?style=flat-square&logo=github&logoColor=white)](fase-02/README.md) |
+| ![Fase 01](https://img.shields.io/badge/01-Comercial-192D35?style=flat-square&labelColor=087F75) | 14 out – 07 nov 2026 | [![Explorar](https://img.shields.io/badge/Explorar_Fase_01-192D35?style=flat-square&logo=github&logoColor=white)](fase-01/README.md) |
+| ![Fase 02](https://img.shields.io/badge/02-Atingimento-192D35?style=flat-square&labelColor=087F75) | 08–23 nov 2026 | [![Explorar](https://img.shields.io/badge/Explorar_Fase_02-192D35?style=flat-square&logo=github&logoColor=white)](fase-02/README.md) |
 | ![Fase 03](https://img.shields.io/badge/03-Fase_03-192D35?style=flat-square&labelColor=34454C) | 16–30 nov 2026 | [![Explorar](https://img.shields.io/badge/Explorar_Fase_03-192D35?style=flat-square&logo=github&logoColor=white)](fase-03/README.md) |
 | ![Fase 04](https://img.shields.io/badge/04-Fase_04-192D35?style=flat-square&labelColor=34454C) | 01–15 dez 2026 | [![Explorar](https://img.shields.io/badge/Explorar_Fase_04-192D35?style=flat-square&logo=github&logoColor=white)](fase-04/README.md) |
 | ![Fase 05](https://img.shields.io/badge/05-Fase_05-192D35?style=flat-square&labelColor=34454C) | 16 dez 2026 – 05 jan 2027 | [![Explorar](https://img.shields.io/badge/Explorar_Fase_05-192D35?style=flat-square&logo=github&logoColor=white)](fase-05/README.md) |
