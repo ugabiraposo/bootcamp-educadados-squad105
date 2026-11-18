@@ -102,11 +102,6 @@ relationship 85f612ed-489e-6752-7190-b54cfa96fe1d
 	fromColumn: fVendas.codigo_vendedor
 	toColumn: dVendedores.codigo_vendedor
 
-relationship ba5dd043-3217-4ffd-b85f-3271c5fe0292
-	joinOnDateBehavior: datePartOnly
-	fromColumn: fOrcamentos.data
-	toColumn: LocalDateTable_d93c9f9e-0877-4e51-9438-5c138bb45504.Date
-
 relationship AutoDetected_fc7a18bd-15bb-4f1a-8e51-fc73466cb02a
 	fromColumn: fOrcamentos.codigo_filial
 	toColumn: dFiliais.codigo_filial
@@ -119,4 +114,8 @@ relationship AutoDetected_de81f3b6-780c-4ec3-bcce-2b7df6bfad67
 relationship AutoDetected_35382975-9048-4c5a-b1a2-ea0a92be930f
 	fromColumn: fOrcamentos.codigo_profissional
 	toColumn: dProfissionais.codigo_profissional
+
+relationship c5958a22-9829-1b97-97ec-3aeb037b315a
+	fromColumn: fOrcamentos.data
+	toColumn: dCalendario.data
 
