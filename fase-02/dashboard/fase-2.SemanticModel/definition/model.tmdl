@@ -32,7 +32,6 @@ ref table 'Medidas metas'
 ref table 'Medidas percentuais'
 ref table 'Medidas especiais'
 ref table fOrcamentos
-ref table LocalDateTable_d93c9f9e-0877-4e51-9438-5c138bb45504
 
 ref cultureInfo pt-BR
 
