@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "dde445a06dbd838dd7b6",
+  "position": {
+    "x": 352.85714285714289,
+    "y": 0,
+    "z": 1,
+    "height": 288.57142857142861,
+    "width": 352.85714285714289,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Se os valores aparecerem divididos e calculados corretamente para cada filial em cada mês, a modelagem está correta. ",
+                    "textStyle": {
+                      "fontSize": "16pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se o mesmo valor total geral se repetir em todas as linhas e colunas, o relacionamento está quebrado ou a direção do filtro está errada.",
+                    "textStyle": {
+                      "fontSize": "16pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

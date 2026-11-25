@@ -1,0 +1,71 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "0b31d8004b950b30c20c",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 288.57142857142861,
+    "width": 352.85714285714289,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFiliais"
+                    }
+                  },
+                  "Property": "filial_abreviado"
+                }
+              },
+              "queryRef": "dFiliais.filial_abreviado",
+              "nativeQueryRef": "filial_abreviado"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dCalendario"
+                    }
+                  },
+                  "Property": "ano"
+                }
+              },
+              "queryRef": "Sum(dCalendario.ano)",
+              "nativeQueryRef": "ano"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fOrcamentos"
+                        }
+                      },
+                      "Property": "valor_liquido"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fOrcamentos.valor_liquido)",
+              "nativeQueryRef": "Sum of valor_liquido"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
