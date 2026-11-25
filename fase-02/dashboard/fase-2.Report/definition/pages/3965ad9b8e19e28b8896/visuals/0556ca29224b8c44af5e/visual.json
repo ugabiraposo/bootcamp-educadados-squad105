@@ -1,0 +1,284 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "0556ca29224b8c44af5e",
+  "position": {
+    "x": 473.41496507479184,
+    "y": 220.24087505653361,
+    "z": 0,
+    "height": 446.65672791839057,
+    "width": 1049.7462269049734,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dGrupos_servico"
+                    }
+                  },
+                  "Property": "grupo_servico"
+                }
+              },
+              "queryRef": "dGrupos_servico.grupo_servico",
+              "nativeQueryRef": "grupo_servico",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dServicos"
+                    }
+                  },
+                  "Property": "servico"
+                }
+              },
+              "queryRef": "dServicos.servico",
+              "nativeQueryRef": "servico",
+              "active": false
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "valor líquido"
+                }
+              },
+              "queryRef": "Medidas base.valor líquido",
+              "nativeQueryRef": "valor líquido"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "número de vendas"
+                }
+              },
+              "queryRef": "Medidas base.número de vendas",
+              "nativeQueryRef": "número de vendas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas venda/servico"
+                    }
+                  },
+                  "Property": "total itens vendidos"
+                }
+              },
+              "queryRef": "Medidas venda/servico.total itens vendidos",
+              "nativeQueryRef": "total itens vendidos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas venda/servico"
+                    }
+                  },
+                  "Property": "porcent participação receita"
+                }
+              },
+              "queryRef": "Medidas venda/servico.porcent participação receita",
+              "nativeQueryRef": "porcent participação receita"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas venda/servico"
+                    }
+                  },
+                  "Property": "porcent participação no grupo"
+                }
+              },
+              "queryRef": "Medidas venda/servico.porcent participação no grupo",
+              "nativeQueryRef": "porcent participação no grupo"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "671f98d026f660a877db",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dGrupos_servico"
+              }
+            },
+            "Property": "grupo_servico"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dbed6888ace0e46b0aad",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dServicos"
+              }
+            },
+            "Property": "servico"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e609d8b9232afa8a0c1c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas base"
+              }
+            },
+            "Property": "valor líquido"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d03398d9bacb379def4e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas base"
+              }
+            },
+            "Property": "número de vendas"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "21c89577f1d7d53c83ef",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas venda/servico"
+              }
+            },
+            "Property": "total itens vendidos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9ba67d54047bbf8a938d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas venda/servico"
+              }
+            },
+            "Property": "porcent participação receita"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cc20b9607a54e6dbaf82",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas venda/servico"
+              }
+            },
+            "Property": "porcent participação no grupo"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dcd77c7f74473cb6e9ec",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dFiliais"
+              }
+            },
+            "Property": "filial"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dFiliais",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "filial"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Rede Aurora Odontologia - Belém Centro'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
+}

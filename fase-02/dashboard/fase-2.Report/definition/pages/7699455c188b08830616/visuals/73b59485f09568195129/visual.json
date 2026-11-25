@@ -1,0 +1,176 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "73b59485f09568195129",
+  "position": {
+    "x": 370,
+    "y": 271.66666666666669,
+    "z": 0,
+    "height": 665,
+    "width": 1056.6666666666667,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFiliais"
+                    }
+                  },
+                  "Property": "codigo_filial"
+                }
+              },
+              "queryRef": "dFiliais.codigo_filial",
+              "nativeQueryRef": "codigo_filial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "status meta-filial"
+                }
+              },
+              "queryRef": "Medidas metas.status meta-filial",
+              "nativeQueryRef": "status meta-filial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "valor metas-filial"
+                }
+              },
+              "queryRef": "Medidas metas.valor metas-filial",
+              "nativeQueryRef": "valor metas-filial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "qtde metas-filial"
+                }
+              },
+              "queryRef": "Medidas metas.qtde metas-filial",
+              "nativeQueryRef": "qtde metas-filial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "sem meta-filial"
+                }
+              },
+              "queryRef": "Medidas metas.sem meta-filial",
+              "nativeQueryRef": "sem meta-filial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "resultado-meta-filial"
+                }
+              },
+              "queryRef": "Medidas metas.resultado-meta-filial",
+              "nativeQueryRef": "resultado-meta-filial"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas metas"
+                  }
+                },
+                "Property": "resultado-meta-filial"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "911a935f303f0e963dce",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas metas"
+              }
+            },
+            "Property": "status meta-filial"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Medidas metas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Contains": {
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "status meta-filial"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "'Com meta definida'"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

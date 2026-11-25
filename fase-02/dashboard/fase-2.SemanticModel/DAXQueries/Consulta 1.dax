@@ -1,0 +1,70 @@
+DEFINE
+    MEASURE 'Medidas metas'[valor metas - filial] =
+        CALCULATE(
+            SUM(fMetas_valor[meta_valor]),
+            REMOVEFILTERS(dCalendario),
+            dCalendario[ano] = 2026
+        )
+
+    MEASURE 'Medidas metas'[qtde metas-filial] =
+        CALCULATE(
+            SUM(fMetas_quantidade[meta_quantidade]),
+            REMOVEFILTERS(dCalendario),
+            dCalendario[ano] = 2026
+        )
+
+    MEASURE 'Medidas metas'[resultado meta-filial] =
+        VAR vlr = COALESCE([valor metas - filial], 0)
+        VAR vQtd = COALESCE([qtde metas-filial], 0)
+        RETURN
+            IF(vlr > 0 || vQtd > 0, 1, 0)
+
+    MEASURE 'Medidas metas'[status meta-filial] =
+        VAR temValor = COALESCE([valor metas - filial], 0) > 0
+        VAR temQtde  = COALESCE([qtde metas-filial], 0) > 0
+        RETURN
+            SWITCH(
+                TRUE(),
+                NOT temValor && NOT temQtde, "sem meta",
+                NOT temValor && temQtde,     "Sem meta de Valor",
+                temValor && NOT temQtde,     "Sem meta de Quantidade",
+                "Com meta definida"
+            )
+
+    MEASURE 'Medidas metas'[sem meta-filial] =
+        IF(
+            [resultado meta-filial] = 0,
+            "sem meta",
+            "Com meta"
+        )
+
+    MEASURE 'Medidas metas'[filiais sem meta] =
+        COUNTROWS(
+            FILTER(
+                VALUES(dFiliais[codigo_filial]),
+                [resultado meta-filial] = 0
+            )
+        ) + 0
+
+    MEASURE 'Medidas metas'[filiais sem meta- valor] =
+        COUNTROWS(
+            FILTER(
+                VALUES(dFiliais[codigo_filial]),
+                COALESCE([valor metas - filial], 0) <= 0
+            )
+        ) + 0
+
+    MEASURE 'Medidas metas'[filiais sem meta-qtde] =
+        COUNTROWS(
+            FILTER(
+                VALUES(dFiliais[codigo_filial]),
+                COALESCE([qtde metas-filial], 0) <= 0
+            )
+        ) + 0
+
+EVALUATE
+    ROW(
+        "filiais sem meta", [filiais sem meta],
+        "filiais sem meta- valor", [filiais sem meta- valor],
+        "filiais sem meta-qtde", [filiais sem meta-qtde]
+    )

@@ -1,0 +1,150 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "3b2b42cb41ee1d3f1e28",
+  "position": {
+    "x": 201.7159416405635,
+    "y": 203.77426757567127,
+    "z": 0,
+    "height": 671.01425484513982,
+    "width": 1395.5449840030822,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFiliais"
+                    }
+                  },
+                  "Property": "filial"
+                }
+              },
+              "queryRef": "dFiliais.filial",
+              "nativeQueryRef": "filial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "valor líquido"
+                }
+              },
+              "queryRef": "Medidas base.valor líquido",
+              "nativeQueryRef": "valor líquido"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "val filial"
+                }
+              },
+              "queryRef": "Medidas metas.val filial",
+              "nativeQueryRef": "val filial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "ating valor-filial"
+                }
+              },
+              "queryRef": "Medidas metas.ating valor-filial",
+              "nativeQueryRef": "ating valor-filial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "faixa ating-valor"
+                }
+              },
+              "queryRef": "Medidas metas.faixa ating-valor",
+              "nativeQueryRef": "faixa ating-valor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "número de vendas"
+                }
+              },
+              "queryRef": "Medidas base.número de vendas",
+              "nativeQueryRef": "número de vendas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "qtde filial"
+                }
+              },
+              "queryRef": "Medidas metas.qtde filial",
+              "nativeQueryRef": "qtde filial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "ating qtde-filial"
+                }
+              },
+              "queryRef": "Medidas metas.ating qtde-filial",
+              "nativeQueryRef": "ating qtde-filial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "faixa ating-qtde"
+                }
+              },
+              "queryRef": "Medidas metas.faixa ating-qtde",
+              "nativeQueryRef": "faixa ating-qtde"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "37a7fa31c7e350271cdc",
+  "position": {
+    "x": 889.19680396656554,
+    "y": 158.4910970032999,
+    "z": 1000,
+    "height": 572.21460995996586,
+    "width": 848.03028526440983,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFiliais"
+                    }
+                  },
+                  "Property": "filial"
+                }
+              },
+              "queryRef": "dFiliais.filial",
+              "nativeQueryRef": "filial",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dEtapasFunil"
+                    }
+                  },
+                  "Property": "taxa de conversão"
+                }
+              },
+              "queryRef": "dEtapasFunil.taxa de conversão",
+              "nativeQueryRef": "taxa de conversão"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dEtapasFunil"
+                  }
+                },
+                "Property": "taxa de conversão"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

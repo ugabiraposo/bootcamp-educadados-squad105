@@ -114,13 +114,15 @@ table fOrcamentos
 		summarizeBy: sum
 		sourceColumn: codigo_venda
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	partition fOrcamentos = m
 		mode: import
 		source =
 				let
-				    Source = Excel.Workbook(File.Contents("C:\bootcamp-educadados-squad105\dados\orcamentos.xlsx"), null, true),
+				    Source = Excel.Workbook(File.Contents("C:\squad105\dados\orcamentos.xlsx"), null, true),
 				    orcamentos_Sheet = Source{[Item="orcamentos",Kind="Sheet"]}[Data],
 				    #"Promoted Headers" = Table.PromoteHeaders(orcamentos_Sheet, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"codigo_orcamento", Int64.Type}, {"data", type date}, {"codigo_filial", Int64.Type}, {"codigo_cliente", Int64.Type}, {"codigo_profissional", Int64.Type}, {"codigo_usuario", Int64.Type}, {"codigo_midia", Int64.Type}, {"valor_bruto", Currency.Type}, {"valor_desconto", Currency.Type}, {"valor_liquido", Currency.Type}, {"status", type text}, {"codigo_venda", Int64.Type}}),

@@ -1,0 +1,92 @@
+table 'Medidas venda/servico'
+	lineageTag: 3c30c32f-b11a-4cc0-b2c5-27688921ba7c
+
+	measure 'receita grupo/serviço' =
+			
+			[valor líquido]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 1b021fb6-7b63-4221-94b7-59ee1d8fb91c
+
+	measure 'qtde vendida grupo/serviço' =
+			
+			[número de vendas]
+		formatString: 0%;-0%;0%
+		lineageTag: b7832476-5335-4e3e-8f8b-2edb355790d1
+
+	measure 'total itens vendidos' =
+			
+			SUM(fItens_venda[quantidade])
+		formatString: 0
+		lineageTag: 7154cc24-73b0-4b05-ae2c-ca0eeeb592b2
+
+	measure 'valor bruto itens' =
+			
+			SUM(fItens_venda[valor_total])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: c6f813f1-e5ae-4cde-beec-c76bd0cf09f2
+
+	measure 'porcent participação receita' =
+			
+			DIVIDE(
+			    [valor líquido],
+			    CALCULATE(
+			        [valor líquido],
+			        ALLSELECTED(dServicos),
+			        ALLSELECTED(dGrupos_servico)
+			    )
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 80ada8d2-020f-4a5b-9bc2-3c811c4a1c6e
+
+	measure 'porcent participação no grupo' =
+			
+			DIVIDE(
+			    [valor líquido],
+			    CALCULATE(
+			        [valor líquido],
+			        ALLEXCEPT(dServicos, dGrupos_servico[grupo_servico])
+			    )
+			)
+		lineageTag: 7499a78a-4549-4858-9bc4-e5fc31de1d95
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'ticket médio serviço' =
+			
+			DIVIDE(
+			    [valor líquido],
+			    [número de vendas]
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: d66ad832-5efe-45eb-87f7-632d744e6c43
+
+	measure 'valor tabela total' =
+			
+			SUMX(
+			    fItens_venda,
+			    fItens_venda[quantidade] * RELATED(dServicos[valor_tabela])
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 8bd7fdc5-970b-4a99-9eb8-bd1c1d45de19
+
+	measure 'desconto/diferença tabela %' =
+			
+			DIVIDE(
+			    [valor tabela total] - [valor bruto itens],
+			    [valor tabela total]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 18e886e6-06dc-4d13-af7f-ccd301314d00
+
+	partition 'Medidas venda/servico' = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+
