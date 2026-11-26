@@ -82,7 +82,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas venda/servico"
+                      "Entity": "Medidas Venda"
                     }
                   },
                   "Property": "total itens vendidos"
@@ -96,7 +96,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas venda/servico"
+                      "Entity": "Medidas Venda"
                     }
                   },
                   "Property": "porcent participação receita"
@@ -110,7 +110,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas venda/servico"
+                      "Entity": "Medidas Venda"
                     }
                   },
                   "Property": "porcent participação no grupo"

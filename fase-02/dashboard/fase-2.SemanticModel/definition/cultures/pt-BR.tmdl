@@ -6249,150 +6249,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_meta.ating_qtdefilial": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "ating qtde-filial"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ating qtde-filial": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ating qtde filial": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "medidas_meta.ating_valorfilial": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "ating valor-filial"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ating valor-filial": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ating valor filial": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "ating courage filial": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "ating bravery filial": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "ating heroism filial": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "ating fearlessness filial": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "ating boldness filial": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "ating gallantry filial": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "ating lionheartedness filial": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "ating pluck filial": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "ating spirit filial": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "ating nerve filial": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        }
-			      ]
-			    },
 			    "medidas_meta.faixa_atingvalor": {
 			      "Definition": {
 			        "Binding": {
@@ -7393,7 +7249,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dEtapasFunil",
-			          "ConceptualProperty": "etapa do funil"
+			          "ConceptualProperty": "qtde orçamentos"
 			        }
 			      },
 			      "State": "Generated",
@@ -7508,7 +7364,7 @@ cultureInfo pt-BR
 			    "medidas_venda_servico": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas venda/servico"
+			          "ConceptualEntity": "Medidas Venda"
 			        }
 			      },
 			      "State": "Generated",
@@ -7553,130 +7409,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_venda_servico.receita_grupo_serviço": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas venda/servico",
-			          "ConceptualProperty": "receita grupo/serviço"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "receita grupo/serviço": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "receita grupo": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "receita grupo serviço": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "serviço": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "medidas_venda_servico.qtde_vendida_grupo_serviço": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas venda/servico",
-			          "ConceptualProperty": "qtde vendida grupo/serviço"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "qtde vendida grupo/serviço": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "qtde vendida grupo": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "qtde vendida grupo serviço": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "serviço": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "medidas_venda_servico.total_itens_vendidos": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas venda/servico",
-			          "ConceptualProperty": "total itens vendidos"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total itens vendidos": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "aggregate iten vendido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "overall iten vendido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
-			    "medidas_venda_servico.valor_bruto_itens": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas venda/servico",
-			          "ConceptualProperty": "valor bruto itens"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "valor bruto itens": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "medidas_venda_servico.porcent_participação_receita": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas venda/servico",
+			          "ConceptualEntity": "Medidas Venda",
 			          "ConceptualProperty": "porcent participação receita"
 			        }
 			      },
@@ -7692,7 +7428,7 @@ cultureInfo pt-BR
 			    "medidas_venda_servico.porcent_participação_no_grupo": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas venda/servico",
+			          "ConceptualEntity": "Medidas Venda",
 			          "ConceptualProperty": "porcent participação no grupo"
 			        }
 			      },
@@ -7718,7 +7454,7 @@ cultureInfo pt-BR
 			    "medidas_venda_servico.ticket_médio_serviço": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas venda/servico",
+			          "ConceptualEntity": "Medidas Venda",
 			          "ConceptualProperty": "ticket médio serviço"
 			        }
 			      },
@@ -7734,7 +7470,7 @@ cultureInfo pt-BR
 			    "medidas_venda_servico.valor_tabela_total": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas venda/servico",
+			          "ConceptualEntity": "Medidas Venda",
 			          "ConceptualProperty": "valor tabela total"
 			        }
 			      },
@@ -7770,7 +7506,7 @@ cultureInfo pt-BR
 			    "medidas_venda_servico.desconto_diferença_tabela_": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas venda/servico",
+			          "ConceptualEntity": "Medidas Venda",
 			          "ConceptualProperty": "desconto/diferença tabela %"
 			        }
 			      },
