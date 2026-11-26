@@ -46,7 +46,7 @@ table dEtapasFunil
 			    SUM(fOrcamentos[valor_liquido]),
 			    fOrcamentos[status] = "Perdido"
 			)
-		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: 2b4d576f-37e1-49c1-be8d-0e9f4cafe770
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "Fluent2-CY26SU10",
@@ -31,7 +31,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           },
@@ -75,6 +75,11 @@
         {
           "name": "filtro-limpo961720811873095.png",
           "path": "filtro-limpo961720811873095.png",
+          "type": "Image"
+        },
+        {
+          "name": "funil4186097435308822.png",
+          "path": "funil4186097435308822.png",
           "type": "Image"
         }
       ]
