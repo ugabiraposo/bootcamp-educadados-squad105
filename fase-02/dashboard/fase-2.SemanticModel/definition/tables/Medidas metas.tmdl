@@ -115,9 +115,10 @@ table 'Medidas metas'
 	measure 'val filial' =
 			CALCULATE([meta de valor],
 			fMetas_valor[nivel] = "Produto")
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: 17d21c44-b54d-454c-bc60-114a23f79fde
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure 'qtde filial' =
 			CALCULATE([meta de quantidade],

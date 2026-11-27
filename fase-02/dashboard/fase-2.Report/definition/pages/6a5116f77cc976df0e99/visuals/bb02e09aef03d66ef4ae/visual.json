@@ -51,21 +51,28 @@
       "header": [
         {
           "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
             "fontColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#071317'"
                     }
                   }
                 }
               }
             },
-            "textSize": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "'Ano'"
                 }
               }
             }

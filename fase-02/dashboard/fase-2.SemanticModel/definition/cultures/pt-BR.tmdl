@@ -4180,6 +4180,16 @@ cultureInfo pt-BR
 			          "quantidade de itens": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Qtde de itens": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4642,6 +4652,16 @@ cultureInfo pt-BR
 			          "val filial": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Meta de valor": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4657,6 +4677,16 @@ cultureInfo pt-BR
 			        {
 			          "qtde filial": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Meta de qtde": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5136,6 +5166,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.739
 			          }
+			        },
+			        {
+			          "Ating qtde %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5171,6 +5211,16 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "Ating val %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5289,7 +5339,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_especiais.status_val_vendedor": {
+			    "medidas_status.status_val_vendedor": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas status",
@@ -5405,7 +5455,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_especiais.status_qtde_vendedor": {
+			    "medidas_status.status_qtde_vendedor": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas status",
@@ -5521,7 +5571,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_especiais.status_val_profissional": {
+			    "medidas_status.status_val_profissional": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas status",
@@ -5637,7 +5687,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_especiais.status_qtde_profissional": {
+			    "medidas_status.status_qtde_profissional": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas status",
@@ -5945,7 +5995,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_meta.status_metafilial": {
+			    "medidas_status.status_metafilial": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas status",
@@ -6249,7 +6299,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_meta.faixa_atingvalor": {
+			    "medidas_percentuais.faixa_atingvalor": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas percentuais",
@@ -6371,7 +6421,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_meta.faixa_atingqtde": {
+			    "medidas_percentuais.faixa_atingqtde": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas percentuais",
@@ -7245,7 +7295,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_etapas_funil.etapa_do_funil": {
+			    "medidas_funil.qtde_orçamentos": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas funil",
@@ -7255,13 +7305,13 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "etapa do funil": {
+			          "qtde orçamentos": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "d_etapas_funil.taxa_de_conversão": {
+			    "medidas_funil.taxa_de_conversão": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas funil",
@@ -7277,7 +7327,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_etapas_funil.taxa_de_conversão_rede": {
+			    "medidas_funil.taxa_de_conversão_rede": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas funil",
@@ -7293,7 +7343,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_etapas_funil.desconto_médio": {
+			    "medidas_funil.desconto_médio": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas funil",
@@ -7309,7 +7359,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_etapas_funil.valor_perdido": {
+			    "medidas_funil.valor_perdido": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas funil",
@@ -7325,7 +7375,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_etapas_funil.valor_perdido__vendido": {
+			    "medidas_funil.valor_perdido__vendido": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas funil",
@@ -7361,7 +7411,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_venda_servico": {
+			    "medidas_venda": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas Venda"
@@ -7370,46 +7420,20 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "medidas venda/servico": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "medida venda/servico": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
 			          "medidas venda": {
-			            "State": "Generated",
-			            "Weight": 0.97
+			            "State": "Generated"
 			          }
 			        },
 			        {
 			          "medida venda": {
 			            "Type": "Noun",
 			            "State": "Generated",
-			            "Weight": 0.7566
-			          }
-			        },
-			        {
-			          "medidas venda servico": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "medida venda servico": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.7566
+			            "Weight": 0.78
 			          }
 			        }
 			      ]
 			    },
-			    "medidas_venda_servico.porcent_participação_receita": {
+			    "medidas_venda.porcent_participação_receita": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas Venda",
@@ -7425,7 +7449,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_venda_servico.porcent_participação_no_grupo": {
+			    "medidas_venda.porcent_participação_no_grupo": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas Venda",
@@ -7451,7 +7475,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_venda_servico.valor_tabela_total": {
+			    "medidas_venda.valor_tabela_total": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas Venda",
@@ -7487,7 +7511,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas_venda_servico.desconto_diferença_tabela_": {
+			    "medidas_venda.desconto_diferença_tabela_": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas Venda",
@@ -7577,6 +7601,272 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medidas status": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medida status": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "medida category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "medida importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "medida prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "medida prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "medida condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "medida class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "medida grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "medida level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "medida position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "medida rank": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_status.status_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas status",
+			          "ConceptualProperty": "status taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status taxa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "taxa": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "category taxon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "importance taxon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prestige taxon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prominence taxon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "condition taxon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "class taxon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade taxon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "level taxon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "position taxon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank taxon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_funil": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas funil"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medidas funil": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medida funil": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
 			          }
 			        }
 			      ]
@@ -8985,7 +9275,40 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_itens_venda_has_medidas_venda_servico_desconto_diferença_tabela_": {
+			    "f_orcamento_has_medidas_status_status_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "fOrcamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_orcamento": {
+			          "Target": {
+			            "Entity": "f_orcamento"
+			          }
+			        },
+			        "medidas_status.status_taxa": {
+			          "Target": {
+			            "Entity": "medidas_status.status_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_orcamento"
+			            },
+			            "Object": {
+			              "Role": "medidas_status.status_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_orcamentos_have_status_taxa"
+			        }
+			      ]
+			    },
+			    "f_itens_venda_has_medidas_venda_desconto_diferença_tabela_": {
 			      "Binding": {
 			        "ConceptualEntity": "fItens_venda"
 			      },
@@ -8996,9 +9319,9 @@ cultureInfo pt-BR
 			            "Entity": "f_itens_venda"
 			          }
 			        },
-			        "medidas_venda_servico.desconto_diferença_tabela_": {
+			        "medidas_venda.desconto_diferença_tabela_": {
 			          "Target": {
-			            "Entity": "medidas_venda_servico.desconto_diferença_tabela_"
+			            "Entity": "medidas_venda.desconto_diferença_tabela_"
 			          }
 			        }
 			      },
@@ -9009,7 +9332,7 @@ cultureInfo pt-BR
 			              "Role": "f_itens_venda"
 			            },
 			            "Object": {
-			              "Role": "medidas_venda_servico.desconto_diferença_tabela_"
+			              "Role": "medidas_venda.desconto_diferença_tabela_"
 			            }
 			          },
 			          "State": "Generated",
@@ -9018,7 +9341,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_servico_has_medidas_venda_servico_desconto_diferença_tabela_": {
+			    "d_servico_has_medidas_venda_desconto_diferença_tabela_": {
 			      "Binding": {
 			        "ConceptualEntity": "dServicos"
 			      },
@@ -9029,9 +9352,9 @@ cultureInfo pt-BR
 			            "Entity": "d_servico"
 			          }
 			        },
-			        "medidas_venda_servico.desconto_diferença_tabela_": {
+			        "medidas_venda.desconto_diferença_tabela_": {
 			          "Target": {
-			            "Entity": "medidas_venda_servico.desconto_diferença_tabela_"
+			            "Entity": "medidas_venda.desconto_diferença_tabela_"
 			          }
 			        }
 			      },
@@ -9042,7 +9365,7 @@ cultureInfo pt-BR
 			              "Role": "d_servico"
 			            },
 			            "Object": {
-			              "Role": "medidas_venda_servico.desconto_diferença_tabela_"
+			              "Role": "medidas_venda.desconto_diferença_tabela_"
 			            }
 			          },
 			          "State": "Generated",
@@ -9051,7 +9374,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_itens_venda_has_medidas_venda_servico_valor_tabela_total": {
+			    "f_itens_venda_has_medidas_venda_valor_tabela_total": {
 			      "Binding": {
 			        "ConceptualEntity": "fItens_venda"
 			      },
@@ -9062,9 +9385,9 @@ cultureInfo pt-BR
 			            "Entity": "f_itens_venda"
 			          }
 			        },
-			        "medidas_venda_servico.valor_tabela_total": {
+			        "medidas_venda.valor_tabela_total": {
 			          "Target": {
-			            "Entity": "medidas_venda_servico.valor_tabela_total"
+			            "Entity": "medidas_venda.valor_tabela_total"
 			          }
 			        }
 			      },
@@ -9075,7 +9398,7 @@ cultureInfo pt-BR
 			              "Role": "f_itens_venda"
 			            },
 			            "Object": {
-			              "Role": "medidas_venda_servico.valor_tabela_total"
+			              "Role": "medidas_venda.valor_tabela_total"
 			            }
 			          },
 			          "State": "Generated",
@@ -9084,7 +9407,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_servico_has_medidas_venda_servico_valor_tabela_total": {
+			    "d_servico_has_medidas_venda_valor_tabela_total": {
 			      "Binding": {
 			        "ConceptualEntity": "dServicos"
 			      },
@@ -9095,9 +9418,9 @@ cultureInfo pt-BR
 			            "Entity": "d_servico"
 			          }
 			        },
-			        "medidas_venda_servico.valor_tabela_total": {
+			        "medidas_venda.valor_tabela_total": {
 			          "Target": {
-			            "Entity": "medidas_venda_servico.valor_tabela_total"
+			            "Entity": "medidas_venda.valor_tabela_total"
 			          }
 			        }
 			      },
@@ -9108,7 +9431,7 @@ cultureInfo pt-BR
 			              "Role": "d_servico"
 			            },
 			            "Object": {
-			              "Role": "medidas_venda_servico.valor_tabela_total"
+			              "Role": "medidas_venda.valor_tabela_total"
 			            }
 			          },
 			          "State": "Generated",
@@ -9117,7 +9440,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_venda_has_medidas_venda_servico_ticket_médio_serviço": {
+			    "f_venda_has_medidas_venda_porcent_participação_no_grupo": {
 			      "Binding": {
 			        "ConceptualEntity": "fVendas"
 			      },
@@ -9128,9 +9451,9 @@ cultureInfo pt-BR
 			            "Entity": "f_venda"
 			          }
 			        },
-			        "medidas_venda_servico.ticket_médio_serviço": {
+			        "medidas_venda.porcent_participação_no_grupo": {
 			          "Target": {
-			            "Entity": "medidas_venda_servico.ticket_médio_serviço"
+			            "Entity": "medidas_venda.porcent_participação_no_grupo"
 			          }
 			        }
 			      },
@@ -9141,40 +9464,7 @@ cultureInfo pt-BR
 			              "Role": "f_venda"
 			            },
 			            "Object": {
-			              "Role": "medidas_venda_servico.ticket_médio_serviço"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_venda_have_ticket_médio_serviço"
-			        }
-			      ]
-			    },
-			    "f_venda_has_medidas_venda_servico_porcent_participação_no_grupo": {
-			      "Binding": {
-			        "ConceptualEntity": "fVendas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_venda": {
-			          "Target": {
-			            "Entity": "f_venda"
-			          }
-			        },
-			        "medidas_venda_servico.porcent_participação_no_grupo": {
-			          "Target": {
-			            "Entity": "medidas_venda_servico.porcent_participação_no_grupo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_venda"
-			            },
-			            "Object": {
-			              "Role": "medidas_venda_servico.porcent_participação_no_grupo"
+			              "Role": "medidas_venda.porcent_participação_no_grupo"
 			            }
 			          },
 			          "State": "Generated",
@@ -9183,7 +9473,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_venda_has_medidas_venda_servico_porcent_participação_receita": {
+			    "f_venda_has_medidas_venda_porcent_participação_receita": {
 			      "Binding": {
 			        "ConceptualEntity": "fVendas"
 			      },
@@ -9194,9 +9484,9 @@ cultureInfo pt-BR
 			            "Entity": "f_venda"
 			          }
 			        },
-			        "medidas_venda_servico.porcent_participação_receita": {
+			        "medidas_venda.porcent_participação_receita": {
 			          "Target": {
-			            "Entity": "medidas_venda_servico.porcent_participação_receita"
+			            "Entity": "medidas_venda.porcent_participação_receita"
 			          }
 			        }
 			      },
@@ -9207,7 +9497,7 @@ cultureInfo pt-BR
 			              "Role": "f_venda"
 			            },
 			            "Object": {
-			              "Role": "medidas_venda_servico.porcent_participação_receita"
+			              "Role": "medidas_venda.porcent_participação_receita"
 			            }
 			          },
 			          "State": "Generated",
@@ -9216,73 +9506,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_itens_venda_has_medidas_venda_servico_valor_bruto_itens": {
-			      "Binding": {
-			        "ConceptualEntity": "fItens_venda"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_itens_venda": {
-			          "Target": {
-			            "Entity": "f_itens_venda"
-			          }
-			        },
-			        "medidas_venda_servico.valor_bruto_itens": {
-			          "Target": {
-			            "Entity": "medidas_venda_servico.valor_bruto_itens"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_itens_venda"
-			            },
-			            "Object": {
-			              "Role": "medidas_venda_servico.valor_bruto_itens"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_itens_venda_have_valor_bruto_itens"
-			        }
-			      ]
-			    },
-			    "f_itens_venda_has_medidas_venda_servico_total_itens_vendidos": {
-			      "Binding": {
-			        "ConceptualEntity": "fItens_venda"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_itens_venda": {
-			          "Target": {
-			            "Entity": "f_itens_venda"
-			          }
-			        },
-			        "medidas_venda_servico.total_itens_vendidos": {
-			          "Target": {
-			            "Entity": "medidas_venda_servico.total_itens_vendidos"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_itens_venda"
-			            },
-			            "Object": {
-			              "Role": "medidas_venda_servico.total_itens_vendidos"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_itens_venda_have_total_itens_vendidos"
-			        }
-			      ]
-			    },
-			    "f_venda_has_medidas_venda_servico_qtde_vendida_grupo_serviço": {
+			    "f_venda_has_medidas_funil_valor_perdido__vendido": {
 			      "Binding": {
 			        "ConceptualEntity": "fVendas"
 			      },
@@ -9293,9 +9517,9 @@ cultureInfo pt-BR
 			            "Entity": "f_venda"
 			          }
 			        },
-			        "medidas_venda_servico.qtde_vendida_grupo_serviço": {
+			        "medidas_funil.valor_perdido__vendido": {
 			          "Target": {
-			            "Entity": "medidas_venda_servico.qtde_vendida_grupo_serviço"
+			            "Entity": "medidas_funil.valor_perdido__vendido"
 			          }
 			        }
 			      },
@@ -9306,73 +9530,7 @@ cultureInfo pt-BR
 			              "Role": "f_venda"
 			            },
 			            "Object": {
-			              "Role": "medidas_venda_servico.qtde_vendida_grupo_serviço"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_venda_have_qtde_vendida_grupo_serviço"
-			        }
-			      ]
-			    },
-			    "f_venda_has_medidas_venda_servico_receita_grupo_serviço": {
-			      "Binding": {
-			        "ConceptualEntity": "fVendas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_venda": {
-			          "Target": {
-			            "Entity": "f_venda"
-			          }
-			        },
-			        "medidas_venda_servico.receita_grupo_serviço": {
-			          "Target": {
-			            "Entity": "medidas_venda_servico.receita_grupo_serviço"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_venda"
-			            },
-			            "Object": {
-			              "Role": "medidas_venda_servico.receita_grupo_serviço"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_venda_have_receita_grupo_serviço"
-			        }
-			      ]
-			    },
-			    "f_venda_has_d_etapas_funil_valor_perdido__vendido": {
-			      "Binding": {
-			        "ConceptualEntity": "fVendas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_venda": {
-			          "Target": {
-			            "Entity": "f_venda"
-			          }
-			        },
-			        "d_etapas_funil.valor_perdido__vendido": {
-			          "Target": {
-			            "Entity": "d_etapas_funil.valor_perdido__vendido"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_venda"
-			            },
-			            "Object": {
-			              "Role": "d_etapas_funil.valor_perdido__vendido"
+			              "Role": "medidas_funil.valor_perdido__vendido"
 			            }
 			          },
 			          "State": "Generated",
@@ -9381,7 +9539,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_orcamento_has_d_etapas_funil_valor_perdido__vendido": {
+			    "f_orcamento_has_medidas_funil_valor_perdido__vendido": {
 			      "Binding": {
 			        "ConceptualEntity": "fOrcamentos"
 			      },
@@ -9392,9 +9550,9 @@ cultureInfo pt-BR
 			            "Entity": "f_orcamento"
 			          }
 			        },
-			        "d_etapas_funil.valor_perdido__vendido": {
+			        "medidas_funil.valor_perdido__vendido": {
 			          "Target": {
-			            "Entity": "d_etapas_funil.valor_perdido__vendido"
+			            "Entity": "medidas_funil.valor_perdido__vendido"
 			          }
 			        }
 			      },
@@ -9405,7 +9563,7 @@ cultureInfo pt-BR
 			              "Role": "f_orcamento"
 			            },
 			            "Object": {
-			              "Role": "d_etapas_funil.valor_perdido__vendido"
+			              "Role": "medidas_funil.valor_perdido__vendido"
 			            }
 			          },
 			          "State": "Generated",
@@ -9414,7 +9572,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_orcamento_has_d_etapas_funil_valor_perdido": {
+			    "f_orcamento_has_medidas_funil_valor_perdido": {
 			      "Binding": {
 			        "ConceptualEntity": "fOrcamentos"
 			      },
@@ -9425,9 +9583,9 @@ cultureInfo pt-BR
 			            "Entity": "f_orcamento"
 			          }
 			        },
-			        "d_etapas_funil.valor_perdido": {
+			        "medidas_funil.valor_perdido": {
 			          "Target": {
-			            "Entity": "d_etapas_funil.valor_perdido"
+			            "Entity": "medidas_funil.valor_perdido"
 			          }
 			        }
 			      },
@@ -9438,7 +9596,7 @@ cultureInfo pt-BR
 			              "Role": "f_orcamento"
 			            },
 			            "Object": {
-			              "Role": "d_etapas_funil.valor_perdido"
+			              "Role": "medidas_funil.valor_perdido"
 			            }
 			          },
 			          "State": "Generated",
@@ -9447,7 +9605,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_orcamento_has_d_etapas_funil_desconto_médio": {
+			    "f_orcamento_has_medidas_funil_desconto_médio": {
 			      "Binding": {
 			        "ConceptualEntity": "fOrcamentos"
 			      },
@@ -9458,9 +9616,9 @@ cultureInfo pt-BR
 			            "Entity": "f_orcamento"
 			          }
 			        },
-			        "d_etapas_funil.desconto_médio": {
+			        "medidas_funil.desconto_médio": {
 			          "Target": {
-			            "Entity": "d_etapas_funil.desconto_médio"
+			            "Entity": "medidas_funil.desconto_médio"
 			          }
 			        }
 			      },
@@ -9471,7 +9629,7 @@ cultureInfo pt-BR
 			              "Role": "f_orcamento"
 			            },
 			            "Object": {
-			              "Role": "d_etapas_funil.desconto_médio"
+			              "Role": "medidas_funil.desconto_médio"
 			            }
 			          },
 			          "State": "Generated",
@@ -9480,7 +9638,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_orcamento_has_d_etapas_funil_taxa_de_conversão_rede": {
+			    "f_orcamento_has_medidas_funil_taxa_de_conversão_rede": {
 			      "Binding": {
 			        "ConceptualEntity": "fOrcamentos"
 			      },
@@ -9491,9 +9649,9 @@ cultureInfo pt-BR
 			            "Entity": "f_orcamento"
 			          }
 			        },
-			        "d_etapas_funil.taxa_de_conversão_rede": {
+			        "medidas_funil.taxa_de_conversão_rede": {
 			          "Target": {
-			            "Entity": "d_etapas_funil.taxa_de_conversão_rede"
+			            "Entity": "medidas_funil.taxa_de_conversão_rede"
 			          }
 			        }
 			      },
@@ -9504,7 +9662,7 @@ cultureInfo pt-BR
 			              "Role": "f_orcamento"
 			            },
 			            "Object": {
-			              "Role": "d_etapas_funil.taxa_de_conversão_rede"
+			              "Role": "medidas_funil.taxa_de_conversão_rede"
 			            }
 			          },
 			          "State": "Generated",
@@ -9513,7 +9671,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_orcamento_has_d_etapas_funil_taxa_de_conversão": {
+			    "f_orcamento_has_medidas_funil_taxa_de_conversão": {
 			      "Binding": {
 			        "ConceptualEntity": "fOrcamentos"
 			      },
@@ -9524,9 +9682,9 @@ cultureInfo pt-BR
 			            "Entity": "f_orcamento"
 			          }
 			        },
-			        "d_etapas_funil.taxa_de_conversão": {
+			        "medidas_funil.taxa_de_conversão": {
 			          "Target": {
-			            "Entity": "d_etapas_funil.taxa_de_conversão"
+			            "Entity": "medidas_funil.taxa_de_conversão"
 			          }
 			        }
 			      },
@@ -9537,7 +9695,7 @@ cultureInfo pt-BR
 			              "Role": "f_orcamento"
 			            },
 			            "Object": {
-			              "Role": "d_etapas_funil.taxa_de_conversão"
+			              "Role": "medidas_funil.taxa_de_conversão"
 			            }
 			          },
 			          "State": "Generated",
@@ -9546,7 +9704,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_orcamento_has_d_etapas_funil_etapa_do_funil": {
+			    "f_orcamento_has_medidas_funil_qtde_orçamentos": {
 			      "Binding": {
 			        "ConceptualEntity": "fOrcamentos"
 			      },
@@ -9557,9 +9715,9 @@ cultureInfo pt-BR
 			            "Entity": "f_orcamento"
 			          }
 			        },
-			        "d_etapas_funil.etapa_do_funil": {
+			        "medidas_funil.qtde_orçamentos": {
 			          "Target": {
-			            "Entity": "d_etapas_funil.etapa_do_funil"
+			            "Entity": "medidas_funil.qtde_orçamentos"
 			          }
 			        }
 			      },
@@ -9570,16 +9728,16 @@ cultureInfo pt-BR
 			              "Role": "f_orcamento"
 			            },
 			            "Object": {
-			              "Role": "d_etapas_funil.etapa_do_funil"
+			              "Role": "medidas_funil.qtde_orçamentos"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "f_orcamentos_have_etapa_do_funil"
+			          "ID": "f_orcamentos_have_qtde_orçamentos"
 			        }
 			      ]
 			    },
-			    "d_etapas_funil_has_etapa_do_funil": {
+			    "d_etapas_funil_has_medidas_funil_qtde_orçamentos": {
 			      "Binding": {
 			        "ConceptualEntity": "dEtapasFunil"
 			      },
@@ -9590,9 +9748,9 @@ cultureInfo pt-BR
 			            "Entity": "d_etapas_funil"
 			          }
 			        },
-			        "d_etapas_funil.etapa_do_funil": {
+			        "medidas_funil.qtde_orçamentos": {
 			          "Target": {
-			            "Entity": "d_etapas_funil.etapa_do_funil"
+			            "Entity": "medidas_funil.qtde_orçamentos"
 			          }
 			        }
 			      },
@@ -9603,12 +9761,12 @@ cultureInfo pt-BR
 			              "Role": "d_etapas_funil"
 			            },
 			            "Object": {
-			              "Role": "d_etapas_funil.etapa_do_funil"
+			              "Role": "medidas_funil.qtde_orçamentos"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "d_etapas_funils_have_etapa_do_funil"
+			          "ID": "d_etapas_funils_have_qtde_orçamentos"
 			        }
 			      ]
 			    },
@@ -10320,7 +10478,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_venda_has_medidas_meta_faixa_atingqtde": {
+			    "f_venda_has_medidas_percentuais_faixa_atingqtde": {
 			      "Binding": {
 			        "ConceptualEntity": "fVendas"
 			      },
@@ -10331,9 +10489,9 @@ cultureInfo pt-BR
 			            "Entity": "f_venda"
 			          }
 			        },
-			        "medidas_meta.faixa_atingqtde": {
+			        "medidas_percentuais.faixa_atingqtde": {
 			          "Target": {
-			            "Entity": "medidas_meta.faixa_atingqtde"
+			            "Entity": "medidas_percentuais.faixa_atingqtde"
 			          }
 			        }
 			      },
@@ -10344,7 +10502,7 @@ cultureInfo pt-BR
 			              "Role": "f_venda"
 			            },
 			            "Object": {
-			              "Role": "medidas_meta.faixa_atingqtde"
+			              "Role": "medidas_percentuais.faixa_atingqtde"
 			            }
 			          },
 			          "State": "Generated",
@@ -10353,7 +10511,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_metas_quantidade_has_medidas_meta_faixa_atingqtde": {
+			    "f_metas_quantidade_has_medidas_percentuais_faixa_atingqtde": {
 			      "Binding": {
 			        "ConceptualEntity": "fMetas_quantidade"
 			      },
@@ -10364,9 +10522,9 @@ cultureInfo pt-BR
 			            "Entity": "f_metas_quantidade"
 			          }
 			        },
-			        "medidas_meta.faixa_atingqtde": {
+			        "medidas_percentuais.faixa_atingqtde": {
 			          "Target": {
-			            "Entity": "medidas_meta.faixa_atingqtde"
+			            "Entity": "medidas_percentuais.faixa_atingqtde"
 			          }
 			        }
 			      },
@@ -10377,7 +10535,7 @@ cultureInfo pt-BR
 			              "Role": "f_metas_quantidade"
 			            },
 			            "Object": {
-			              "Role": "medidas_meta.faixa_atingqtde"
+			              "Role": "medidas_percentuais.faixa_atingqtde"
 			            }
 			          },
 			          "State": "Generated",
@@ -10386,7 +10544,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_venda_has_medidas_meta_faixa_atingvalor": {
+			    "f_venda_has_medidas_percentuais_faixa_atingvalor": {
 			      "Binding": {
 			        "ConceptualEntity": "fVendas"
 			      },
@@ -10397,9 +10555,9 @@ cultureInfo pt-BR
 			            "Entity": "f_venda"
 			          }
 			        },
-			        "medidas_meta.faixa_atingvalor": {
+			        "medidas_percentuais.faixa_atingvalor": {
 			          "Target": {
-			            "Entity": "medidas_meta.faixa_atingvalor"
+			            "Entity": "medidas_percentuais.faixa_atingvalor"
 			          }
 			        }
 			      },
@@ -10410,7 +10568,7 @@ cultureInfo pt-BR
 			              "Role": "f_venda"
 			            },
 			            "Object": {
-			              "Role": "medidas_meta.faixa_atingvalor"
+			              "Role": "medidas_percentuais.faixa_atingvalor"
 			            }
 			          },
 			          "State": "Generated",
@@ -10419,7 +10577,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_metas_valor_has_medidas_meta_faixa_atingvalor": {
+			    "f_metas_valor_has_medidas_percentuais_faixa_atingvalor": {
 			      "Binding": {
 			        "ConceptualEntity": "fMetas_valor"
 			      },
@@ -10430,9 +10588,9 @@ cultureInfo pt-BR
 			            "Entity": "f_metas_valor"
 			          }
 			        },
-			        "medidas_meta.faixa_atingvalor": {
+			        "medidas_percentuais.faixa_atingvalor": {
 			          "Target": {
-			            "Entity": "medidas_meta.faixa_atingvalor"
+			            "Entity": "medidas_percentuais.faixa_atingvalor"
 			          }
 			        }
 			      },
@@ -10443,144 +10601,12 @@ cultureInfo pt-BR
 			              "Role": "f_metas_valor"
 			            },
 			            "Object": {
-			              "Role": "medidas_meta.faixa_atingvalor"
+			              "Role": "medidas_percentuais.faixa_atingvalor"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "f_metas_valor_have_faixa_atingvalor"
-			        }
-			      ]
-			    },
-			    "f_venda_has_medidas_meta_ating_valorfilial": {
-			      "Binding": {
-			        "ConceptualEntity": "fVendas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_venda": {
-			          "Target": {
-			            "Entity": "f_venda"
-			          }
-			        },
-			        "medidas_meta.ating_valorfilial": {
-			          "Target": {
-			            "Entity": "medidas_meta.ating_valorfilial"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_venda"
-			            },
-			            "Object": {
-			              "Role": "medidas_meta.ating_valorfilial"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_venda_have_ating_valorfilial"
-			        }
-			      ]
-			    },
-			    "f_metas_valor_has_medidas_meta_ating_valorfilial": {
-			      "Binding": {
-			        "ConceptualEntity": "fMetas_valor"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_metas_valor": {
-			          "Target": {
-			            "Entity": "f_metas_valor"
-			          }
-			        },
-			        "medidas_meta.ating_valorfilial": {
-			          "Target": {
-			            "Entity": "medidas_meta.ating_valorfilial"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_metas_valor"
-			            },
-			            "Object": {
-			              "Role": "medidas_meta.ating_valorfilial"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_metas_valor_have_ating_valorfilial"
-			        }
-			      ]
-			    },
-			    "f_venda_has_medidas_meta_ating_qtdefilial": {
-			      "Binding": {
-			        "ConceptualEntity": "fVendas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_venda": {
-			          "Target": {
-			            "Entity": "f_venda"
-			          }
-			        },
-			        "medidas_meta.ating_qtdefilial": {
-			          "Target": {
-			            "Entity": "medidas_meta.ating_qtdefilial"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_venda"
-			            },
-			            "Object": {
-			              "Role": "medidas_meta.ating_qtdefilial"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_venda_have_ating_qtdefilial"
-			        }
-			      ]
-			    },
-			    "f_metas_quantidade_has_medidas_meta_ating_qtdefilial": {
-			      "Binding": {
-			        "ConceptualEntity": "fMetas_quantidade"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_metas_quantidade": {
-			          "Target": {
-			            "Entity": "f_metas_quantidade"
-			          }
-			        },
-			        "medidas_meta.ating_qtdefilial": {
-			          "Target": {
-			            "Entity": "medidas_meta.ating_qtdefilial"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_metas_quantidade"
-			            },
-			            "Object": {
-			              "Role": "medidas_meta.ating_qtdefilial"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_metas_quantidades_have_ating_qtdefilial"
 			        }
 			      ]
 			    },
@@ -10749,7 +10775,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_metas_valor_has_medidas_meta_status_metafilial": {
+			    "f_metas_valor_has_medidas_status_status_metafilial": {
 			      "Binding": {
 			        "ConceptualEntity": "fMetas_valor"
 			      },
@@ -10760,9 +10786,9 @@ cultureInfo pt-BR
 			            "Entity": "f_metas_valor"
 			          }
 			        },
-			        "medidas_meta.status_metafilial": {
+			        "medidas_status.status_metafilial": {
 			          "Target": {
-			            "Entity": "medidas_meta.status_metafilial"
+			            "Entity": "medidas_status.status_metafilial"
 			          }
 			        }
 			      },
@@ -10773,7 +10799,7 @@ cultureInfo pt-BR
 			              "Role": "f_metas_valor"
 			            },
 			            "Object": {
-			              "Role": "medidas_meta.status_metafilial"
+			              "Role": "medidas_status.status_metafilial"
 			            }
 			          },
 			          "State": "Generated",
@@ -10782,7 +10808,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_metas_quantidade_has_medidas_meta_status_metafilial": {
+			    "f_metas_quantidade_has_medidas_status_status_metafilial": {
 			      "Binding": {
 			        "ConceptualEntity": "fMetas_quantidade"
 			      },
@@ -10793,9 +10819,9 @@ cultureInfo pt-BR
 			            "Entity": "f_metas_quantidade"
 			          }
 			        },
-			        "medidas_meta.status_metafilial": {
+			        "medidas_status.status_metafilial": {
 			          "Target": {
-			            "Entity": "medidas_meta.status_metafilial"
+			            "Entity": "medidas_status.status_metafilial"
 			          }
 			        }
 			      },
@@ -10806,7 +10832,7 @@ cultureInfo pt-BR
 			              "Role": "f_metas_quantidade"
 			            },
 			            "Object": {
-			              "Role": "medidas_meta.status_metafilial"
+			              "Role": "medidas_status.status_metafilial"
 			            }
 			          },
 			          "State": "Generated",
@@ -11145,7 +11171,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_venda_has_medidas_especiais_status_qtde_profissional": {
+			    "f_venda_has_medidas_status_status_qtde_profissional": {
 			      "Binding": {
 			        "ConceptualEntity": "fVendas"
 			      },
@@ -11156,9 +11182,9 @@ cultureInfo pt-BR
 			            "Entity": "f_venda"
 			          }
 			        },
-			        "medidas_especiais.status_qtde_profissional": {
+			        "medidas_status.status_qtde_profissional": {
 			          "Target": {
-			            "Entity": "medidas_especiais.status_qtde_profissional"
+			            "Entity": "medidas_status.status_qtde_profissional"
 			          }
 			        }
 			      },
@@ -11169,7 +11195,7 @@ cultureInfo pt-BR
 			              "Role": "f_venda"
 			            },
 			            "Object": {
-			              "Role": "medidas_especiais.status_qtde_profissional"
+			              "Role": "medidas_status.status_qtde_profissional"
 			            }
 			          },
 			          "State": "Generated",
@@ -11178,7 +11204,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_metas_quantidade_has_medidas_especiais_status_qtde_profissional": {
+			    "f_metas_quantidade_has_medidas_status_status_qtde_profissional": {
 			      "Binding": {
 			        "ConceptualEntity": "fMetas_quantidade"
 			      },
@@ -11189,9 +11215,9 @@ cultureInfo pt-BR
 			            "Entity": "f_metas_quantidade"
 			          }
 			        },
-			        "medidas_especiais.status_qtde_profissional": {
+			        "medidas_status.status_qtde_profissional": {
 			          "Target": {
-			            "Entity": "medidas_especiais.status_qtde_profissional"
+			            "Entity": "medidas_status.status_qtde_profissional"
 			          }
 			        }
 			      },
@@ -11202,7 +11228,7 @@ cultureInfo pt-BR
 			              "Role": "f_metas_quantidade"
 			            },
 			            "Object": {
-			              "Role": "medidas_especiais.status_qtde_profissional"
+			              "Role": "medidas_status.status_qtde_profissional"
 			            }
 			          },
 			          "State": "Generated",
@@ -11211,7 +11237,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_venda_has_medidas_especiais_status_val_profissional": {
+			    "f_venda_has_medidas_status_status_val_profissional": {
 			      "Binding": {
 			        "ConceptualEntity": "fVendas"
 			      },
@@ -11222,9 +11248,9 @@ cultureInfo pt-BR
 			            "Entity": "f_venda"
 			          }
 			        },
-			        "medidas_especiais.status_val_profissional": {
+			        "medidas_status.status_val_profissional": {
 			          "Target": {
-			            "Entity": "medidas_especiais.status_val_profissional"
+			            "Entity": "medidas_status.status_val_profissional"
 			          }
 			        }
 			      },
@@ -11235,7 +11261,7 @@ cultureInfo pt-BR
 			              "Role": "f_venda"
 			            },
 			            "Object": {
-			              "Role": "medidas_especiais.status_val_profissional"
+			              "Role": "medidas_status.status_val_profissional"
 			            }
 			          },
 			          "State": "Generated",
@@ -11244,7 +11270,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_metas_valor_has_medidas_especiais_status_val_profissional": {
+			    "f_metas_valor_has_medidas_status_status_val_profissional": {
 			      "Binding": {
 			        "ConceptualEntity": "fMetas_valor"
 			      },
@@ -11255,9 +11281,9 @@ cultureInfo pt-BR
 			            "Entity": "f_metas_valor"
 			          }
 			        },
-			        "medidas_especiais.status_val_profissional": {
+			        "medidas_status.status_val_profissional": {
 			          "Target": {
-			            "Entity": "medidas_especiais.status_val_profissional"
+			            "Entity": "medidas_status.status_val_profissional"
 			          }
 			        }
 			      },
@@ -11268,7 +11294,7 @@ cultureInfo pt-BR
 			              "Role": "f_metas_valor"
 			            },
 			            "Object": {
-			              "Role": "medidas_especiais.status_val_profissional"
+			              "Role": "medidas_status.status_val_profissional"
 			            }
 			          },
 			          "State": "Generated",
@@ -11277,7 +11303,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_venda_has_medidas_especiais_status_qtde_vendedor": {
+			    "f_venda_has_medidas_status_status_qtde_vendedor": {
 			      "Binding": {
 			        "ConceptualEntity": "fVendas"
 			      },
@@ -11288,9 +11314,9 @@ cultureInfo pt-BR
 			            "Entity": "f_venda"
 			          }
 			        },
-			        "medidas_especiais.status_qtde_vendedor": {
+			        "medidas_status.status_qtde_vendedor": {
 			          "Target": {
-			            "Entity": "medidas_especiais.status_qtde_vendedor"
+			            "Entity": "medidas_status.status_qtde_vendedor"
 			          }
 			        }
 			      },
@@ -11301,7 +11327,7 @@ cultureInfo pt-BR
 			              "Role": "f_venda"
 			            },
 			            "Object": {
-			              "Role": "medidas_especiais.status_qtde_vendedor"
+			              "Role": "medidas_status.status_qtde_vendedor"
 			            }
 			          },
 			          "State": "Generated",
@@ -11310,7 +11336,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_metas_quantidade_has_medidas_especiais_status_qtde_vendedor": {
+			    "f_metas_quantidade_has_medidas_status_status_qtde_vendedor": {
 			      "Binding": {
 			        "ConceptualEntity": "fMetas_quantidade"
 			      },
@@ -11321,9 +11347,9 @@ cultureInfo pt-BR
 			            "Entity": "f_metas_quantidade"
 			          }
 			        },
-			        "medidas_especiais.status_qtde_vendedor": {
+			        "medidas_status.status_qtde_vendedor": {
 			          "Target": {
-			            "Entity": "medidas_especiais.status_qtde_vendedor"
+			            "Entity": "medidas_status.status_qtde_vendedor"
 			          }
 			        }
 			      },
@@ -11334,7 +11360,7 @@ cultureInfo pt-BR
 			              "Role": "f_metas_quantidade"
 			            },
 			            "Object": {
-			              "Role": "medidas_especiais.status_qtde_vendedor"
+			              "Role": "medidas_status.status_qtde_vendedor"
 			            }
 			          },
 			          "State": "Generated",
@@ -11343,7 +11369,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_venda_has_medidas_especiais_status_val_vendedor": {
+			    "f_venda_has_medidas_status_status_val_vendedor": {
 			      "Binding": {
 			        "ConceptualEntity": "fVendas"
 			      },
@@ -11354,9 +11380,9 @@ cultureInfo pt-BR
 			            "Entity": "f_venda"
 			          }
 			        },
-			        "medidas_especiais.status_val_vendedor": {
+			        "medidas_status.status_val_vendedor": {
 			          "Target": {
-			            "Entity": "medidas_especiais.status_val_vendedor"
+			            "Entity": "medidas_status.status_val_vendedor"
 			          }
 			        }
 			      },
@@ -11367,7 +11393,7 @@ cultureInfo pt-BR
 			              "Role": "f_venda"
 			            },
 			            "Object": {
-			              "Role": "medidas_especiais.status_val_vendedor"
+			              "Role": "medidas_status.status_val_vendedor"
 			            }
 			          },
 			          "State": "Generated",
@@ -11376,7 +11402,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_metas_valor_has_medidas_especiais_status_val_vendedor": {
+			    "f_metas_valor_has_medidas_status_status_val_vendedor": {
 			      "Binding": {
 			        "ConceptualEntity": "fMetas_valor"
 			      },
@@ -11387,9 +11413,9 @@ cultureInfo pt-BR
 			            "Entity": "f_metas_valor"
 			          }
 			        },
-			        "medidas_especiais.status_val_vendedor": {
+			        "medidas_status.status_val_vendedor": {
 			          "Target": {
-			            "Entity": "medidas_especiais.status_val_vendedor"
+			            "Entity": "medidas_status.status_val_vendedor"
 			          }
 			        }
 			      },
@@ -11400,7 +11426,7 @@ cultureInfo pt-BR
 			              "Role": "f_metas_valor"
 			            },
 			            "Object": {
-			              "Role": "medidas_especiais.status_val_vendedor"
+			              "Role": "medidas_status.status_val_vendedor"
 			            }
 			          },
 			          "State": "Generated",
