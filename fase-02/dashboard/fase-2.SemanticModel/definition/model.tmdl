@@ -11,7 +11,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop"]
 
-annotation PBI_QueryOrder = ["dCalendario","dCidades","dFiliais","dGrupos_servico","fItens_venda","fMetas_quantidade","fMetas_valor","dProfissionais","dServicos","fVendas","dVendedores","Medidas base","Medidas metas","Medidas percentuais","Medidas especiais","fOrcamentos","Medidas orçamentos","dEtapasFunil","Medidas Venda","Medidas status","Medidas funil"]
+annotation PBI_QueryOrder = ["dCalendario","dCidades","dFiliais","dGrupos_servico","fItens_venda","fMetas_quantidade","fMetas_valor","dProfissionais","dServicos","fVendas","dVendedores","Medidas base","Medidas metas","Medidas percentuais","Medidas especiais","fOrcamentos","Medidas orçamentos","dEtapasFunil","Medidas Venda","Medidas status","Medidas funil","dFuncionarios"]
 
 ref table dCalendario
 ref table DateTableTemplate_34e28ad4-7e82-4cc3-84d5-46d00dcf28f7
@@ -37,6 +37,7 @@ ref table dEtapasFunil
 ref table 'Medidas Venda'
 ref table 'Medidas status'
 ref table 'Medidas funil'
+ref table dFuncionarios
 
 ref cultureInfo pt-BR
 
