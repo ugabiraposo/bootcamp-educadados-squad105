@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "416672a8790820934058",
   "position": {
     "x": 90,
@@ -154,7 +154,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Medidas especiais"
+                          "Entity": "Medidas status"
                         }
                       },
                       "Property": "status val vendedor"
@@ -184,7 +184,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Medidas especiais"
+                          "Entity": "Medidas status"
                         }
                       },
                       "Property": "status qtde vendedor"

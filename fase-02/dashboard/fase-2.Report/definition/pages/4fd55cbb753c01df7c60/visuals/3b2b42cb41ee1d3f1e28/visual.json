@@ -76,7 +76,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas metas"
+                      "Entity": "Medidas percentuais"
                     }
                   },
                   "Property": "faixa ating-valor"
@@ -132,7 +132,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas metas"
+                      "Entity": "Medidas percentuais"
                     }
                   },
                   "Property": "faixa ating-qtde"

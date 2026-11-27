@@ -27,15 +27,6 @@ table 'Medidas Venda'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'ticket médio serviço' =
-			
-			DIVIDE(
-			    [valor líquido],
-			    [número de vendas]
-			)
-		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
-		lineageTag: d66ad832-5efe-45eb-87f7-632d744e6c43
-
 	measure 'valor tabela total' =
 			
 			SUMX(
@@ -63,8 +54,6 @@ table 'Medidas Venda'
 				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
 				in
 				    #"Colunas Removidas"
-
-	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 

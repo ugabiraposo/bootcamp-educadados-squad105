@@ -119,6 +119,32 @@ table 'Medidas percentuais'
 		formatString: 0%;-0%;0%
 		lineageTag: 2d957290-c3f5-4a73-84c9-ed7cd568de04
 
+	measure 'faixa ating-qtde' =
+			
+			VAR vPct = [qtde filial %]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(vPct), "sem meta",
+			        vPct >= 1,     "100% ou mais",
+			        vPct >= 0.9,   "90% a 99%",
+			        "abaixo de 90%"
+			    )
+		lineageTag: 74c7d418-3726-4150-90d3-91d836af4494
+
+	measure 'faixa ating-valor' =
+			
+			VAR vPct = [val filial %]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(vPct), "sem meta",
+			        vPct >= 1,     "100% ou mais",
+			        vPct >= 0.9,   "90% a 99%",
+			        "abaixo de 90%"
+			    )
+		lineageTag: c476ca21-6137-4315-abf7-9a2360b4e083
+
 	partition 'Medidas percentuais' = m
 		mode: import
 		source =

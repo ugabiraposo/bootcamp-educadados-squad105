@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "46dde54f16f21ef8e686",
   "position": {
     "x": 104.97462269049733,
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dEtapasFunil"
+                      "Entity": "Medidas funil"
                     }
                   },
                   "Property": "qtde orçamentos"

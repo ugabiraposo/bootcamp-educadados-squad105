@@ -1,0 +1,67 @@
+table 'Medidas status'
+	lineageTag: 14e5fcb2-e833-410b-a34d-8ab3efa24116
+
+	measure 'status qtde profissional' =
+			CALCULATE( SWITCH(true(),
+			[qtde profissional %] = "sem meta","FFFFFF",
+			[qtde profissional %] > 1, "#1E4D2B",
+			[qtde profissional %] < 1, "#5C1D24"), fMetas_quantidade[nivel] = "Profissional")
+		lineageTag: 45a1e154-4505-49e0-b40f-f0ed183fdb5c
+
+	measure 'status val vendedor' =
+			CALCULATE( SWITCH(true(),
+			[val vendedor %] = "sem meta","FFFFFF",
+			[val vendedor %] > 1, "#1E4D2B",
+			[val vendedor %] < 1, "#5C1D24"), fMetas_valor[nivel] = "Vendedor")
+		lineageTag: 7d01417f-afcd-47b6-bef2-533c01246de7
+
+	measure 'status qtde vendedor' =
+			CALCULATE( SWITCH(true(),
+			[qtde vendedor %] = "sem meta","FFFFFF",
+			[qtde vendedor %] > 1, "#1E4D2B",
+			[qtde vendedor %] < 1, "#5C1D24"), fMetas_quantidade[nivel] = "Vendedor")
+		lineageTag: b5e4162d-ba9a-45fd-a198-706bc84fc983
+
+	measure 'status taxa' =
+			
+			SWITCH (
+			    TRUE (),
+			    [taxa de conversão] = [taxa de conversão rede], "#42D8BE",
+			    [taxa de conversão] > [taxa de conversão rede], "#42D8BE",
+			    [taxa de conversão] < [taxa de conversão rede], "#94A3B8"
+			)
+		lineageTag: 44670b91-b541-4b4e-b1d9-2e52c7b748a6
+
+	measure 'status val profissional' =
+			CALCULATE( SWITCH(true(),
+			[val profissional %] = "sem meta","FFFFFF",
+			[val profissional %] > 1, "#1E4D2B",
+			[val profissional %] < 1, "#5C1D24"), fMetas_valor[nivel] = "Profissional")
+		lineageTag: 402b240c-b8d9-449a-b52e-958123c094bb
+
+	measure 'status meta-filial' =
+			
+			VAR temValor = COALESCE([valor metas-filial], 0) > 0
+			VAR temQtde = COALESCE([qtde metas-filial], 0) > 0
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        NOT temValor && NOT temQtde, "sem meta",
+			        NOT temValor && temQtde, "Sem meta de Valor",
+			        temValor && NOT temQtde, "Sem meta de Quantidade",
+			        "Com meta definida"
+			    )
+		lineageTag: 71d316f1-18fb-465e-a19a-1eb96a948e9a
+
+	partition 'Medidas status' = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

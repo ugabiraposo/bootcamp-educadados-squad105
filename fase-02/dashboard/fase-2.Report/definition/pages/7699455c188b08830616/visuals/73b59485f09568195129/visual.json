@@ -34,7 +34,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas metas"
+                      "Entity": "Medidas status"
                     }
                   },
                   "Property": "status meta-filial"
@@ -130,7 +130,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Medidas metas"
+                "Entity": "Medidas status"
               }
             },
             "Property": "status meta-filial"
@@ -144,6 +144,11 @@
               "Name": "m",
               "Entity": "Medidas metas",
               "Type": 0
+            },
+            {
+              "Name": "m1",
+              "Entity": "Medidas status",
+              "Type": 0
             }
           ],
           "Where": [
@@ -154,7 +159,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Source": "m"
+                          "Source": "m1"
                         }
                       },
                       "Property": "status meta-filial"

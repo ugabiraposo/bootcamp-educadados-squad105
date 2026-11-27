@@ -5292,7 +5292,7 @@ cultureInfo pt-BR
 			    "medidas_especiais.status_val_vendedor": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas especiais",
+			          "ConceptualEntity": "Medidas status",
 			          "ConceptualProperty": "status val vendedor"
 			        }
 			      },
@@ -5408,7 +5408,7 @@ cultureInfo pt-BR
 			    "medidas_especiais.status_qtde_vendedor": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas especiais",
+			          "ConceptualEntity": "Medidas status",
 			          "ConceptualProperty": "status qtde vendedor"
 			        }
 			      },
@@ -5524,7 +5524,7 @@ cultureInfo pt-BR
 			    "medidas_especiais.status_val_profissional": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas especiais",
+			          "ConceptualEntity": "Medidas status",
 			          "ConceptualProperty": "status val profissional"
 			        }
 			      },
@@ -5640,7 +5640,7 @@ cultureInfo pt-BR
 			    "medidas_especiais.status_qtde_profissional": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas especiais",
+			          "ConceptualEntity": "Medidas status",
 			          "ConceptualProperty": "status qtde profissional"
 			        }
 			      },
@@ -5948,7 +5948,7 @@ cultureInfo pt-BR
 			    "medidas_meta.status_metafilial": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas metas",
+			          "ConceptualEntity": "Medidas status",
 			          "ConceptualProperty": "status meta-filial"
 			        }
 			      },
@@ -6252,7 +6252,7 @@ cultureInfo pt-BR
 			    "medidas_meta.faixa_atingvalor": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas metas",
+			          "ConceptualEntity": "Medidas percentuais",
 			          "ConceptualProperty": "faixa ating-valor"
 			        }
 			      },
@@ -6374,7 +6374,7 @@ cultureInfo pt-BR
 			    "medidas_meta.faixa_atingqtde": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Medidas metas",
+			          "ConceptualEntity": "Medidas percentuais",
 			          "ConceptualProperty": "faixa ating-qtde"
 			        }
 			      },
@@ -7248,7 +7248,7 @@ cultureInfo pt-BR
 			    "d_etapas_funil.etapa_do_funil": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dEtapasFunil",
+			          "ConceptualEntity": "Medidas funil",
 			          "ConceptualProperty": "qtde orçamentos"
 			        }
 			      },
@@ -7264,7 +7264,7 @@ cultureInfo pt-BR
 			    "d_etapas_funil.taxa_de_conversão": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dEtapasFunil",
+			          "ConceptualEntity": "Medidas funil",
 			          "ConceptualProperty": "taxa de conversão"
 			        }
 			      },
@@ -7280,7 +7280,7 @@ cultureInfo pt-BR
 			    "d_etapas_funil.taxa_de_conversão_rede": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dEtapasFunil",
+			          "ConceptualEntity": "Medidas funil",
 			          "ConceptualProperty": "taxa de conversão rede"
 			        }
 			      },
@@ -7296,7 +7296,7 @@ cultureInfo pt-BR
 			    "d_etapas_funil.desconto_médio": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dEtapasFunil",
+			          "ConceptualEntity": "Medidas funil",
 			          "ConceptualProperty": "desconto médio"
 			        }
 			      },
@@ -7312,7 +7312,7 @@ cultureInfo pt-BR
 			    "d_etapas_funil.valor_perdido": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dEtapasFunil",
+			          "ConceptualEntity": "Medidas funil",
 			          "ConceptualProperty": "valor perdido"
 			        }
 			      },
@@ -7328,7 +7328,7 @@ cultureInfo pt-BR
 			    "d_etapas_funil.valor_perdido__vendido": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dEtapasFunil",
+			          "ConceptualEntity": "Medidas funil",
 			          "ConceptualProperty": "valor perdido % vendido"
 			        }
 			      },
@@ -7447,22 +7447,6 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.599
-			          }
-			        }
-			      ]
-			    },
-			    "medidas_venda_servico.ticket_médio_serviço": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas Venda",
-			          "ConceptualProperty": "ticket médio serviço"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ticket médio serviço": {
-			            "State": "Generated"
 			          }
 			        }
 			      ]
