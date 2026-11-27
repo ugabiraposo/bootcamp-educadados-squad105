@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "05c50b0573eaa9b9b93d",
   "position": {
     "x": 70,
@@ -69,6 +69,20 @@
                   "Value": "'Data, percent of first'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         },
@@ -78,9 +92,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#071317'"
                     }
                   }
                 }
@@ -125,11 +138,17 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#237264'"
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
                 }
               }
             }
@@ -145,6 +164,17 @@
                   "Value": "true"
                 }
               }
+            },
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#51A4F3'"
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -155,7 +185,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#42A5F5'"
+                      "Value": "'#64A4E3'"
                     }
                   }
                 }
@@ -322,7 +352,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#071317'"
                     }
                   }
                 }
@@ -335,6 +365,26 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showChartSpecificTooltips": {
               "expr": {
                 "Literal": {
                   "Value": "false"

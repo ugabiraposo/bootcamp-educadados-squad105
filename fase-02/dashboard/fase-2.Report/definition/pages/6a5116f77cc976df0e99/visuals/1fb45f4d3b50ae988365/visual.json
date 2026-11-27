@@ -57,7 +57,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#071317'"
                     }
                   }
                 }
@@ -67,6 +67,13 @@
               "expr": {
                 "Literal": {
                   "Value": "15D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Mês'"
                 }
               }
             }

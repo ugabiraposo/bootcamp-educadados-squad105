@@ -1,0 +1,311 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ba8b1abb1227b79482b4",
+  "position": {
+    "x": 998.33333333333337,
+    "y": 548.33333333333337,
+    "z": 12000,
+    "height": 353.33333333333337,
+    "width": 846.66666666666674,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFiliais"
+                    }
+                  },
+                  "Property": "filial_abreviado"
+                }
+              },
+              "queryRef": "dFiliais.filial_abreviado",
+              "nativeQueryRef": "Filial",
+              "active": true,
+              "displayName": "Filial"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "valor líquido"
+                }
+              },
+              "queryRef": "Medidas base.valor líquido",
+              "nativeQueryRef": "Valor líquido",
+              "displayName": "Valor líquido"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "val filial"
+                }
+              },
+              "queryRef": "Medidas metas.val filial",
+              "nativeQueryRef": "Meta de valor",
+              "displayName": "Meta de valor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas percentuais"
+                    }
+                  },
+                  "Property": "val filial %"
+                }
+              },
+              "queryRef": "Medidas percentuais.val filial %",
+              "nativeQueryRef": "Ating val %",
+              "displayName": "Ating val %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "quantidade de itens"
+                }
+              },
+              "queryRef": "Medidas base.quantidade de itens",
+              "nativeQueryRef": "Qtde de itens",
+              "displayName": "Qtde de itens"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "qtde filial"
+                }
+              },
+              "queryRef": "Medidas metas.qtde filial",
+              "nativeQueryRef": "Meta de qtde",
+              "displayName": "Meta de qtde"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas percentuais"
+                    }
+                  },
+                  "Property": "qtde filial %"
+                }
+              },
+              "queryRef": "Medidas percentuais.qtde filial %",
+              "nativeQueryRef": "Ating qtde %",
+              "displayName": "Ating qtde %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas percentuais"
+                  }
+                },
+                "Property": "qtde filial %"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#071317'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#237264'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnTotal": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowTotal": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#237264'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#237264'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
