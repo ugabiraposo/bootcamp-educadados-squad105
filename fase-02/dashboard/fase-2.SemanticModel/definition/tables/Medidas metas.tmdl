@@ -246,6 +246,40 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: ac4c1a0c-dd7d-4df2-9709-bc591e60b9be
 
+	measure 'Vendedores Sem Meta' =
+			
+			CALCULATE(
+			    COUNT(dVendedores[codigo_vendedor]),
+			    FILTER(
+			        dVendedores,
+			        ISBLANK(
+			            CALCULATE(
+			                [meta de valor],
+			                fMetas_valor[nivel] = "Vendedor"
+			            )
+			        )
+			    )
+			)
+		formatString: 0
+		lineageTag: 6da35821-0faf-45ee-a9f9-681db6d12024
+
+	measure 'Profissionais Sem Meta' =
+			
+			CALCULATE(
+			    COUNT(dProfissionais[codigo_profissional]),
+			    FILTER(
+			        dProfissionais,
+			        ISBLANK(
+			            CALCULATE(
+			                [meta de valor],
+			                fMetas_valor[nivel] = "Profissional"
+			            )
+			        )
+			    )
+			)
+		formatString: 0
+		lineageTag: d72fe07a-d9b7-424e-b1c4-5f753961b0fa
+
 	partition 'Medidas metas' = m
 		mode: import
 		source =
@@ -257,4 +291,6 @@ table 'Medidas metas'
 				    #"Colunas Removidas"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

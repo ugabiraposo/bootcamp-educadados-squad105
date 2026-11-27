@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "4ac6c26cfbc6aecef704",
+  "position": {
+    "x": 0,
+    "y": 288.4390243902439,
+    "z": 1001,
+    "height": 154.09756097560975,
+    "width": 907.46341463414626,
+    "tabOrder": 1001
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "Vendedores Sem Meta"
+                }
+              },
+              "queryRef": "Medidas metas.Vendedores Sem Meta",
+              "nativeQueryRef": "Vendedores Sem Meta"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "filiais sem meta"
+                }
+              },
+              "queryRef": "Medidas metas.filiais sem meta",
+              "nativeQueryRef": "filiais sem meta"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas metas"
+                    }
+                  },
+                  "Property": "Profissionais Sem Meta"
+                }
+              },
+              "queryRef": "Medidas metas.Profissionais Sem Meta",
+              "nativeQueryRef": "Profissionais Sem Meta"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas metas"
+                  }
+                },
+                "Property": "Vendedores Sem Meta"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "40d409be1a21728b0246",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas metas"
+              }
+            },
+            "Property": "Vendedores Sem Meta"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
