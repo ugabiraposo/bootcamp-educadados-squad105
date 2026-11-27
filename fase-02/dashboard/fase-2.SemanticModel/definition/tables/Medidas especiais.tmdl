@@ -190,6 +190,16 @@ table 'Medidas especiais'
 			```
 		lineageTag: acef5318-9731-405a-a126-56476dbbcf1b
 
+	measure 'status taxa' =
+			
+			SWITCH (
+			    TRUE (),
+			    [taxa de conversão] = [taxa de conversão rede], "#42D8BE",
+			    [taxa de conversão] > [taxa de conversão rede], "#42D8BE",
+			    [taxa de conversão] < [taxa de conversão rede], "#94A3B8"
+			)
+		lineageTag: 44670b91-b541-4b4e-b1d9-2e52c7b748a6
+
 	partition 'Medidas especiais' = m
 		mode: import
 		source =

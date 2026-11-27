@@ -212,23 +212,9 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: bea3b342-5f54-4ec6-bc84-412b2653476c
 
-	measure 'ating qtde-filial' =
-			
-			DIVIDE([número de vendas], [qtde filial])
-		lineageTag: 71b7033e-b7e1-43df-9cc7-e2823c1f8785
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'ating valor-filial' =
-			
-			DIVIDE([valor líquido], [val filial])
-		lineageTag: 23043d90-e679-49b1-9cbf-6b36f8eb09b7
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'faixa ating-valor' =
 			
-			VAR vPct = [ating valor-filial]
+			VAR vPct = [val filial %]
 			RETURN
 			    SWITCH(
 			        TRUE(),
@@ -241,7 +227,7 @@ table 'Medidas metas'
 
 	measure 'faixa ating-qtde' =
 			
-			VAR vPct = [ating qtde-filial]
+			VAR vPct = [qtde filial %]
 			RETURN
 			    SWITCH(
 			        TRUE(),
@@ -257,7 +243,7 @@ table 'Medidas metas'
 			COUNTROWS(
 			    FILTER(
 			        VALUES(dFiliais[codigo_filial]),
-			        [ating valor-filial] >= 1
+			        [val filial %] >= 1
 			    )
 			) + 0
 		formatString: 0
@@ -268,7 +254,7 @@ table 'Medidas metas'
 			COUNTROWS(
 			    FILTER(
 			        VALUES(dFiliais[codigo_filial]),
-			        [ating qtde-filial] >= 1
+			        [qtde filial %] >= 1
 			    )
 			) + 0
 		formatString: 0
@@ -279,9 +265,9 @@ table 'Medidas metas'
 			COUNTROWS(
 			    FILTER(
 			        VALUES(dFiliais[codigo_filial]),
-			        [ating valor-filial] >= 1
-			            && NOT ISBLANK([ating qtde-filial])
-			            && [ating qtde-filial] < 1
+			        [val filial %] >= 1
+			            && NOT ISBLANK([qtde filial %])
+			            && [qtde filial %] < 1
 			    )
 			) + 0
 		formatString: 0
@@ -292,9 +278,9 @@ table 'Medidas metas'
 			COUNTROWS(
 			    FILTER(
 			        VALUES(dFiliais[codigo_filial]),
-			        [ating qtde-filial] >= 1
-			            && NOT ISBLANK([ating valor-filial])
-			            && [ating valor-filial] < 1
+			        [qtde filial %] >= 1
+			            && NOT ISBLANK([val filial %])
+			            && [val filial %] < 1
 			    )
 			) + 0
 		formatString: 0

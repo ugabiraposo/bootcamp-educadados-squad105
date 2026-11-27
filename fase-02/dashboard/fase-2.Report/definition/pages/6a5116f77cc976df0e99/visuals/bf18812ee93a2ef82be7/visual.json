@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "bf18812ee93a2ef82be7",
+  "position": {
+    "x": 222.5,
+    "y": 977.5,
+    "z": 11000,
+    "height": 102.5,
+    "width": 1420,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "AURORA ODONTOLOGIA • FUNIL DE ORÇAMENTOS | EDUCADADOS — SQUAD 105 • PROJETO ACADÊMICO",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt",
+                      "color": "#b3c7c9"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

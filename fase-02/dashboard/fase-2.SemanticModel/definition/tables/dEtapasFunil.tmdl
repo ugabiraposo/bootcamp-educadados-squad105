@@ -1,7 +1,7 @@
 table dEtapasFunil
 	lineageTag: 247f02e0-5f79-47e2-a93f-3e16a79da895
 
-	measure 'etapa do funil' =
+	measure 'qtde orçamentos' =
 			
 			SWITCH(
 			    SELECTEDVALUE(dEtapasFunil[etapa]),
@@ -46,7 +46,7 @@ table dEtapasFunil
 			    SUM(fOrcamentos[valor_liquido]),
 			    fOrcamentos[status] = "Perdido"
 			)
-		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: 2b4d576f-37e1-49c1-be8d-0e9f4cafe770
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
