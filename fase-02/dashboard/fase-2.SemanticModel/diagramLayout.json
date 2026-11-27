@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 2423.8394998553586,
-        "y": 487825.23739126843
+        "x": 316.4970609317827,
+        "y": 854563.759878861
       },
       "nodes": [
         {
           "location": {
             "x": 1077.3585770118596,
-            "y": 707704.71578507347
+            "y": 855550.68092424958
           },
           "nodeIndex": "dCalendario",
           "nodeLineageTag": "fea6cb85-efc6-4b79-891a-8572d064a459",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 1088.7935918767762,
-            "y": 706905.7697488229
+            "y": 854751.734887999
           },
           "nodeIndex": "dCidades",
           "nodeLineageTag": "4e75c66b-473e-4fc9-a419-d5a9b7b29d4a",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 1089.5969669987796,
-            "y": 707274.17587081564
+            "y": 855120.14100999176
           },
           "nodeIndex": "dFiliais",
           "nodeLineageTag": "31436c85-8749-4069-ba6a-40242687c471",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 2222.4357584250556,
-            "y": 707624.32466545829
+            "y": 855470.28980463441
           },
           "nodeIndex": "dGrupos_servico",
           "nodeLineageTag": "e57eb1cf-34de-4859-a8ab-5057b2bb9fcd",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 1069.6192101927652,
-            "y": 708024.38560072624
+            "y": 855870.35073990235
           },
           "nodeIndex": "dProfissionais",
           "nodeLineageTag": "04502e6d-b79b-4187-9f01-65fad1a24542",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 1062.0592896834339,
-            "y": 708194.33074416441
+            "y": 856040.29588334053
           },
           "nodeIndex": "dVendedores",
           "nodeLineageTag": "0c235ee2-8548-42cc-af81-5020886b3a31",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 1484.3770421610432,
-            "y": 707010.12973257585
+            "y": 854856.094871752
           },
           "nodeIndex": "dServicos",
           "nodeLineageTag": "fc0f97b0-2f64-4f1f-953e-bb935e14b6c8",
@@ -101,8 +101,8 @@
         },
         {
           "location": {
-            "x": 654.73055454590337,
-            "y": 706757.077405627
+            "x": 251.452041423148,
+            "y": 854572.413796971
           },
           "nodeIndex": "fItens_venda",
           "nodeLineageTag": "072c6883-a670-42d2-9ad3-4152bc04ea59",
@@ -115,7 +115,7 @@
         {
           "location": {
             "x": 1787.1165153153263,
-            "y": 707792.34574440413
+            "y": 855638.31088358024
           },
           "nodeIndex": "fMetas_quantidade",
           "nodeLineageTag": "98f4970a-daa2-4bc0-ae46-7c30776d0caf",
@@ -128,7 +128,7 @@
         {
           "location": {
             "x": 1691.0060534448698,
-            "y": 707263.5054998569
+            "y": 855109.470639033
           },
           "nodeIndex": "fMetas_valor",
           "nodeLineageTag": "34526a14-a043-421f-aeb8-df9285f4ccae",
@@ -141,7 +141,7 @@
         {
           "location": {
             "x": 652.87672730624615,
-            "y": 707791.18995744281
+            "y": 855637.15509661892
           },
           "nodeIndex": "fVendas",
           "nodeLineageTag": "b0b38e8f-85a5-41be-8ce9-5904c693d0c9",
@@ -154,7 +154,7 @@
         {
           "location": {
             "x": 2575.0933548996381,
-            "y": 706896.05450749875
+            "y": 854742.01964667486
           },
           "nodeIndex": "Medidas base",
           "nodeLineageTag": "3e07e608-f740-450a-b1ad-4f9c5071dbc8",
@@ -167,7 +167,7 @@
         {
           "location": {
             "x": 2584.2616587729972,
-            "y": 707191.094150036
+            "y": 855037.05928921211
           },
           "nodeIndex": "Medidas metas",
           "nodeLineageTag": "84e2f1c0-cf55-4547-add2-f710f35ffe55",
@@ -180,7 +180,7 @@
         {
           "location": {
             "x": 2579.9626079028758,
-            "y": 707019.64483090618
+            "y": 854865.6099700823
           },
           "nodeIndex": "Medidas percentuais",
           "nodeLineageTag": "1e2fa61a-1b4f-4c69-9a42-8fce15bacccc",
@@ -193,7 +193,7 @@
         {
           "location": {
             "x": 2580.4912014740826,
-            "y": 707329.91413740267
+            "y": 855175.87927657878
           },
           "nodeIndex": "Medidas especiais",
           "nodeLineageTag": "1c862f21-c531-41d7-98d0-731ae36d51e1",
@@ -206,7 +206,7 @@
         {
           "location": {
             "x": 110.79651306446596,
-            "y": 707223.69497773761
+            "y": 855069.66011691373
           },
           "nodeIndex": "fOrcamentos",
           "nodeLineageTag": "cefe47f6-d277-46cf-95f1-c4515857d1cb",
@@ -219,7 +219,7 @@
         {
           "location": {
             "x": 2757.4651457085311,
-            "y": 488516.40960805665
+            "y": 636362.37474723277
           },
           "nodeIndex": "Medidas orçamentos",
           "nodeLineageTag": "cf209dd3-617e-46a8-9b82-2c2d7ac67e88",
@@ -232,7 +232,7 @@
         {
           "location": {
             "x": 3325.4651457085311,
-            "y": 488456.40960805665
+            "y": 636302.37474723277
           },
           "nodeIndex": "dEtapasFunil",
           "nodeLineageTag": "247f02e0-5f79-47e2-a93f-3e16a79da895",
@@ -245,7 +245,7 @@
         {
           "location": {
             "x": 3041.4651457085311,
-            "y": 488444.40960805665
+            "y": 636290.37474723277
           },
           "nodeIndex": "Medidas Venda",
           "size": {
@@ -257,7 +257,7 @@
         {
           "location": {
             "x": 3498.6686326440649,
-            "y": 350647.41056237929
+            "y": 498493.37570155546
           },
           "nodeIndex": "Medidas status",
           "nodeLineageTag": "14e5fcb2-e833-410b-a34d-8ab3efa24116",
@@ -269,8 +269,8 @@
         },
         {
           "location": {
-            "x": 3671.8721195795988,
-            "y": 295691.93027835235
+            "x": 2309.5256766809971,
+            "y": 474410.65256884
           },
           "nodeIndex": "Medidas funil",
           "nodeLineageTag": "108f826a-73b8-4107-ba7f-f2f0d80f738d",
@@ -279,10 +279,23 @@
             "width": 234
           },
           "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 610.66015853637475,
+            "y": 854861.85555608978
+          },
+          "nodeIndex": "dFuncionarios",
+          "nodeLineageTag": "341ec8fe-548d-43db-986c-a634d911b0b5",
+          "size": {
+            "height": 228.38221756037092,
+            "width": 234
+          },
+          "zIndex": 22
         }
       ],
       "name": "Todas as tabelas",
-      "zoomValue": 87.852317329038371,
+      "zoomValue": 78.35775765812042,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": true,

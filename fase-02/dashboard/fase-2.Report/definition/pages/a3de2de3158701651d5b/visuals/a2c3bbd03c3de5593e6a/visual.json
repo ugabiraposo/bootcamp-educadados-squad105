@@ -1,0 +1,97 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "a2c3bbd03c3de5593e6a",
+  "position": {
+    "x": 0,
+    "y": 442.5,
+    "z": 1002,
+    "height": 556.25,
+    "width": 907.5,
+    "tabOrder": 1002
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFuncionarios"
+                    }
+                  },
+                  "Property": "Nome"
+                }
+              },
+              "queryRef": "dFuncionarios.Nome",
+              "nativeQueryRef": "Nome"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFuncionarios"
+                    }
+                  },
+                  "Property": "Tipo"
+                }
+              },
+              "queryRef": "dFuncionarios.Tipo",
+              "nativeQueryRef": "Tipo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFuncionarios"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "dFuncionarios.Status",
+              "nativeQueryRef": "Status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFiliais"
+                    }
+                  },
+                  "Property": "filial_abreviado"
+                }
+              },
+              "queryRef": "dFiliais.filial_abreviado",
+              "nativeQueryRef": "filial_abreviado"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dFuncionarios"
+                  }
+                },
+                "Property": "Status"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
