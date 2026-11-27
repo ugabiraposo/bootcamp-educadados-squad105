@@ -1,34 +1,6 @@
 table 'Medidas especiais'
 	lineageTag: 1c862f21-c531-41d7-98d0-731ae36d51e1
 
-	measure 'status val vendedor' =
-			CALCULATE( SWITCH(true(),
-			[val vendedor %] = "sem meta","FFFFFF",
-			[val vendedor %] > 1, "#1E4D2B",
-			[val vendedor %] < 1, "#5C1D24"), fMetas_valor[nivel] = "Vendedor")
-		lineageTag: 7d01417f-afcd-47b6-bef2-533c01246de7
-
-	measure 'status qtde vendedor' =
-			CALCULATE( SWITCH(true(),
-			[qtde vendedor %] = "sem meta","FFFFFF",
-			[qtde vendedor %] > 1, "#1E4D2B",
-			[qtde vendedor %] < 1, "#5C1D24"), fMetas_quantidade[nivel] = "Vendedor")
-		lineageTag: b5e4162d-ba9a-45fd-a198-706bc84fc983
-
-	measure 'status val profissional' =
-			CALCULATE( SWITCH(true(),
-			[val profissional %] = "sem meta","FFFFFF",
-			[val profissional %] > 1, "#1E4D2B",
-			[val profissional %] < 1, "#5C1D24"), fMetas_valor[nivel] = "Profissional")
-		lineageTag: 402b240c-b8d9-449a-b52e-958123c094bb
-
-	measure 'status qtde profissional' =
-			CALCULATE( SWITCH(true(),
-			[qtde profissional %] = "sem meta","FFFFFF",
-			[qtde profissional %] > 1, "#1E4D2B",
-			[qtde profissional %] < 1, "#5C1D24"), fMetas_quantidade[nivel] = "Profissional")
-		lineageTag: 45a1e154-4505-49e0-b40f-f0ed183fdb5c
-
 	measure 'rótulo especial' =
 			
 			var valFormat = SWITCH(true(),
@@ -189,16 +161,6 @@ table 'Medidas especiais'
 			
 			```
 		lineageTag: acef5318-9731-405a-a126-56476dbbcf1b
-
-	measure 'status taxa' =
-			
-			SWITCH (
-			    TRUE (),
-			    [taxa de conversão] = [taxa de conversão rede], "#42D8BE",
-			    [taxa de conversão] > [taxa de conversão rede], "#42D8BE",
-			    [taxa de conversão] < [taxa de conversão rede], "#94A3B8"
-			)
-		lineageTag: 44670b91-b541-4b4e-b1d9-2e52c7b748a6
 
 	partition 'Medidas especiais' = m
 		mode: import

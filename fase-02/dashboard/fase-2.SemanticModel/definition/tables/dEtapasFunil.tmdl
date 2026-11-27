@@ -1,65 +1,6 @@
 table dEtapasFunil
 	lineageTag: 247f02e0-5f79-47e2-a93f-3e16a79da895
 
-	measure 'qtde orçamentos' =
-			
-			SWITCH(
-			    SELECTEDVALUE(dEtapasFunil[etapa]),
-			    "Gerados",   [orçamentos gerados],
-			    "Aprovados", [orçamentos aprovados],
-			    "Perdidos",  [orçamentos perdidos]
-			)
-		formatString: 0
-		lineageTag: 7007a551-870c-46ee-b572-c880460423fc
-
-	measure 'taxa de conversão' =
-			
-			DIVIDE(
-			    [orçamentos aprovados],
-			    [orçamentos gerados]
-			)
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: 1e6e5492-72cd-402e-a502-26d085f3c599
-
-	measure 'taxa de conversão rede' =
-			
-			CALCULATE(
-			    [taxa de conversão],
-			    REMOVEFILTERS(dFiliais),
-			    REMOVEFILTERS(dCidades)
-			)
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: d505d2fb-c00f-42b9-b34d-0bffb5a88c0f
-
-	measure 'desconto médio' =
-			
-			DIVIDE(
-			    SUM(fOrcamentos[valor_desconto]),
-			    SUM(fOrcamentos[valor_bruto])
-			)
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: d461741b-95de-48fd-808b-a151b893caf8
-
-	measure 'valor perdido' =
-			
-			CALCULATE(
-			    SUM(fOrcamentos[valor_liquido]),
-			    fOrcamentos[status] = "Perdido"
-			)
-		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
-		lineageTag: 2b4d576f-37e1-49c1-be8d-0e9f4cafe770
-
-		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
-
-	measure 'valor perdido % vendido' =
-			
-			DIVIDE(
-			    [valor perdido],
-			    [valor líquido]
-			)
-		formatString: #,0.00%;-#,0.00%;#,0.00%
-		lineageTag: 802b9830-4ef7-4c1e-b619-be5a0b7bd942
-
 	column etapa
 		dataType: string
 		lineageTag: aaa84a25-c209-44c8-bd21-7c98b5e31b62

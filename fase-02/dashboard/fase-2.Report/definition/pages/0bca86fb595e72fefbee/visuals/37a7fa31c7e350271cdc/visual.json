@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "37a7fa31c7e350271cdc",
   "position": {
     "x": 889.19680396656554,
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dEtapasFunil"
+                      "Entity": "Medidas funil"
                     }
                   },
                   "Property": "taxa de conversão"
@@ -58,7 +58,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dEtapasFunil"
+                    "Entity": "Medidas funil"
                   }
                 },
                 "Property": "taxa de conversão"
@@ -93,7 +93,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dEtapasFunil"
+                      "Entity": "Medidas funil"
                     }
                   },
                   "Property": "taxa de conversão rede"

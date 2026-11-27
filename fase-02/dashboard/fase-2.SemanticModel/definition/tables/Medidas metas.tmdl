@@ -156,20 +156,6 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: 8a52144c-b511-4308-948e-87c4258d54b5
 
-	measure 'status meta-filial' =
-			
-			VAR temValor = COALESCE([valor metas-filial], 0) > 0
-			VAR temQtde = COALESCE([qtde metas-filial], 0) > 0
-			RETURN
-			    SWITCH(
-			        TRUE(),
-			        NOT temValor && NOT temQtde, "sem meta",
-			        NOT temValor && temQtde, "Sem meta de Valor",
-			        temValor && NOT temQtde, "Sem meta de Quantidade",
-			        "Com meta definida"
-			    )
-		lineageTag: 71d316f1-18fb-465e-a19a-1eb96a948e9a
-
 	measure 'sem meta-filial' =
 			
 			IF(
@@ -211,32 +197,6 @@ table 'Medidas metas'
 			) + 0
 		formatString: 0
 		lineageTag: bea3b342-5f54-4ec6-bc84-412b2653476c
-
-	measure 'faixa ating-valor' =
-			
-			VAR vPct = [val filial %]
-			RETURN
-			    SWITCH(
-			        TRUE(),
-			        ISBLANK(vPct), "sem meta",
-			        vPct >= 1,     "100% ou mais",
-			        vPct >= 0.9,   "90% a 99%",
-			        "abaixo de 90%"
-			    )
-		lineageTag: c476ca21-6137-4315-abf7-9a2360b4e083
-
-	measure 'faixa ating-qtde' =
-			
-			VAR vPct = [qtde filial %]
-			RETURN
-			    SWITCH(
-			        TRUE(),
-			        ISBLANK(vPct), "sem meta",
-			        vPct >= 1,     "100% ou mais",
-			        vPct >= 0.9,   "90% a 99%",
-			        "abaixo de 90%"
-			    )
-		lineageTag: 74c7d418-3726-4150-90d3-91d836af4494
 
 	measure 'filiais bateram valor' =
 			

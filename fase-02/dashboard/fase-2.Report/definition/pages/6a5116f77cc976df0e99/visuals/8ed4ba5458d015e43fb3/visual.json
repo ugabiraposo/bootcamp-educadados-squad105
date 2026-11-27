@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "8ed4ba5458d015e43fb3",
   "position": {
     "x": 997.5,
@@ -32,6 +32,38 @@
             }
           ]
         },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas status"
+                    }
+                  },
+                  "Property": "status qtde vendedor"
+                }
+              },
+              "queryRef": "Medidas especiais.status qtde vendedor",
+              "nativeQueryRef": "status qtde vendedor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas status"
+                    }
+                  },
+                  "Property": "status taxa"
+                }
+              },
+              "queryRef": "Medidas especiais.status taxa",
+              "nativeQueryRef": "status taxa"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -39,7 +71,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dEtapasFunil"
+                      "Entity": "Medidas funil"
                     }
                   },
                   "Property": "taxa de conversão"
@@ -58,7 +90,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dEtapasFunil"
+                    "Entity": "Medidas funil"
                   }
                 },
                 "Property": "taxa de conversão"
@@ -93,7 +125,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dEtapasFunil"
+                      "Entity": "Medidas funil"
                     }
                   },
                   "Property": "taxa de conversão rede"
@@ -247,7 +279,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Medidas especiais"
+                          "Entity": "Medidas status"
                         }
                       },
                       "Property": "status taxa"
