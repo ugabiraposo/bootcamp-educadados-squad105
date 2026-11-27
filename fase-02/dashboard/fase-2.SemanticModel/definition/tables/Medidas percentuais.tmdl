@@ -90,18 +90,16 @@ table 'Medidas percentuais'
 			    [número de vendas],
 			    [qtde filial],
 			    "sem meta")
+		formatString: 0%;-0%;0%
 		lineageTag: a00d994b-2920-4945-bdde-857cbb9372d4
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'val filial %' =
 			divide(
 			    [valor líquido],
 			    [val filial],
 			    "sem meta")
+		formatString: 0%;-0%;0%
 		lineageTag: 2a0cfe09-16dd-4ffc-ac9b-098abd572d38
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'val rede %' =
 			divide(

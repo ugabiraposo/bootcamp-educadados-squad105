@@ -30,7 +30,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "funil4186097435308822.png"
+                    "ItemName": "funil012319189632343908.png"
                   }
                 }
               },
@@ -46,5 +46,92 @@
         }
       }
     ]
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "ba8b1abb1227b79482b4",
+      "target": "05c50b0573eaa9b9b93d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ba8b1abb1227b79482b4",
+      "target": "f3aabe4c1521116286e4",
+      "type": "NoFilter"
+    },
+    {
+      "source": "ba8b1abb1227b79482b4",
+      "target": "08d3ab522e9796191b89",
+      "type": "NoFilter"
+    },
+    {
+      "source": "ba8b1abb1227b79482b4",
+      "target": "17734635f7f9be78cb71",
+      "type": "NoFilter"
+    },
+    {
+      "source": "ba8b1abb1227b79482b4",
+      "target": "efc9d67c7f1ea505a34b",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ba8b1abb1227b79482b4",
+      "target": "8ed4ba5458d015e43fb3",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ba8b1abb1227b79482b4",
+      "target": "07d11c954e5c581728b0",
+      "type": "DataFilter"
+    },
+    {
+      "source": "8ed4ba5458d015e43fb3",
+      "target": "ba8b1abb1227b79482b4",
+      "type": "DataFilter"
+    },
+    {
+      "source": "8ed4ba5458d015e43fb3",
+      "target": "05c50b0573eaa9b9b93d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "8ed4ba5458d015e43fb3",
+      "target": "f3aabe4c1521116286e4",
+      "type": "NoFilter"
+    },
+    {
+      "source": "8ed4ba5458d015e43fb3",
+      "target": "08d3ab522e9796191b89",
+      "type": "NoFilter"
+    },
+    {
+      "source": "8ed4ba5458d015e43fb3",
+      "target": "17734635f7f9be78cb71",
+      "type": "NoFilter"
+    },
+    {
+      "source": "05c50b0573eaa9b9b93d",
+      "target": "ba8b1abb1227b79482b4",
+      "type": "DataFilter"
+    },
+    {
+      "source": "05c50b0573eaa9b9b93d",
+      "target": "8ed4ba5458d015e43fb3",
+      "type": "DataFilter"
+    },
+    {
+      "source": "05c50b0573eaa9b9b93d",
+      "target": "f3aabe4c1521116286e4",
+      "type": "NoFilter"
+    },
+    {
+      "source": "05c50b0573eaa9b9b93d",
+      "target": "08d3ab522e9796191b89",
+      "type": "NoFilter"
+    },
+    {
+      "source": "05c50b0573eaa9b9b93d",
+      "target": "17734635f7f9be78cb71",
+      "type": "NoFilter"
+    }
+  ]
 }
