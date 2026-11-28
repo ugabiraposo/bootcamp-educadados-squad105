@@ -44,7 +44,7 @@
               },
               "queryRef": "dServicos.servico",
               "nativeQueryRef": "servico",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -149,20 +149,7 @@
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Endodontia'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
