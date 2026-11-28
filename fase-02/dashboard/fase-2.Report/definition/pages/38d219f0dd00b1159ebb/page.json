@@ -46,5 +46,47 @@
         }
       }
     ]
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "b0bbf844ea127ab79f73",
+      "target": "e4068c158ff373d63d4d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "b0bbf844ea127ab79f73",
+      "target": "e1d9b12131722f4f2ede",
+      "type": "NoFilter"
+    },
+    {
+      "source": "b0bbf844ea127ab79f73",
+      "target": "287f5426bd7f01c20183",
+      "type": "NoFilter"
+    },
+    {
+      "source": "b0bbf844ea127ab79f73",
+      "target": "cb92889d18d932d64345",
+      "type": "NoFilter"
+    },
+    {
+      "source": "287f5426bd7f01c20183",
+      "target": "cb92889d18d932d64345",
+      "type": "NoFilter"
+    },
+    {
+      "source": "287f5426bd7f01c20183",
+      "target": "e1d9b12131722f4f2ede",
+      "type": "NoFilter"
+    },
+    {
+      "source": "287f5426bd7f01c20183",
+      "target": "e4068c158ff373d63d4d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "287f5426bd7f01c20183",
+      "target": "b0bbf844ea127ab79f73",
+      "type": "NoFilter"
+    }
+  ]
 }

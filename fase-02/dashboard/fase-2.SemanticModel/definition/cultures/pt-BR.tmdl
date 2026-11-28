@@ -5953,7 +5953,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "valor metas-filial"
+			          "ConceptualProperty": "D valor metas-filial"
 			        }
 			      },
 			      "State": "Generated",
@@ -5975,7 +5975,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "qtde metas-filial"
+			          "ConceptualProperty": "D qtde metas-filial"
 			        }
 			      },
 			      "State": "Generated",
@@ -6141,7 +6141,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "sem meta-filial"
+			          "ConceptualProperty": "D sem meta-filial"
 			        }
 			      },
 			      "State": "Generated",

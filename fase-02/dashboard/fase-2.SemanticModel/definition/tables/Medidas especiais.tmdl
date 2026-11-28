@@ -162,6 +162,13 @@ table 'Medidas especiais'
 			```
 		lineageTag: acef5318-9731-405a-a126-56476dbbcf1b
 
+	measure 'rótulo orçamentos' =
+			
+			var nivelAtual = SELECTEDVALUE(dEtapasFunil[etapa])
+			return SWITCH(TRUE(),
+			nivelAtual = "Gerado)))
+		lineageTag: 2e3a97be-7bea-47ba-baa4-2a139e98a30c
+
 	partition 'Medidas especiais' = m
 		mode: import
 		source =

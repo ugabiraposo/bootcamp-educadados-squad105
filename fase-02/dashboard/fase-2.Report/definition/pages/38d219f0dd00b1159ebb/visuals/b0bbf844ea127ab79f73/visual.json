@@ -4,10 +4,10 @@
   "position": {
     "x": 1000,
     "y": 195,
-    "z": 10001,
+    "z": 11000,
     "height": 705.30612244897952,
     "width": 839.75510204081627,
-    "tabOrder": 10001
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "tableEx",
@@ -195,6 +195,36 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas status"
+                        }
+                      },
+                      "Property": "status meta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Medidas Venda.Meta 2026"
+          }
         }
       ]
     },
@@ -227,93 +257,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "80c21b2b36001223295d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dFuncionarios"
-              }
-            },
-            "Property": "Nome"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "578a24070f440964c1b6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dFuncionarios"
-              }
-            },
-            "Property": "Tipo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7f5a25cee98c40c8bcb2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dFiliais"
-              }
-            },
-            "Property": "filial_abreviado"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "cc0edf96ebebf11a05fd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dFuncionarios"
-              }
-            },
-            "Property": "Status"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ca8c944750c2ed510bab",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas Venda"
-              }
-            },
-            "Property": "Vendas 2026"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b40bf5ee6ce43032f345",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas Venda"
-              }
-            },
-            "Property": "Meta 2026"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

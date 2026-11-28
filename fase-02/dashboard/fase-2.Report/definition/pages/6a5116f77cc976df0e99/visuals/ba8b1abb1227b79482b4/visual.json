@@ -141,7 +141,7 @@
                 "Property": "qtde filial %"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -275,6 +275,66 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas status"
+                        }
+                      },
+                      "Property": "status val filial"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Medidas percentuais.val filial %"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas status"
+                        }
+                      },
+                      "Property": "status qtde filial"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Medidas percentuais.qtde filial %"
+          }
         }
       ]
     },
@@ -307,107 +367,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8e1c42eac1d21c304eb9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dFiliais"
-              }
-            },
-            "Property": "filial_abreviado"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6a186eeb4b38985f77e2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas base"
-              }
-            },
-            "Property": "valor líquido"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f0772b5601e17ab41158",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas metas"
-              }
-            },
-            "Property": "val filial"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8d4bca04aecc076302f5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas percentuais"
-              }
-            },
-            "Property": "val filial %"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3a2c7a7445fc4c79b6af",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas base"
-              }
-            },
-            "Property": "quantidade de itens"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6a96ebb61d6e0d69223c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas metas"
-              }
-            },
-            "Property": "qtde filial"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c2d47ffcd8f4da53c5ff",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas percentuais"
-              }
-            },
-            "Property": "qtde filial %"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

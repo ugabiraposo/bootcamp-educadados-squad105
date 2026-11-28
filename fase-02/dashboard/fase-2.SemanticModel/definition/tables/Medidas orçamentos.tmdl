@@ -25,6 +25,21 @@ table 'Medidas orçamentos'
 		formatString: 0
 		lineageTag: d15343ef-2c6d-4ff4-8235-a3f3ef6ee661
 
+	measure 'gerados %' = divide([orçamentos gerados], [orçamentos gerados])
+		lineageTag: fc006cb1-00f7-4868-80b2-d0918298542f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'aprovados %' = divide([orçamentos aprovados], [orçamentos gerados])
+		lineageTag: f9724614-c4be-44e6-aaf7-82a9209cb692
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'perdidos %' = divide([orçamentos perdidos], [orçamentos gerados])
+		lineageTag: d4ea1060-225b-496c-92ed-c1c0d1b67044
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition 'Medidas orçamentos' = m
 		mode: import
 		source =

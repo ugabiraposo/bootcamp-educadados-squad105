@@ -192,5 +192,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fd091261d5cb6d30636c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas metas"
+              }
+            },
+            "Property": "Filiais Sem Meta"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

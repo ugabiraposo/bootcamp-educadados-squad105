@@ -51,7 +51,7 @@
                       "Entity": "Medidas metas"
                     }
                   },
-                  "Property": "valor metas-filial"
+                  "Property": "D valor metas-filial"
                 }
               },
               "queryRef": "Medidas metas.valor metas-filial",
@@ -65,7 +65,7 @@
                       "Entity": "Medidas metas"
                     }
                   },
-                  "Property": "qtde metas-filial"
+                  "Property": "D qtde metas-filial"
                 }
               },
               "queryRef": "Medidas metas.qtde metas-filial",
@@ -79,7 +79,7 @@
                       "Entity": "Medidas metas"
                     }
                   },
-                  "Property": "sem meta-filial"
+                  "Property": "D sem meta-filial"
                 }
               },
               "queryRef": "Medidas metas.sem meta-filial",
