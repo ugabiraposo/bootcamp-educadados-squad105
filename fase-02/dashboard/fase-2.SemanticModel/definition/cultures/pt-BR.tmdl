@@ -6019,7 +6019,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas status",
-			          "ConceptualProperty": "status meta-filial"
+			          "ConceptualProperty": "D status meta-filial"
 			        }
 			      },
 			      "State": "Generated",
@@ -6179,7 +6179,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "filiais sem meta-valor"
+			          "ConceptualProperty": "D filiais sem meta-valor"
 			        }
 			      },
 			      "State": "Generated",
@@ -6301,7 +6301,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "filiais sem meta-qtde"
+			          "ConceptualProperty": "D filiais sem meta-qtde"
 			        }
 			      },
 			      "State": "Generated",
@@ -6467,7 +6467,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "filiais bateram valor"
+			          "ConceptualProperty": "D filiais bateram valor"
 			        }
 			      },
 			      "State": "Generated",
@@ -6583,7 +6583,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "filiais bateram qtde"
+			          "ConceptualProperty": "D filiais bateram qtde"
 			        }
 			      },
 			      "State": "Generated",
@@ -6599,7 +6599,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "filiais bateram valor ñ quantidade"
+			          "ConceptualProperty": "D filiais bateram valor ñ quantidade"
 			        }
 			      },
 			      "State": "Generated",
@@ -6615,7 +6615,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "filiais bateram quantidade ñ valor"
+			          "ConceptualProperty": "D filiais bateram quantidade ñ valor"
 			        }
 			      },
 			      "State": "Generated",
@@ -7399,7 +7399,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas funil",
-			          "ConceptualProperty": "valor perdido % vendido"
+			          "ConceptualProperty": "D valor perdido % vendido"
 			        }
 			      },
 			      "State": "Generated",
@@ -7457,7 +7457,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas Venda",
-			          "ConceptualProperty": "porcent participação receita"
+			          "ConceptualProperty": "D porcent participação receita"
 			        }
 			      },
 			      "State": "Generated",
@@ -7473,7 +7473,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas Venda",
-			          "ConceptualProperty": "porcent participação no grupo"
+			          "ConceptualProperty": "D porcent participação no grupo"
 			        }
 			      },
 			      "State": "Generated",
@@ -7499,7 +7499,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas Venda",
-			          "ConceptualProperty": "valor tabela total"
+			          "ConceptualProperty": "D valor tabela total"
 			        }
 			      },
 			      "State": "Generated",
@@ -7535,7 +7535,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas Venda",
-			          "ConceptualProperty": "desconto/diferença tabela %"
+			          "ConceptualProperty": "D desconto/diferença tabela %"
 			        }
 			      },
 			      "State": "Generated",

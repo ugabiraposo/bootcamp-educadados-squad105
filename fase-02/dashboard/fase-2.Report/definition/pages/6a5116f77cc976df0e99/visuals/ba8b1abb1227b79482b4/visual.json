@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "ba8b1abb1227b79482b4",
   "position": {
     "x": 998.33333333333337,
@@ -307,5 +307,107 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8e1c42eac1d21c304eb9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dFiliais"
+              }
+            },
+            "Property": "filial_abreviado"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6a186eeb4b38985f77e2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas base"
+              }
+            },
+            "Property": "valor líquido"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f0772b5601e17ab41158",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas metas"
+              }
+            },
+            "Property": "val filial"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8d4bca04aecc076302f5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas percentuais"
+              }
+            },
+            "Property": "val filial %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3a2c7a7445fc4c79b6af",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas base"
+              }
+            },
+            "Property": "quantidade de itens"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6a96ebb61d6e0d69223c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas metas"
+              }
+            },
+            "Property": "qtde filial"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c2d47ffcd8f4da53c5ff",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas percentuais"
+              }
+            },
+            "Property": "qtde filial %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

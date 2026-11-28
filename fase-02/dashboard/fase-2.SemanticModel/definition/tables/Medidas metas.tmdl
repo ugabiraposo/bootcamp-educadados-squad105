@@ -177,7 +177,7 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: 587c478c-0f2e-4d77-821c-6a0a3cd45cf1
 
-	measure 'filiais sem meta-valor' =
+	measure 'D filiais sem meta-valor' =
 			
 			COUNTROWS(
 			    FILTER(
@@ -188,7 +188,7 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: 8884e7a5-c4c1-446f-a551-1199b3f16ae3
 
-	measure 'filiais sem meta-qtde' =
+	measure 'D filiais sem meta-qtde' =
 			
 			COUNTROWS(
 			    FILTER(
@@ -199,7 +199,7 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: bea3b342-5f54-4ec6-bc84-412b2653476c
 
-	measure 'filiais bateram valor' =
+	measure 'D filiais bateram valor' =
 			
 			COUNTROWS(
 			    FILTER(
@@ -210,7 +210,7 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: d614ffeb-30c2-45d3-9b49-38f24014cd9d
 
-	measure 'filiais bateram qtde' =
+	measure 'D filiais bateram qtde' =
 			
 			COUNTROWS(
 			    FILTER(
@@ -221,7 +221,7 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: 5a3ef801-c82b-4ce6-a64c-5096c06e02e7
 
-	measure 'filiais bateram valor ñ quantidade' =
+	measure 'D filiais bateram valor ñ quantidade' =
 			
 			COUNTROWS(
 			    FILTER(
@@ -234,7 +234,7 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: c50c2e0b-89f0-443b-b115-983a40b2278d
 
-	measure 'filiais bateram quantidade ñ valor' =
+	measure 'D filiais bateram quantidade ñ valor' =
 			
 			COUNTROWS(
 			    FILTER(

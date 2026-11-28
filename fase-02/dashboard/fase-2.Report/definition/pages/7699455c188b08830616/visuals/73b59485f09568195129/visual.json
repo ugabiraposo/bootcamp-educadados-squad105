@@ -37,7 +37,7 @@
                       "Entity": "Medidas status"
                     }
                   },
-                  "Property": "status meta-filial"
+                  "Property": "D status meta-filial"
                 }
               },
               "queryRef": "Medidas metas.status meta-filial",
@@ -133,7 +133,7 @@
                 "Entity": "Medidas status"
               }
             },
-            "Property": "status meta-filial"
+            "Property": "D status meta-filial"
           }
         },
         "type": "Advanced",
@@ -162,7 +162,7 @@
                           "Source": "m1"
                         }
                       },
-                      "Property": "status meta-filial"
+                      "Property": "D status meta-filial"
                     }
                   },
                   "Right": {

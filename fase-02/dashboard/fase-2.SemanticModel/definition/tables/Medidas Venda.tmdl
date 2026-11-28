@@ -1,7 +1,7 @@
 table 'Medidas Venda'
 	lineageTag: 3c30c32f-b11a-4cc0-b2c5-27688921ba7c
 
-	measure 'porcent participação receita' =
+	measure 'D porcent participação receita' =
 			
 			DIVIDE(
 			    [valor líquido],
@@ -14,7 +14,7 @@ table 'Medidas Venda'
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 80ada8d2-020f-4a5b-9bc2-3c811c4a1c6e
 
-	measure 'porcent participação no grupo' =
+	measure 'D porcent participação no grupo' =
 			
 			DIVIDE(
 			    [valor líquido],
@@ -27,7 +27,7 @@ table 'Medidas Venda'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'valor tabela total' =
+	measure 'D valor tabela total' =
 			
 			SUMX(
 			    fItens_venda,
@@ -36,11 +36,11 @@ table 'Medidas Venda'
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 8bd7fdc5-970b-4a99-9eb8-bd1c1d45de19
 
-	measure 'desconto/diferença tabela %' =
+	measure 'D desconto/diferença tabela %' =
 			
 			DIVIDE(
-			    [valor tabela total] - [valor bruto],
-			    [valor tabela total]
+			    [D valor tabela total] - [valor bruto],
+			    [D valor tabela total]
 			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 18e886e6-06dc-4d13-af7f-ccd301314d00

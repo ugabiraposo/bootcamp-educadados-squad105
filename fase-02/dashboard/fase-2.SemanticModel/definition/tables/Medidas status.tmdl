@@ -39,7 +39,7 @@ table 'Medidas status'
 			[val profissional %] < 1, "#5C1D24"), fMetas_valor[nivel] = "Profissional")
 		lineageTag: 402b240c-b8d9-449a-b52e-958123c094bb
 
-	measure 'status meta-filial' =
+	measure 'D status meta-filial' =
 			
 			VAR temValor = COALESCE([valor metas-filial], 0) > 0
 			VAR temQtde = COALESCE([qtde metas-filial], 0) > 0
