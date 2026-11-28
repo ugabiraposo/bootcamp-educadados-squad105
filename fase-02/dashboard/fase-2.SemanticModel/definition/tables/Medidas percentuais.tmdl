@@ -38,9 +38,8 @@ table 'Medidas percentuais'
 			    [valor bruto],
 			    [val grupos],
 			    "sem meta")
+		formatString: 0%;-0%;0%
 		lineageTag: 831dd4cb-5fec-4e62-a896-f624090aecc0
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'qtde grupos %' =
 			divide(
@@ -142,6 +141,14 @@ table 'Medidas percentuais'
 			        "abaixo de 90%"
 			    )
 		lineageTag: c476ca21-6137-4315-abf7-9a2360b4e083
+
+	measure 'val grupo rede %' =
+			divide(
+			    [valor bruto],
+			    [val rede],
+			    "sem meta")
+		formatString: 0%;-0%;0%
+		lineageTag: 5db24679-5427-45a7-952f-187d733d20c3
 
 	partition 'Medidas percentuais' = m
 		mode: import

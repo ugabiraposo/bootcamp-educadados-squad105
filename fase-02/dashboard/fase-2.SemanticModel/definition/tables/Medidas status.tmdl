@@ -39,10 +39,10 @@ table 'Medidas status'
 			[val profissional %] < 1, "#5C1D24"), fMetas_valor[nivel] = "Profissional")
 		lineageTag: 402b240c-b8d9-449a-b52e-958123c094bb
 
-	measure 'status meta-filial' =
+	measure 'D status meta-filial' =
 			
-			VAR temValor = COALESCE([valor metas-filial], 0) > 0
-			VAR temQtde = COALESCE([qtde metas-filial], 0) > 0
+			VAR temValor = COALESCE([D valor metas-filial], 0) > 0
+			VAR temQtde = COALESCE([D qtde metas-filial], 0) > 0
 			RETURN
 			    SWITCH(
 			        TRUE(),
@@ -52,6 +52,34 @@ table 'Medidas status'
 			        "Com meta definida"
 			    )
 		lineageTag: 71d316f1-18fb-465e-a19a-1eb96a948e9a
+
+	measure 'status qtde filial' =
+			
+			SWITCH(
+			    [faixa ating-qtde],
+			    "100% ou mais",   "#2E7D32",  // Verde (bom contraste com o texto #237264 transparente)
+			    "90% a 99%",      "#F9A825",  // Amarelo âmbar
+			    "abaixo de 90%",  "#C62828",  // Vermelho
+			    "#FFFFFF"                     // Branco ("sem meta")
+			)
+		lineageTag: 24f1089a-7359-4bce-9111-ad422aa6883f
+
+	measure 'status val filial' =
+			
+			SWITCH(
+			    [faixa ating-valor],
+			    "100% ou mais",   "#2E7D32",  // Verde
+			    "90% a 99%",      "#F9A825",  // Amarelo âmbar
+			    "abaixo de 90%",  "#C62828",  // Vermelho
+			    "#FFFFFF"                     // Branco ("sem meta")
+			)
+		lineageTag: 1b327f6d-737c-4e64-87aa-90ab54a8aae0
+
+	measure 'status meta' =
+			if([Meta 2026] = "sem meta",
+			"#C62828",
+			"#237264")
+		lineageTag: 6bf21cc0-8fb0-4634-a221-b5d2491a0476
 
 	partition 'Medidas status' = m
 		mode: import
