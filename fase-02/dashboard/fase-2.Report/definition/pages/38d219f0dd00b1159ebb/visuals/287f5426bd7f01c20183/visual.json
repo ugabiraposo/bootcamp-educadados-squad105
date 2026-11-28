@@ -1,0 +1,391 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "287f5426bd7f01c20183",
+  "position": {
+    "x": 70.530612244897952,
+    "y": 456.24489795918367,
+    "z": 10000,
+    "height": 443.0204081632653,
+    "width": 877.22448979591832,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dGrupos_servico"
+                    }
+                  },
+                  "Property": "grupo_servico"
+                }
+              },
+              "queryRef": "dGrupos_servico.grupo_servico",
+              "nativeQueryRef": "grupo / serviço",
+              "active": true,
+              "displayName": "grupo / serviço"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dServicos"
+                    }
+                  },
+                  "Property": "servico"
+                }
+              },
+              "queryRef": "dServicos.servico",
+              "nativeQueryRef": "servico",
+              "active": false
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas base"
+                    }
+                  },
+                  "Property": "valor bruto"
+                }
+              },
+              "queryRef": "Medidas base.valor bruto",
+              "nativeQueryRef": "Valor bruto",
+              "displayName": "Valor bruto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas percentuais"
+                    }
+                  },
+                  "Property": "val grupo rede %"
+                }
+              },
+              "queryRef": "Medidas percentuais.val grupo rede %",
+              "nativeQueryRef": "Total da rede %",
+              "displayName": "Total da rede %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas percentuais"
+                    }
+                  },
+                  "Property": "val grupos %"
+                }
+              },
+              "queryRef": "Medidas percentuais.val grupos %",
+              "nativeQueryRef": "dentro do grupo %",
+              "displayName": "dentro do grupo %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dGrupos_servico"
+                  }
+                },
+                "Property": "grupo_servico"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "dGrupos_servico.grupo_servico"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dGrupos_servico"
+                    }
+                  },
+                  "Property": "grupo_servico"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "dServicos.servico"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#071317'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#237264'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnTotal": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowTotal": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#237264'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#237264'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f73d876c03b5401b4f6b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dGrupos_servico"
+              }
+            },
+            "Property": "grupo_servico"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2735e5d9fc92e8d2bbf1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dServicos"
+              }
+            },
+            "Property": "servico"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1f09d12c1602236ee290",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas base"
+              }
+            },
+            "Property": "valor bruto"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6c5a7e8ba3e6d2e2ce1e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas percentuais"
+              }
+            },
+            "Property": "val grupo rede %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "56ee4424a63fa7df53ec",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas percentuais"
+              }
+            },
+            "Property": "val grupos %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

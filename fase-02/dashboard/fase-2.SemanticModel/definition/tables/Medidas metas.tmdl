@@ -166,7 +166,7 @@ table 'Medidas metas'
 			)
 		lineageTag: 2b7d305b-18a3-49bb-b37b-057bcac6f219
 
-	measure 'filiais sem meta' =
+	measure 'Filiais Sem Meta' =
 			
 			COUNTROWS(
 			    FILTER(

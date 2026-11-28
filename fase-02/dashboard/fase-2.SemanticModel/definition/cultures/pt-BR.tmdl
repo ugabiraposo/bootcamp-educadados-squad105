@@ -2274,6 +2274,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "grupo / serviço": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4930,6 +4940,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.739
 			          }
+			        },
+			        {
+			          "dentro do grupo %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -6143,7 +6163,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas metas",
-			          "ConceptualProperty": "filiais sem meta"
+			          "ConceptualProperty": "Filiais Sem Meta"
 			        }
 			      },
 			      "State": "Generated",
@@ -7870,6 +7890,388 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medidas_meta.vendedores_sem_meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas metas",
+			          "ConceptualProperty": "Vendedores Sem Meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vendedores sem meta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_meta.profissionais_sem_meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas metas",
+			          "ConceptualProperty": "Profissionais Sem Meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "profissionais sem meta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_percentuais.val_grupo_rede_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas percentuais",
+			          "ConceptualProperty": "val grupo rede %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "val grupo rede %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "val grupo rede percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "val grupo rede pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "Total da rede %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "d_funcionario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFuncionarios"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "d funcionario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dFuncionarios": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "d_funcionario.codigo_original": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFuncionarios",
+			          "ConceptualProperty": "Codigo_Original"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "codigo original": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Codigo_Original": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "codigo archetype": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "codigo exemplar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "codigo template": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "d_funcionario.nome": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFuncionarios",
+			          "ConceptualProperty": "Nome"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nome": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "d_funcionario.codigo_filial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFuncionarios",
+			          "ConceptualProperty": "codigo_filial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "codigo filial": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "codigo_filial": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "d_funcionario.tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFuncionarios",
+			          "ConceptualProperty": "Tipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "d_funcionario.status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFuncionarios",
+			          "ConceptualProperty": "Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Situação": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "d_funcionario.chave_equipe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFuncionarios",
+			          "ConceptualProperty": "Chave_Equipe"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "chave equipe": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Chave_Equipe": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_venda.vendas_2026": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Venda",
+			          "ConceptualProperty": "Vendas 2026"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vendas 2026": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_venda.meta_2026": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Venda",
+			          "ConceptualProperty": "Meta 2026"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meta 2026": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -8398,6 +8800,52 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "data_inauguracaos_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "d_funcionario_has_d_filiais": {
+			      "Binding": {
+			        "ConceptualEntity": "dFuncionarios"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_funcionario": {
+			          "Target": {
+			            "Entity": "d_funcionario"
+			          }
+			        },
+			        "d_filiais": {
+			          "Target": {
+			            "Entity": "d_filiais"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_funcionario"
+			            },
+			            "Object": {
+			              "Role": "d_filiais"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_funcionarios_have_d_filiaises"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_filiais"
+			            },
+			            "Object": {
+			              "Role": "d_funcionario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_filiaises_have_d_funcionarios"
 			        }
 			      ]
 			    },
@@ -9272,6 +9720,369 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_cidades_have_d_filiaises"
+			        }
+			      ]
+			    },
+			    "f_metas_valor_has_medidas_venda_meta_2026": {
+			      "Binding": {
+			        "ConceptualEntity": "fMetas_valor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_metas_valor": {
+			          "Target": {
+			            "Entity": "f_metas_valor"
+			          }
+			        },
+			        "medidas_venda.meta_2026": {
+			          "Target": {
+			            "Entity": "medidas_venda.meta_2026"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_metas_valor"
+			            },
+			            "Object": {
+			              "Role": "medidas_venda.meta_2026"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_metas_valor_have_meta_2026"
+			        }
+			      ]
+			    },
+			    "f_venda_has_medidas_venda_vendas_2026": {
+			      "Binding": {
+			        "ConceptualEntity": "fVendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_venda": {
+			          "Target": {
+			            "Entity": "f_venda"
+			          }
+			        },
+			        "medidas_venda.vendas_2026": {
+			          "Target": {
+			            "Entity": "medidas_venda.vendas_2026"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_venda"
+			            },
+			            "Object": {
+			              "Role": "medidas_venda.vendas_2026"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_venda_have_vendas_2026"
+			        }
+			      ]
+			    },
+			    "d_funcionario_has_chave_equipe": {
+			      "Binding": {
+			        "ConceptualEntity": "dFuncionarios"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_funcionario": {
+			          "Target": {
+			            "Entity": "d_funcionario"
+			          }
+			        },
+			        "d_funcionario.chave_equipe": {
+			          "Target": {
+			            "Entity": "d_funcionario.chave_equipe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_funcionario"
+			            },
+			            "Object": {
+			              "Role": "d_funcionario.chave_equipe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_funcionarios_have_chave_equipes"
+			        }
+			      ]
+			    },
+			    "d_funcionario_has_status": {
+			      "Binding": {
+			        "ConceptualEntity": "dFuncionarios"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_funcionario": {
+			          "Target": {
+			            "Entity": "d_funcionario"
+			          }
+			        },
+			        "d_funcionario.status": {
+			          "Target": {
+			            "Entity": "d_funcionario.status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_funcionario"
+			            },
+			            "Object": {
+			              "Role": "d_funcionario.status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_funcionarios_have_statuses"
+			        }
+			      ]
+			    },
+			    "d_funcionario_has_tipo": {
+			      "Binding": {
+			        "ConceptualEntity": "dFuncionarios"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_funcionario": {
+			          "Target": {
+			            "Entity": "d_funcionario"
+			          }
+			        },
+			        "d_funcionario.tipo": {
+			          "Target": {
+			            "Entity": "d_funcionario.tipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_funcionario"
+			            },
+			            "Object": {
+			              "Role": "d_funcionario.tipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_funcionarios_have_tipos"
+			        }
+			      ]
+			    },
+			    "d_funcionario_has_nome": {
+			      "Binding": {
+			        "ConceptualEntity": "dFuncionarios"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_funcionario": {
+			          "Target": {
+			            "Entity": "d_funcionario"
+			          }
+			        },
+			        "d_funcionario.nome": {
+			          "Target": {
+			            "Entity": "d_funcionario.nome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_funcionario"
+			            },
+			            "Object": {
+			              "Role": "d_funcionario.nome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_funcionarios_have_nome"
+			        }
+			      ]
+			    },
+			    "d_funcionario_has_codigo_original": {
+			      "Binding": {
+			        "ConceptualEntity": "dFuncionarios"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_funcionario": {
+			          "Target": {
+			            "Entity": "d_funcionario"
+			          }
+			        },
+			        "d_funcionario.codigo_original": {
+			          "Target": {
+			            "Entity": "d_funcionario.codigo_original"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_funcionario"
+			            },
+			            "Object": {
+			              "Role": "d_funcionario.codigo_original"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_funcionarios_have_codigo_originals"
+			        }
+			      ]
+			    },
+			    "f_metas_valor_has_medidas_percentuais_val_grupo_rede_": {
+			      "Binding": {
+			        "ConceptualEntity": "fMetas_valor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_metas_valor": {
+			          "Target": {
+			            "Entity": "f_metas_valor"
+			          }
+			        },
+			        "medidas_percentuais.val_grupo_rede_": {
+			          "Target": {
+			            "Entity": "medidas_percentuais.val_grupo_rede_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_metas_valor"
+			            },
+			            "Object": {
+			              "Role": "medidas_percentuais.val_grupo_rede_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_metas_valor_have_val_grupo_rede_"
+			        }
+			      ]
+			    },
+			    "f_itens_venda_has_medidas_percentuais_val_grupo_rede_": {
+			      "Binding": {
+			        "ConceptualEntity": "fItens_venda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_itens_venda": {
+			          "Target": {
+			            "Entity": "f_itens_venda"
+			          }
+			        },
+			        "medidas_percentuais.val_grupo_rede_": {
+			          "Target": {
+			            "Entity": "medidas_percentuais.val_grupo_rede_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_itens_venda"
+			            },
+			            "Object": {
+			              "Role": "medidas_percentuais.val_grupo_rede_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_itens_venda_have_val_grupo_rede_"
+			        }
+			      ]
+			    },
+			    "d_profissionais_has_medidas_meta_profissionais_sem_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "dProfissionais"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_profissionais": {
+			          "Target": {
+			            "Entity": "d_profissionais"
+			          }
+			        },
+			        "medidas_meta.profissionais_sem_meta": {
+			          "Target": {
+			            "Entity": "medidas_meta.profissionais_sem_meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_profissionais"
+			            },
+			            "Object": {
+			              "Role": "medidas_meta.profissionais_sem_meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_profissionaises_have_profissionais_sem_meta"
+			        }
+			      ]
+			    },
+			    "d_vendedore_has_medidas_meta_vendedores_sem_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "dVendedores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_vendedore": {
+			          "Target": {
+			            "Entity": "d_vendedore"
+			          }
+			        },
+			        "medidas_meta.vendedores_sem_meta": {
+			          "Target": {
+			            "Entity": "medidas_meta.vendedores_sem_meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_vendedore"
+			            },
+			            "Object": {
+			              "Role": "medidas_meta.vendedores_sem_meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_vendedores_have_vendedores_sem_meta"
 			        }
 			      ]
 			    },

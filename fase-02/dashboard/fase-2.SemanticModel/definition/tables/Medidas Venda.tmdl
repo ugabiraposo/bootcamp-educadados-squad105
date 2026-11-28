@@ -45,6 +45,28 @@ table 'Medidas Venda'
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 18e886e6-06dc-4d13-af7f-ccd301314d00
 
+	measure 'Vendas 2026' =
+			
+			CALCULATE([valor líquido], dCalendario[ano] = 2026)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 964b36c2-26f9-4709-95f1-a1059f86f686
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Meta 2026' = ```
+			
+			var valor = CALCULATE([meta de valor], 
+			dCalendario[ano] = 2026, 
+			OR(fMetas_valor[nivel] = "vendendor", 
+			fMetas_valor[nivel] = "profissional"))
+			
+			return if(not isblank(valor), valor, "sem meta")
+			```
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: b36394b9-5f7e-4329-a0d4-b2524be77701
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
 	partition 'Medidas Venda' = m
 		mode: import
 		source =

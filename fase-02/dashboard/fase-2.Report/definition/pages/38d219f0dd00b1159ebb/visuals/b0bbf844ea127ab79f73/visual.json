@@ -1,0 +1,319 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "b0bbf844ea127ab79f73",
+  "position": {
+    "x": 1000,
+    "y": 195,
+    "z": 10001,
+    "height": 705.30612244897952,
+    "width": 839.75510204081627,
+    "tabOrder": 10001
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFuncionarios"
+                    }
+                  },
+                  "Property": "Nome"
+                }
+              },
+              "queryRef": "dFuncionarios.Nome",
+              "nativeQueryRef": "Nome"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFuncionarios"
+                    }
+                  },
+                  "Property": "Tipo"
+                }
+              },
+              "queryRef": "dFuncionarios.Tipo",
+              "nativeQueryRef": "Tipo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFiliais"
+                    }
+                  },
+                  "Property": "filial_abreviado"
+                }
+              },
+              "queryRef": "dFiliais.filial_abreviado",
+              "nativeQueryRef": "Filial",
+              "displayName": "Filial"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFuncionarios"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "dFuncionarios.Status",
+              "nativeQueryRef": "Situação",
+              "displayName": "Situação"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas Venda"
+                    }
+                  },
+                  "Property": "Vendas 2026"
+                }
+              },
+              "queryRef": "Medidas Venda.vendas 2026",
+              "nativeQueryRef": "Vendas 2026",
+              "displayName": "Vendas 2026"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas Venda"
+                    }
+                  },
+                  "Property": "Meta 2026"
+                }
+              },
+              "queryRef": "Medidas Venda.Meta 2026",
+              "nativeQueryRef": "Meta 2026"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dFuncionarios"
+                  }
+                },
+                "Property": "Status"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#071317'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#237264'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#237264'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "80c21b2b36001223295d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dFuncionarios"
+              }
+            },
+            "Property": "Nome"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "578a24070f440964c1b6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dFuncionarios"
+              }
+            },
+            "Property": "Tipo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7f5a25cee98c40c8bcb2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dFiliais"
+              }
+            },
+            "Property": "filial_abreviado"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cc0edf96ebebf11a05fd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dFuncionarios"
+              }
+            },
+            "Property": "Status"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ca8c944750c2ed510bab",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas Venda"
+              }
+            },
+            "Property": "Vendas 2026"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b40bf5ee6ce43032f345",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas Venda"
+              }
+            },
+            "Property": "Meta 2026"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "bf18812ee93a2ef82be7",
   "position": {
     "x": 222.5,
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "AURORA ODONTOLOGIA • FUNIL DE ORÇAMENTOS | EDUCADADOS — SQUAD 105 • PROJETO ACADÊMICO",
+                    "value": "AURORA ODONTOLOGIA • PAINEL ORÇAMENTOS | EDUCADADOS — SQUAD 105 • PROJETO ACADÊMICO",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "14pt",

@@ -23,7 +23,7 @@
                       "Entity": "Medidas metas"
                     }
                   },
-                  "Property": "filiais sem meta"
+                  "Property": "Filiais Sem Meta"
                 }
               },
               "queryRef": "Medidas metas.filiais sem meta",
@@ -42,7 +42,7 @@
                     "Entity": "Medidas metas"
                   }
                 },
-                "Property": "filiais sem meta"
+                "Property": "Filiais Sem Meta"
               }
             },
             "direction": "Descending"
