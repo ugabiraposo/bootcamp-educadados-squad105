@@ -119,7 +119,8 @@ relationship c5958a22-9829-1b97-97ec-3aeb037b315a
 	fromColumn: fOrcamentos.data
 	toColumn: dCalendario.data
 
-relationship AutoDetected_9ad89063-4e55-43f0-9be3-d6e83abe708a
+relationship fd35f99b-86e3-dca7-c731-4c8e3ac15f50
+	crossFilteringBehavior: bothDirections
 	fromColumn: dFuncionarios.codigo_filial
 	toColumn: dFiliais.codigo_filial
 

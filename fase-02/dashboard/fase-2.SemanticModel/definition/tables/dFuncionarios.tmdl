@@ -1,53 +1,53 @@
 table dFuncionarios
-	lineageTag: 341ec8fe-548d-43db-986c-a634d911b0b5
+	lineageTag: e269c76c-7e19-4080-adca-4b384c0bd36d
 
-	column Codigo_Original
+	column codigo
 		dataType: int64
 		formatString: 0
-		lineageTag: be8cb949-a404-454c-b128-b388a110a369
+		lineageTag: 627ced60-5864-4ebe-b560-e128667af19d
 		summarizeBy: sum
-		sourceColumn: Codigo_Original
+		sourceColumn: codigo
 
 		annotation SummarizationSetBy = Automatic
 
-	column Nome
+	column nome
 		dataType: string
-		lineageTag: 2d412c9b-17cd-440f-a76e-920ef767c108
+		lineageTag: fd7983cd-822f-40e1-bb4e-169e3dd2b3b1
 		summarizeBy: none
-		sourceColumn: Nome
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column especialidade
+		dataType: string
+		lineageTag: f2bf50b2-2b36-4a29-9c5e-9b0b0c5477dc
+		summarizeBy: none
+		sourceColumn: especialidade
 
 		annotation SummarizationSetBy = Automatic
 
 	column codigo_filial
 		dataType: int64
 		formatString: 0
-		lineageTag: aa076893-8e6c-42e0-a6ab-01255948f80e
+		lineageTag: 41d4675d-da95-4b17-a02b-62f0d96ee618
 		summarizeBy: none
 		sourceColumn: codigo_filial
 
 		annotation SummarizationSetBy = Automatic
 
+	column situacao
+		dataType: string
+		lineageTag: f0be5dce-0fba-47df-9907-7c19540cdd52
+		summarizeBy: none
+		sourceColumn: situacao
+
+		annotation SummarizationSetBy = Automatic
+
 	column Tipo
 		dataType: string
-		lineageTag: a464ff6c-58a0-4518-8887-b7e41b813a11
+		lineageTag: 68d35d87-0923-4b6c-8ef2-894194e75627
 		summarizeBy: none
 		sourceColumn: Tipo
-
-		annotation SummarizationSetBy = Automatic
-
-	column Status
-		dataType: string
-		lineageTag: 8c41f7a6-d954-49de-914b-5bd9203cf8cb
-		summarizeBy: none
-		sourceColumn: Status
-
-		annotation SummarizationSetBy = Automatic
-
-	column Chave_Equipe
-		dataType: string
-		lineageTag: e7139cac-b58e-43a6-9f28-8a763279f2ac
-		summarizeBy: none
-		sourceColumn: Chave_Equipe
 
 		annotation SummarizationSetBy = Automatic
 
@@ -55,47 +55,9 @@ table dFuncionarios
 		mode: import
 		source =
 				let
-				    // 1. Prepara a tabela de Vendedores com Chave Única (Prefixo "V-")
-				    VendedoresBase = Table.SelectColumns(dVendedores, {"codigo_vendedor", "vendedor", "codigo_filial", "ativo"}),
-				    VendedoresRenomeado = Table.RenameColumns(VendedoresBase, {
-				        {"codigo_vendedor", "Codigo_Original"},
-				        {"vendedor", "Nome"}
-				    }),
-				    VendedoresTipo = Table.AddColumn(VendedoresRenomeado, "Tipo", each "Vendedor", type text),
-				    VendedoresChave = Table.AddColumn(VendedoresTipo, "Chave_Equipe", each "V-" & Text.From([Codigo_Original]), type text),
-				
-				    // 2. Prepara a tabela de Profissionais com Chave Única (Prefixo "P-")
-				    ProfissionaisBase = Table.SelectColumns(dProfissionais, {"codigo_profissional", "profissional", "codigo_filial", "ativo"}),
-				    ProfissionaisRenomeado = Table.RenameColumns(ProfissionaisBase, {
-				        {"codigo_profissional", "Codigo_Original"},
-				        {"profissional", "Nome"}
-				    }),
-				    ProfissionaisTipo = Table.AddColumn(ProfissionaisRenomeado, "Tipo", each "Profissional", type text),
-				    ProfissionaisChave = Table.AddColumn(ProfissionaisTipo, "Chave_Equipe", each "P-" & Text.From([Codigo_Original]), type text),
-				
-				    // 3. Acrescenta (Unifica) as duas tabelas
-				    TabelaUnificada = Table.Combine({VendedoresChave, ProfissionaisChave}),
-				
-				    // 4. Cria a coluna Status (Ativo / Inativo)
-				    AdicionaStatus = Table.AddColumn(TabelaUnificada, "Status", each if [ativo] = true then "Ativo" else "Inativo", type text),
-				    RemoveAtivo = Table.RemoveColumns(AdicionaStatus, {"ativo"}),
-				
-				    // 5. Padroniza os tipos ANTES de mesclar com dFiliais (evita erro de tipo no relacionamento/merge)
-				    TiposBase = Table.TransformColumnTypes(RemoveAtivo, {
-				        {"Chave_Equipe", type text},
-				        {"Codigo_Original", Int64.Type},
-				        {"Nome", type text},
-				        {"codigo_filial", Int64.Type},
-				        {"Tipo", type text},
-				        {"Status", type text}
-				    }),
-				
-				    // 6. Traz o nome da Filial direto para a dimensão (Desnormalização - dispensa relacionamento Snowflake)
-				    MergeFiliais = Table.NestedJoin(TiposBase, {"codigo_filial"}, dFiliais, {"codigo_filial"}, "dFiliais", JoinKind.LeftOuter),
-				    #"Reordered Columns" = Table.ReorderColumns(MergeFiliais,{"Codigo_Original", "Chave_Equipe", "Nome", "codigo_filial", "Tipo", "Status", "dFiliais"}),
-				    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns",{"dFiliais"})
+				    Source = Table.Combine({#"dProfissionais (2)", #"dVendedores (2)"})
 				in
-				    #"Removed Columns"
+				    Source
 
 	annotation PBI_NavigationStepName = Navigation
 

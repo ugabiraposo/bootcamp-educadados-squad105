@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 316.4970609317827,
-        "y": 854563.759878861
+        "x": 118.71132835924243,
+        "y": 854877.1722791245
       },
       "nodes": [
         {
@@ -19,7 +19,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 17
+          "zIndex": 15
         },
         {
           "location": {
@@ -45,7 +45,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 14
+          "zIndex": 13
         },
         {
           "location": {
@@ -62,29 +62,29 @@
         },
         {
           "location": {
-            "x": 1069.6192101927652,
-            "y": 855870.35073990235
+            "x": 1072.8276244727447,
+            "y": 855868.74653276231
           },
           "nodeIndex": "dProfissionais",
           "nodeLineageTag": "04502e6d-b79b-4187-9f01-65fad1a24542",
           "size": {
-            "height": 145,
+            "height": 241.25242839928251,
             "width": 234
           },
-          "zIndex": 15
+          "zIndex": 20
         },
         {
           "location": {
-            "x": 1062.0592896834339,
-            "y": 856040.29588334053
+            "x": 1073.2887396633623,
+            "y": 856136.54831173993
           },
           "nodeIndex": "dVendedores",
           "nodeLineageTag": "0c235ee2-8548-42cc-af81-5020886b3a31",
           "size": {
-            "height": 176,
-            "width": 234
+            "height": 270.64822125935461,
+            "width": 219.56213574009212
           },
-          "zIndex": 11
+          "zIndex": 21
         },
         {
           "location": {
@@ -97,7 +97,7 @@
             "height": 168.10986085953493,
             "width": 234
           },
-          "zIndex": 18
+          "zIndex": 16
         },
         {
           "location": {
@@ -110,7 +110,7 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 12
+          "zIndex": 11
         },
         {
           "location": {
@@ -123,7 +123,7 @@
             "height": 296,
             "width": 234
           },
-          "zIndex": 13
+          "zIndex": 12
         },
         {
           "location": {
@@ -136,7 +136,7 @@
             "height": 264.43944343813996,
             "width": 234
           },
-          "zIndex": 21
+          "zIndex": 19
         },
         {
           "location": {
@@ -149,7 +149,7 @@
             "height": 293.31933322606574,
             "width": 234
           },
-          "zIndex": 16
+          "zIndex": 14
         },
         {
           "location": {
@@ -175,7 +175,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 19
+          "zIndex": 17
         },
         {
           "location": {
@@ -214,7 +214,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 20
+          "zIndex": 18
         },
         {
           "location": {
@@ -295,7 +295,7 @@
         }
       ],
       "name": "Todas as tabelas",
-      "zoomValue": 78.35775765812042,
+      "zoomValue": 62.336089590424194,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": true,

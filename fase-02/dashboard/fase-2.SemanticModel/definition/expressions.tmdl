@@ -1,0 +1,38 @@
+expression 'dProfissionais (2)' =
+		let
+		    Fonte = Excel.Workbook(File.Contents("C:\squad105\dados\profissionais.xlsx"), null, true),
+		    profissionais_Sheet = Fonte{[Item="profissionais",Kind="Sheet"]}[Data],
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(profissionais_Sheet, [PromoteAllScalars=true]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_profissional", Int64.Type}, {"nome", type text}, {"especialidade", type text}, {"codigo_filial", Int64.Type}, {"ativo", type logical}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Tipo Alterado",{{"ativo", "situacao"}, {"codigo_profissional", "codigo"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "Tipo", each "Profissional", type text),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"situacao", type text}}),
+		    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","true","Ativo",Replacer.ReplaceText,{"situacao"}),
+		    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","false","Inativo",Replacer.ReplaceText,{"situacao"})
+		in
+		    #"Replaced Value1"
+	lineageTag: c73537e1-7ea0-4e47-9e24-f86e2cbe5e44
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression 'dVendedores (2)' =
+		let
+		    Fonte = Excel.Workbook(File.Contents("C:\squad105\dados\vendedores.xlsx"), null, true),
+		    vendedores_Sheet = Fonte{[Item="vendedores",Kind="Sheet"]}[Data],
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(vendedores_Sheet, [PromoteAllScalars=true]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"codigo_vendedor", Int64.Type}, {"nome", type text}, {"codigo_filial", Int64.Type}, {"ativo", type logical}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Tipo Alterado",{{"codigo_vendedor", "codigo"}, {"ativo", "situacao"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "Tipo", each "Vendedor", type text),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"situacao", type text}}),
+		    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","true","Ativo",Replacer.ReplaceText,{"situacao"}),
+		    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","false","Inativo",Replacer.ReplaceText,{"situacao"})
+		in
+		    #"Replaced Value1"
+	lineageTag: f4e0f4f2-4968-4092-aac3-b22ef5f2a932
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
