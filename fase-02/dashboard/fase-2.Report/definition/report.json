@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.4.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "Fluent2-CY26SU10",
@@ -78,8 +78,13 @@
           "type": "Image"
         },
         {
-          "name": "funil012319189632343908.png",
-          "path": "funil012319189632343908.png",
+          "name": "Frame_19506670785179433.png",
+          "path": "Frame_19506670785179433.png",
+          "type": "Image"
+        },
+        {
+          "name": "Frame_2_(6)028969336252746558.png",
+          "path": "Frame_2_(6)028969336252746558.png",
           "type": "Image"
         }
       ]
@@ -92,5 +97,6 @@
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
     "useDefaultAggregateDisplayName": true
-  }
+  },
+  "linguisticSchemaSyncVersion": 2
 }

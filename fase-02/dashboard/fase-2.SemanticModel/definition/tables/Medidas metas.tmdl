@@ -123,10 +123,10 @@ table 'Medidas metas'
 	measure 'qtde filial' =
 			CALCULATE([meta de quantidade],
 			fMetas_quantidade[nivel] = "Vendedor")
-		formatString: 0
+		formatString: #,0
 		lineageTag: 58da23be-e81d-498a-9930-125c607781f1
 
-	measure 'valor metas-filial' =
+	measure 'D valor metas-filial' =
 			
 			CALCULATE(
 			    SUM(fMetas_valor[meta_valor]),
@@ -136,7 +136,7 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: 841e65ca-2025-4f95-bb92-0c1ef8a71594
 
-	measure 'qtde metas-filial' = ```
+	measure 'D qtde metas-filial' = ```
 			
 			CALCULATE(
 			    SUM(fMetas_quantidade[meta_quantidade]),
@@ -150,14 +150,14 @@ table 'Medidas metas'
 
 	measure resultado-meta-filial =
 			
-			VAR vlr = COALESCE([valor metas-filial], 0)
-			VAR vQtd = COALESCE([qtde metas-filial], 0)
+			VAR vlr = COALESCE([val filial], 0)
+			VAR vQtd = COALESCE([qtde filial], 0)
 			RETURN
 			    IF(vlr > 0 || vQtd > 0, 1, 0)
 		formatString: 0
 		lineageTag: 8a52144c-b511-4308-948e-87c4258d54b5
 
-	measure 'sem meta-filial' =
+	measure 'D sem meta-filial' =
 			
 			IF(
 			    [resultado-meta-filial] = 0,
@@ -166,7 +166,7 @@ table 'Medidas metas'
 			)
 		lineageTag: 2b7d305b-18a3-49bb-b37b-057bcac6f219
 
-	measure 'filiais sem meta' =
+	measure 'Filiais Sem Meta' =
 			
 			COUNTROWS(
 			    FILTER(
@@ -177,29 +177,29 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: 587c478c-0f2e-4d77-821c-6a0a3cd45cf1
 
-	measure 'filiais sem meta-valor' =
+	measure 'D filiais sem meta-valor' =
 			
 			COUNTROWS(
 			    FILTER(
 			        VALUES(dFiliais[codigo_filial]),
-			        COALESCE([valor metas-filial], 0) <= 0
+			        COALESCE([D valor metas-filial], 0) <= 0
 			    )
 			) + 0
 		formatString: 0
 		lineageTag: 8884e7a5-c4c1-446f-a551-1199b3f16ae3
 
-	measure 'filiais sem meta-qtde' =
+	measure 'D filiais sem meta-qtde' =
 			
 			COUNTROWS(
 			    FILTER(
 			        VALUES(dFiliais[codigo_filial]),
-			        COALESCE([qtde metas-filial], 0) <= 0
+			        COALESCE([D qtde metas-filial], 0) <= 0
 			    )
 			) + 0
 		formatString: 0
 		lineageTag: bea3b342-5f54-4ec6-bc84-412b2653476c
 
-	measure 'filiais bateram valor' =
+	measure 'D filiais bateram valor' =
 			
 			COUNTROWS(
 			    FILTER(
@@ -210,7 +210,7 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: d614ffeb-30c2-45d3-9b49-38f24014cd9d
 
-	measure 'filiais bateram qtde' =
+	measure 'D filiais bateram qtde' =
 			
 			COUNTROWS(
 			    FILTER(
@@ -221,7 +221,7 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: 5a3ef801-c82b-4ce6-a64c-5096c06e02e7
 
-	measure 'filiais bateram valor ñ quantidade' =
+	measure 'D filiais bateram valor ñ quantidade' =
 			
 			COUNTROWS(
 			    FILTER(
@@ -234,7 +234,7 @@ table 'Medidas metas'
 		formatString: 0
 		lineageTag: c50c2e0b-89f0-443b-b115-983a40b2278d
 
-	measure 'filiais bateram quantidade ñ valor' =
+	measure 'D filiais bateram quantidade ñ valor' =
 			
 			COUNTROWS(
 			    FILTER(
@@ -249,37 +249,43 @@ table 'Medidas metas'
 
 	measure 'Vendedores Sem Meta' =
 			
-			CALCULATE(
-			    COUNT(dVendedores[codigo_vendedor]),
+			COUNTROWS(
 			    FILTER(
-			        dVendedores,
-			        ISBLANK(
-			            CALCULATE(
-			                [meta de valor],
-			                fMetas_valor[nivel] = "Vendedor"
-			            )
-			        )
+			        VALUES(dVendedores[codigo_vendedor]),
+			        [resultado-meta-vendedor] = 0
 			    )
-			)
+			) + 0
 		formatString: 0
 		lineageTag: 6da35821-0faf-45ee-a9f9-681db6d12024
 
 	measure 'Profissionais Sem Meta' =
 			
-			CALCULATE(
-			    COUNT(dProfissionais[codigo_profissional]),
+			COUNTROWS(
 			    FILTER(
-			        dProfissionais,
-			        ISBLANK(
-			            CALCULATE(
-			                [meta de valor],
-			                fMetas_valor[nivel] = "Profissional"
-			            )
-			        )
+			        VALUES(dProfissionais[codigo_profissional]),
+			        [resultado-meta-profissional] = 0
 			    )
-			)
+			) + 0
 		formatString: 0
 		lineageTag: d72fe07a-d9b7-424e-b1c4-5f753961b0fa
+
+	measure resultado-meta-vendedor =
+			
+			VAR vlr = COALESCE([val vendedor], 0)
+			VAR vQtd = COALESCE([qtde vendedor], 0)
+			RETURN
+			    IF(vlr > 0 || vQtd > 0, 1, 0)
+		formatString: 0
+		lineageTag: a42d7d68-a5d5-44d8-8bf6-1a29a0b63979
+
+	measure resultado-meta-profissional =
+			
+			VAR vlr = COALESCE([val profissional], 0)
+			VAR vQtd = COALESCE([qtde profissional], 0)
+			RETURN
+			    IF(vlr > 0 || vQtd > 0, 1, 0)
+		formatString: 0
+		lineageTag: 7575c5e5-6745-4501-9a8a-66e3cfd64b76
 
 	partition 'Medidas metas' = m
 		mode: import

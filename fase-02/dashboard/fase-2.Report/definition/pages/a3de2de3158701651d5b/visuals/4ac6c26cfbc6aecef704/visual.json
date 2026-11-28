@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "4ac6c26cfbc6aecef704",
   "position": {
     "x": 0,
     "y": 288.4390243902439,
-    "z": 1001,
+    "z": 2000,
     "height": 154.09756097560975,
     "width": 907.46341463414626,
-    "tabOrder": 1001
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -37,7 +37,7 @@
                       "Entity": "Medidas metas"
                     }
                   },
-                  "Property": "filiais sem meta"
+                  "Property": "Filiais Sem Meta"
                 }
               },
               "queryRef": "Medidas metas.filiais sem meta",
@@ -80,23 +80,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "40d409be1a21728b0246",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas metas"
-              }
-            },
-            "Property": "Vendedores Sem Meta"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "80044454770acc035998",
   "position": {
     "x": 90,
@@ -129,13 +129,13 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dProfissionais"
+                    "Entity": "Medidas percentuais"
                   }
                 },
-                "Property": "profissional"
+                "Property": "val profissional %"
               }
             },
             "direction": "Descending"
